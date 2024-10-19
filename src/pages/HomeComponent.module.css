@@ -1,0 +1,311 @@
+.home {
+    background-color: #fff;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: start;
+    overflow: hidden;
+    justify-content: center;
+  }
+  
+  .mainContent {
+    position: relative;
+    z-index: 0;
+    display: flex;
+    min-height: 100%;
+    width: 100%;
+    align-items: flex-start;
+    overflow: hidden;
+    justify-content: center;
+  }
+  
+  @media (max-width: 991px) {
+    .mainContent {
+      max-width: 100%;
+    }
+  }
+  
+  .contentWrapper {
+    z-index: 0;
+    display: flex;
+    min-width: 240px;
+    align-items: center;
+    gap: 10px;
+    justify-content: start;
+    flex-wrap: wrap;
+    margin: auto 0;
+    padding: 97px 37px;
+    border: 5px dashed rgba(0, 0, 0, 0.3);
+  }
+  
+  @media (max-width: 991px) {
+    .contentWrapper {
+      max-width: 100%;
+      padding: 0 20px;
+    }
+  }
+  
+  .textContent {
+    align-self: stretch;
+    display: flex;
+    min-width: 240px;
+    flex-direction: column;
+    font-family: Inter, sans-serif;
+    color: #000;
+    font-weight: 700;
+    justify-content: start;
+    width: 973px;
+    margin: auto 0;
+  }
+  
+  @media (max-width: 991px) {
+    .textContent {
+      max-width: 100%;
+    }
+  }
+  
+  .mainHeading {
+    font-size: 48px;
+    margin-top: 20px;
+  }
+  
+  @media (max-width: 991px) {
+    .mainHeading {
+      max-width: 100%;
+      font-size: 40px;
+    }
+  }
+  
+  .description {
+    font-size: 20px;
+  }
+  
+  @media (max-width: 991px) {
+    .description {
+      max-width: 100%;
+    }
+  }
+  
+  .iconWrapper {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    width: 100px;
+    margin: auto 0;
+  }
+  
+  .iconContainer {
+    border-radius: 100px;
+    background-color: #000;
+    align-self: stretch;
+    display: flex;
+    min-height: 100px;
+    width: 100px;
+    align-items: center;
+    gap: 10px;
+    overflow: hidden;
+    justify-content: start;
+    height: 100px;
+    margin: auto 0;
+    padding: 20px 33px;
+  }
+  
+  @media (max-width: 991px) {
+    .iconContainer {
+      padding: 0 20px;
+    }
+  }
+  
+  .icon {
+    aspect-ratio: 0.57;
+    object-fit: contain;
+    object-position: center;
+    width: 34px;
+    align-self: stretch;
+    margin: auto 0;
+  }
+  
+  .footer {
+    align-self: start;
+    position: absolute;
+    z-index: 0;
+    display: flex;
+    min-height: 94px;
+    width: 1920px;
+    align-items: center;
+    gap: 10px;
+    overflow: hidden;
+    color: #000;
+    white-space: nowrap;
+    justify-content: center;
+    flex-wrap: wrap;
+    right: 0;
+    bottom: 0;
+    height: 94px;
+    padding: 31px 10px;
+    font: 700 24px Inter, sans-serif;
+  }
+  
+  @media (max-width: 991px) {
+    .footer {
+      max-width: 100%;
+      white-space: initial;
+    }
+  }
+  
+  .footerItem {
+    align-self: stretch;
+    min-width: 240px;
+    width: 342px;
+    margin: auto 0;
+    padding: 2px 23px;
+  }
+  
+  @media (max-width: 991px) {
+    .footerItem {
+      white-space: initial;
+      padding: 0 20px;
+    }
+  }
+  
+  .footerItemRight {
+    align-self: stretch;
+    min-width: 240px;
+    text-align: right;
+    width: 342px;
+    margin: auto 0;
+    padding: 2px 70px;
+  }
+  
+  @media (max-width: 991px) {
+    .footerItemRight {
+      white-space: initial;
+      padding: 0 20px;
+    }
+  }
+  
+  .sideMenu {
+    position: absolute;
+    z-index: 0;
+    display: flex;
+    min-width: 100px;
+    min-height: 1079px;
+    max-width: 110px;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    top: 0;
+    width: 110px;
+    height: 1079px;
+  }
+  
+  .menuIcon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 59px;
+  }
+  
+  .header {
+    position: absolute;
+    z-index: 0;
+    display: flex;
+    min-width: 240px;
+    min-height: 53px;
+    align-items: center;
+    gap: 40px 100px;
+    color: #000;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    right: 110px;
+    top: 32px;
+    width: 1699px;
+    height: 53px;
+    padding: 1px 10px;
+    font: 700 28px Inter, sans-serif;
+  }
+  
+  @media (max-width: 991px) {
+    .header {
+      max-width: 100%;
+    }
+  }
+  
+  .headerTitle {
+    align-self: stretch;
+    width: 310px;
+    margin: auto 0;
+  }
+  
+  .socialLinks {
+    align-self: stretch;
+    display: flex;
+    min-width: 240px;
+    align-items: center;
+    gap: 10px;
+    overflow: hidden;
+    text-align: right;
+    justify-content: start;
+    margin: auto 0;
+    padding: 9px 49px;
+  }
+  
+  @media (max-width: 991px) {
+    .socialLinks {
+      max-width: 100%;
+      padding: 0 20px;
+    }
+  }
+  
+  .socialLink {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    margin: auto 0;
+  }
+  
+  .socialLinkText {
+    align-self: stretch;
+    margin: auto 0;
+  }
+  
+  .socialIcon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 24px;
+    align-self: stretch;
+    margin: auto 0;
+  }
+  
+  .socialLinkGroup {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+    justify-content: center;
+    margin: auto 0;
+  }
+  
+  @media (max-width: 991px) {
+    .socialLinkGroup {
+      white-space: initial;
+    }
+  }
+  
+  .youtubeIcon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 26px;
+    align-self: stretch;
+    margin: auto 0;
+  }
