@@ -2,6 +2,8 @@ import AppBarGeneric from "../components/AppBarGeneric/AppBarGeneric";
 import BoxGeneric from "../components/BoxGeneric/BoxGeneric";
 import video from '../assets/1015(2).mp4'
 import styles from './styles.module.scss'
+import NavigateNextTwoToneIcon from '@mui/icons-material/NavigateNextTwoTone';
+import { motion } from "framer-motion";
 
 export default function Home(){
     return(
@@ -9,6 +11,24 @@ export default function Home(){
             <video src={video} autoPlay muted loop/>
             <AppBarGeneric/>
             <BoxGeneric>
+                <section className={styles.contentWrapper}>
+                    <div className={styles.textContent}>
+                        <h1 className={styles.mainHeading}>
+                        A melhor conexão da região<br/>metropolitana é na Atria
+                        </h1>
+                        <p className={styles.description}>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt sagittis laoreet. Morbi tortor lectus, pharetra eget fermentum ac, pulvinar eget eros. Nullam at venenatis tellus. Duis purus ipsum, elementum eget elementum quis, blandit et ipsum. Maecenas sed nisi eget dui euismod accumsan.
+                        </p>
+                    </div>
+                    <div className={styles.iconWrapper}>
+                        <motion.div 
+                        whileHover={{scale:1.3}}
+                        transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                        >
+                            <NavigateNextTwoToneIcon sx={{fontSize:90,color:"white"}}/>
+                        </motion.div>
+                    </div>
+                </section>
             </BoxGeneric>
         </div>
     )

@@ -10,14 +10,12 @@ export default function AppBarGeneric(){
 
     const variants = {
         open:{
-            opacity: 1,
-            x: 0,
+            opacity: [0,1],
+            x: 0
             
         },
         close:{
-            opacity:0,
-            x: '-100%',
-            width: '0',
+            opacity: [1,0],
             marginLeft:0,
         }
     }
