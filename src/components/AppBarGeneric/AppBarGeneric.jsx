@@ -15,7 +15,7 @@ export default function AppBarGeneric(){
             
         },
         close:{
-            opacity: [1,0],
+            opacity: [0],
             marginLeft:0,
         }
     }
@@ -27,10 +27,10 @@ export default function AppBarGeneric(){
                 <MenuIcon sx={{fontSize: 40, color:'white'}} onClick={() => {setIsOpen(!isOpen)}}/>
             </motion.div>
             <motion.ul className={styles.ul}>
-                <motion.li className={styles.li} variants={variants} animate={isOpen ? "open" : "close"}  transition={{duration:1, delay:0}} exit={{display: 'none'}}>HOME</motion.li>
-                <motion.li className={styles.li} variants={variants} animate={isOpen ? "open" : "close"}  transition={{duration:1, delay:0.1}} exit={{display: 'none'}}>SOBRE</motion.li>
-                <motion.li className={styles.li} variants={variants} animate={isOpen ? "open" : "close"}  transition={{duration:1, delay:0.2}} exit={{display: 'none'}}>PLANOS</motion.li>
-                <motion.li className={styles.li} variants={variants} animate={isOpen ? "open" : "close"}  transition={{duration:1, delay:0.3}} exit={{display: 'none'}}>contato</motion.li>
+                <motion.li className={styles.li} variants={variants} animate={isOpen ? "open" : "close"}  transition={{duration:1, delay:0}} exit={{display: 'none'}} initial={{opacity:0}}>HOME</motion.li>
+                <motion.li className={styles.li} variants={variants} animate={isOpen ? "open" : "close"}  transition={{duration:1, delay:0.1}} exit={{display: 'none'}} initial={{opacity:0}}>SOBRE</motion.li>
+                <motion.li className={styles.li} variants={variants} animate={isOpen ? "open" : "close"}  transition={{duration:1, delay:0.2}} exit={{display: 'none'}} initial={{opacity:0}}>PLANOS</motion.li>
+                <motion.li className={styles.li} variants={variants} animate={isOpen ? "open" : "close"}  transition={{duration:1, delay:0.3}} exit={{display: 'none'}} initial={{opacity:0}}>contato</motion.li>
             </motion.ul>
         </div>
     )
