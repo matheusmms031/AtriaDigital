@@ -42,21 +42,15 @@ export default function Home(){
                             transition={{ type: "spring", stiffness: 400, damping: 10 }}
                         >
                             <motion.div
-                                initial={{opacity:0, scale:0}}
+                                initial={{opacity:0, x:100}}
                                 animate={{
                                     opacity:1,
-                                    scale:1,
+                                    x:0,
                                 }}
                                 transition={{
-                                    duration: 0.3,
+                                    duration: 1.5,
                                     ease: [0, 0.71, 0.2, 1.01],
-                                    scale: {
-                                      type: "spring",
-                                      damping: 5,
-                                      stiffness: 100,
-                                      restDelta: 0.001
-                                    },
-                                    delay:0.2
+                                    delay:0.5
                                   }}
                             >
                                 <NavigateNextTwoToneIcon sx={{fontSize:90,color:"white"}}/>
