@@ -8,8 +8,6 @@ import { motion } from "framer-motion";
 export default function Home() {
     return (
         <div className={styles.home}>
-            <video src={video} autoPlay muted loop />
-            <AppBarGeneric />
             <BoxGeneric>
                 <section className={styles.contentWrapper}>
                     <div className={styles.textContent}>
