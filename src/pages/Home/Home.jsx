@@ -1,6 +1,6 @@
 import AppBarGeneric from "../../components/AppBarGeneric/AppBarGeneric";
 import BoxGeneric from "../../components/BoxGeneric/BoxGeneric";
-import video from "../../assets/1015(2).mp4";
+import video from "../../assets/1015(4).mp4";
 import styles from "./styles.module.scss";
 import NavigateNextTwoToneIcon from "@mui/icons-material/NavigateNextTwoTone";
 import { motion } from "framer-motion";
