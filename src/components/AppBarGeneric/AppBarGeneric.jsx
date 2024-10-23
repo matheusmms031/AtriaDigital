@@ -12,7 +12,6 @@ export default function AppBarGeneric(){
         open:{
             opacity: [0,1],
             x: 0
-            
         },
         close:{
             opacity: [0],
