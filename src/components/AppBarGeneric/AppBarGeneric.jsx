@@ -4,6 +4,7 @@ import { useState,useRef } from 'react'
 import { motion} from "framer-motion";
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import LinkGeneric from '../../LinkGeneric/LinkGeneric';
 
 export default function AppBarGeneric(){
     const [isOpen, setIsOpen] = useState(false)
@@ -30,7 +31,7 @@ export default function AppBarGeneric(){
                     </motion.div>
                     <motion.ul className={styles.ul}>
                         <motion.li className={styles.li} variants={variants} animate={isOpen ? "open" : "close"}  transition={{duration:1, delay:0}} exit={{display: 'none'}} initial={{opacity:0}}>HOME</motion.li>
-                        <motion.li className={styles.li} variants={variants} animate={isOpen ? "open" : "close"}  transition={{duration:1, delay:0.1}} exit={{display: 'none'}} initial={{opacity:0}}>SOBRE</motion.li>
+                        <LinkGeneric><motion.li className={styles.li} variants={variants} animate={isOpen ? "open" : "close"}  transition={{duration:1, delay:0.1}} exit={{display: 'none'}} initial={{opacity:0}}>SOBRE</motion.li></LinkGeneric>
                         <motion.li className={styles.li} variants={variants} animate={isOpen ? "open" : "close"}  transition={{duration:1, delay:0.2}} exit={{display: 'none'}} initial={{opacity:0}}>PLANOS</motion.li>
                         <motion.li className={styles.li} variants={variants} animate={isOpen ? "open" : "close"}  transition={{duration:1, delay:0.3}} exit={{display: 'none'}} initial={{opacity:0}}>contato</motion.li>
                     </motion.ul>

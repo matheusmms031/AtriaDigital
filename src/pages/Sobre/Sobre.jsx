@@ -23,7 +23,7 @@ export default function Sobre() {
                                 delay: 0.1,
                             }}
                         >
-                            A melhor conexão da região
+                            AAAAAAAAAAA
                             <br />
                             metropolitana é na Atria
                         </motion.h1>

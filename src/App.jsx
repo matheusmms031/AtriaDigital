@@ -8,7 +8,7 @@ import { PageOrganizer } from "./components/Organizer/PageOrganizer.jsx";
 
 
 const pages = {
-    "pagination": [{ "path": "/", "element": <Home/>, "name": "Home" }, { "path": "/sobre", "element": Sobre, "name": "Sobre" }],
+    "pagination": [{ "path": "/", "element": <Home/>, "name": "Home" }, { "path": "/sobre", "element": <Sobre/>, "name": "teste" }],
     "select": "Home"
 }
 
