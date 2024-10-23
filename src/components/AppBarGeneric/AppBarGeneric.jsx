@@ -2,10 +2,8 @@ import MenuIcon from '@mui/icons-material/Menu'
 import styles from './styles.module.scss'
 import { useState,useRef } from 'react'
 import { motion} from "framer-motion";
-import { useDimensions } from './script.jsx';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
-
 
 export default function AppBarGeneric(){
     const [isOpen, setIsOpen] = useState(false)

@@ -4,12 +4,12 @@ import video from "../../assets/1015(4).mp4";
 import styles from "./styles.module.scss";
 import NavigateNextTwoToneIcon from "@mui/icons-material/NavigateNextTwoTone";
 import { motion } from "framer-motion";
-import { useContext } from "react";
 
-export default function Home() {
+export default function Sobre() {
     return (
         <div className={styles.home}>
             <video src={video} autoPlay muted loop className="video-fundo" />
+            <AppBarGeneric />
             <BoxGeneric>
                 <section className={styles.contentWrapper}>
                     <div className={styles.textContent}>
