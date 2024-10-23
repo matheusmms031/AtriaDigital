@@ -9,6 +9,7 @@ export default function LinkGeneric({children}){
     return(
         <div onClick={() => {
             pagesConfig[0].select = "teste"
+            console.log(pagesConfig)
             pagesConfig[1](pagesConfig[0])
         }}>
             {children}

@@ -1,18 +1,20 @@
-import { pagesConfigContext } from "../../Contexts/PagesContexts";
 import { useContext, useEffect, useState } from "react";
+import { pagesConfigContext } from "../../Contexts/PagesContexts";
 
 export function PageOrganizer() {
-  const pagesConfig = useContext(pagesConfigContext);
+  const { pagesConfig } = useContext(pagesConfigContext);
   const [selectedElement, setSelectedElement] = useState(null);
 
   useEffect(() => {
-    // Atualiza o elemento selecionado sempre que o pagesConfig mudar
-    const currentPage = pagesConfig[0]['pagination'].find((array) => array.name === pagesConfig[0]['select']);
-    console.log(currentPage)
+    // Verifica qual página está selecionada e atualiza o componente correspondente
+    const currentPage = pagesConfig.pagination.find(
+      (page) => page.name === pagesConfig.select
+    );
+    
     if (currentPage) {
       setSelectedElement(currentPage.element);
     }
-  }, [pagesConfig]); // O useEffect será acionado sempre que o pagesConfig mudar
+  }, [pagesConfig]); // Atualiza sempre que pagesConfig mudar
 
   return (
     <>

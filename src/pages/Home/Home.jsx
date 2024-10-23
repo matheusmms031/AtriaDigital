@@ -10,7 +10,6 @@ import LinkGeneric from "../../LinkGeneric/LinkGeneric";
 export default function Home() {
     return (
         <div className={styles.home}>
-            <video src={video} autoPlay muted loop className="video-fundo" />
             <BoxGeneric>
                 <section className={styles.contentWrapper}>
                     <div className={styles.textContent}>
