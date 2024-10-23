@@ -19,7 +19,7 @@ export default function AppBarGeneric(){
             opacity: [0],
             marginLeft:0,
         }
-    }
+    };
 
     
     return(
