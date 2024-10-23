@@ -5,11 +5,11 @@ import styles from "./styles.module.scss";
 import NavigateNextTwoToneIcon from "@mui/icons-material/NavigateNextTwoTone";
 import { motion } from "framer-motion";
 import { useContext } from "react";
+import LinkGeneric from "../../LinkGeneric/LinkGeneric";
 
 export default function Home() {
     return (
         <div className={styles.home}>
-            <video src={video} autoPlay muted loop className="video-fundo" />
             <BoxGeneric>
                 <section className={styles.contentWrapper}>
                     <div className={styles.textContent}>
