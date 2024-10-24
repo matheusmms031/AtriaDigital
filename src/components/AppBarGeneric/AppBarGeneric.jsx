@@ -1,6 +1,6 @@
 import MenuIcon from '@mui/icons-material/Menu'
 import styles from './styles.module.scss'
-import { useState,useRef } from 'react'
+import { useState } from 'react'
 import { motion} from "framer-motion";
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
