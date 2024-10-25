@@ -26,6 +26,7 @@
   flex-direction: column; /* 240px convertido aproximadamente */
   align-items: center;
   gap: 2.5vh; /* 10px convertido */
+  gap: 2.5vh; /* 10px convertido */
   justify-content: start;
   background-color: #00000049;
   flex-wrap: wrap;
@@ -45,6 +46,7 @@
 
   li{
     font-size: 1.1vmax;
+    font-size: 1.1vmax;
     cursor: pointer;
 
   }
@@ -59,6 +61,7 @@
   font-weight: 700;
   justify-content: start;
   margin: auto 0;
+  gap: 2vw;
   gap: 2vw;
 }
 
@@ -75,6 +78,12 @@
   text-align: justify;
   margin-top: 0;
   text-shadow: 0.1vw 0.1vw 0.5vw black; /* sombras convertidas */
+}
+
+.boxDescriptions{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .boxDescriptions{
