@@ -20,6 +20,7 @@ export function SobreAtria() {
                     >
                         Página de Sobre
                     </motion.h1>
+                    <div className={styles.boxDescriptions}>
                     <motion.p
                         className={styles.description}
                         initial={{ opacity: 0, x: 100 }}
@@ -52,6 +53,7 @@ export function SobreAtria() {
                         purus ipsum, elementum eget elementum quis, blandit et ipsum.
                         Maecenas sed nisi eget dui euismod accumsan.
                     </motion.p>
+                    </div>
             </div>
             <video src={video} className={styles.video} autoPlay muted loop style={{ width: "500px", height: "300px", display: "block", position: "relative" }} />
         </div>
@@ -61,7 +63,7 @@ export function SobreAtria() {
 export function Ahistoria() {
     return (
         <div className={styles.textContent}>
-            <div className={styles.boxtext}>
+        <div className={styles.boxtext}>
                 <motion.h1
                     className={styles.mainHeading}
                     initial={{ opacity: 0, x: 100 }}
@@ -74,6 +76,7 @@ export function Ahistoria() {
                 >
                     Página de Sobre
                 </motion.h1>
+                <div className={styles.boxDescriptions}>
                 <motion.p
                     className={styles.description}
                     initial={{ opacity: 0, x: 100 }}
@@ -106,8 +109,9 @@ export function Ahistoria() {
                     purus ipsum, elementum eget elementum quis, blandit et ipsum.
                     Maecenas sed nisi eget dui euismod accumsan.
                 </motion.p>
-            </div>
-            <video src={video} className={styles.video} autoPlay muted loop style={{ width: "500px", height: "300px", display: "block", position: "relative" }} />
+                </div>
         </div>
+        <video src={video} className={styles.video} autoPlay muted loop style={{ width: "500px", height: "300px", display: "block", position: "relative" }} />
+    </div>
     )
 }
