@@ -20,6 +20,7 @@ export default function AppBarGeneric(){
         close:{
             opacity: [0],
             marginLeft:0,
+            height:0,
         }
     };
 
@@ -37,40 +38,6 @@ export default function AppBarGeneric(){
                         <motion.li className={styles.li} onClick={() => {updateSelectedPage("Planos")}}variants={variants} animate={isOpen ? "open" : "close"}  transition={{duration:1, delay:0.2}} exit={{display: 'none'}} initial={{opacity:0}}>PLANOS</motion.li>
                         <motion.li className={styles.li} onClick={() => {updateSelectedPage("Contato")}}variants={variants} animate={isOpen ? "open" : "close"}  transition={{duration:1, delay:0.3}} exit={{display: 'none'}} initial={{opacity:0}}>contato</motion.li>
                     </motion.ul>
-                </div>
-                <div className={styles.boxsocial}>
-                    <motion.div
-                        className={styles.socialmedia}
-                        initial={{opacity:0, x:100}}
-                                animate={{
-                                    opacity:1,
-                                    x:0,
-                                }}
-                                transition={{
-                                    duration: 1.5,
-                                    ease: [0, 0.71, 0.2, 1.01],
-                                    delay:0.5
-                                  }}
-                    >
-                        <span>Instagram</span>
-                        <InstagramIcon sx={{fontSize:"1vmax", marginBottom:'0.1vmax'}}/>
-                    </motion.div>
-                    <motion.div
-                        className={styles.socialmedia}
-                        initial={{opacity:0, x:100}}
-                                animate={{
-                                    opacity:1,
-                                    x:0,
-                                }}
-                                transition={{
-                                    duration: 1.5,
-                                    ease: [0, 0.71, 0.2, 1.01],
-                                    delay:0.8
-                                  }}
-                    >
-                        <span>Facebook</span>
-                        <FacebookIcon sx={{fontSize:"1vmax", marginBottom:'0.1vmax'}}/>
-                    </motion.div>
                 </div>
             </div>
         </div>

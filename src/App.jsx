@@ -4,12 +4,14 @@ import { PagesConfigProvider } from "./Contexts/PagesContexts.jsx";
 import { PageOrganizer } from "./components/Organizer/PageOrganizer.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import { useContext } from "react";
+import Front from "./components/Front/Front.jsx";
 
 export function App() {
 
     return (
         <PagesConfigProvider>
             <video src={video} autoPlay muted loop className="video-fundo" />
+            <Front/>
             <AppBarGeneric />
             <PageOrganizer/>
             <Footer/>
