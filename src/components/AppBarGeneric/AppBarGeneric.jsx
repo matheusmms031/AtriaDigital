@@ -29,7 +29,7 @@ export default function AppBarGeneric(){
             <div className={styles.contents}>
                 <div className={styles.options}>
                     <motion.div animate={isOpen ? {rotate:90}: {}}>
-                        <MenuIcon sx={{fontSize: 40, color:'white'}} onClick={() => {setIsOpen(!isOpen)}}/>
+                        <MenuIcon sx={{fontSize: "2vmax", color:'white'}} onClick={() => {setIsOpen(!isOpen)}}/>
                     </motion.div>
                     <motion.ul className={styles.ul}>
                         <motion.li className={styles.li} onClick={() => {updateSelectedPage("Home")}} variants={variants} animate={isOpen ? "open" : "close"}  transition={{duration:1, delay:0}} exit={{display: 'none'}} initial={{opacity:0}}>HOME</motion.li>
@@ -53,7 +53,7 @@ export default function AppBarGeneric(){
                                   }}
                     >
                         <span>Instagram</span>
-                        <InstagramIcon sx={{fontSize:20}}/>
+                        <InstagramIcon sx={{fontSize:"1vmax", marginBottom:'0.1vmax'}}/>
                     </motion.div>
                     <motion.div
                         className={styles.socialmedia}
@@ -69,7 +69,7 @@ export default function AppBarGeneric(){
                                   }}
                     >
                         <span>Facebook</span>
-                        <FacebookIcon sx={{fontSize:20}}/>
+                        <FacebookIcon sx={{fontSize:"1vmax", marginBottom:'0.1vmax'}}/>
                     </motion.div>
                 </div>
             </div>

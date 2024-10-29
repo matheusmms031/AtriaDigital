@@ -40,7 +40,7 @@
     text-transform: uppercase;
     font-weight: 600;
     cursor: pointer;
-    font-size: larger;
+    font-size: 1vmax;
     text-shadow: 2px 2px 10px black;
     opacity: 0;
 }
@@ -54,11 +54,16 @@
 
 .socialmedia{
     display: flex;
-    font-size: large;
-    align-items: center;
+    font-size: 1vmax;
+    align-items:end;
     color: white;
+    width: fit-content;
 
     span{
         margin-right: 0.5vw;
+        width: fit-content;
+        height: fit-content;
+        text-align: center;
+        align-items: center;
     }
 }
