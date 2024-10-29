@@ -2,8 +2,13 @@ import BoxGeneric from "../../components/BoxGeneric/BoxGeneric";
 import styles from "./styles.module.scss";
 import NavigateNextTwoToneIcon from "@mui/icons-material/NavigateNextTwoTone";
 import { motion } from "framer-motion";
+import { useContext } from "react";
+import { pagesConfigContext } from "../../Contexts/PagesContexts";
 
 export default function Home() {
+
+    const { updateSelectedPage } = useContext(pagesConfigContext);
+
     return (
         <div className={styles.home}>
             <BoxGeneric>
@@ -59,6 +64,7 @@ export default function Home() {
                             >
                                 <NavigateNextTwoToneIcon
                                     sx={{ fontSize: 90, color: "white" }}
+                                    onClick={() => {updateSelectedPage("Sobre")}}
                                 />
                             </motion.div>
                         </motion.div>
