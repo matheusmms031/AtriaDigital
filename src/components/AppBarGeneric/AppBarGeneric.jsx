@@ -34,8 +34,8 @@ export default function AppBarGeneric(){
                     <motion.ul className={styles.ul}>
                         <motion.li className={styles.li} onClick={() => {updateSelectedPage("Home")}} variants={variants} animate={isOpen ? "open" : "close"}  transition={{duration:1, delay:0}} exit={{display: 'none'}} initial={{opacity:0}}>HOME</motion.li>
                         <motion.li className={styles.li} onClick={() => {updateSelectedPage("Sobre")}} variants={variants} animate={isOpen ? "open" : "close"}  transition={{duration:1, delay:0.1}} exit={{display: 'none'}} initial={{opacity:0}}>SOBRE</motion.li>
-                        <motion.li className={styles.li} variants={variants} animate={isOpen ? "open" : "close"}  transition={{duration:1, delay:0.2}} exit={{display: 'none'}} initial={{opacity:0}}>PLANOS</motion.li>
-                        <motion.li className={styles.li} variants={variants} animate={isOpen ? "open" : "close"}  transition={{duration:1, delay:0.3}} exit={{display: 'none'}} initial={{opacity:0}}>contato</motion.li>
+                        <motion.li className={styles.li} onClick={() => {updateSelectedPage("Planos")}}variants={variants} animate={isOpen ? "open" : "close"}  transition={{duration:1, delay:0.2}} exit={{display: 'none'}} initial={{opacity:0}}>PLANOS</motion.li>
+                        <motion.li className={styles.li} onClick={() => {updateSelectedPage("Contato")}}variants={variants} animate={isOpen ? "open" : "close"}  transition={{duration:1, delay:0.3}} exit={{display: 'none'}} initial={{opacity:0}}>contato</motion.li>
                     </motion.ul>
                 </div>
                 <div className={styles.boxsocial}>

@@ -68,9 +68,8 @@ export default function Sobre() {
                                 transition={{
                                     duration: 1.5,
                                     type: "spring",
-                                    delay: 0.5,
-                                }}
-                                />
+                                    delay: 0.2,
+                                }}/>
                             </div>
                         </div>
                     </div>
