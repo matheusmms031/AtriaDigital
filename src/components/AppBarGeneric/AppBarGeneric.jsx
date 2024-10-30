@@ -14,7 +14,7 @@ export default function AppBarGeneric() {
         open: {
             opacity: [1],
             x: 0,
-            marginTop:"1.5vh"
+            marginTop:"1.5vmax"
         },
         close: {
             opacity: [0],

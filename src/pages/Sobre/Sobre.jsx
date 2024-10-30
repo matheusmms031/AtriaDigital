@@ -4,6 +4,17 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { Chip } from "@mui/material";
 import video from "../../assets/1015(4).mp4"
+import Carousel from "../../components/Carousel/Carousel";
+import img1 from "../../assets/imagem1.jpeg"
+import img2 from "../../assets/imagem2.jpg"
+import img3 from "../../assets/imagem3.jpg"
+import img4 from "../../assets/imagem4.jpg"
+
+const images = [
+    img1,
+    img2,
+    img3,
+]
 
 export default function Sobre() {
 
@@ -76,6 +87,9 @@ export default function Sobre() {
                                     delay: 0.2,
                                 }}/>
                             </div>
+                            <Carousel
+                            images={images}
+                            />
                         </div>
                     </div>
                 </section>
