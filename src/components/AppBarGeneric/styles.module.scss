@@ -8,6 +8,13 @@
     left: 30px;
 }
 
+@media (max-width:720px) {
+    .appbar{
+        display: "none";
+        opacity: 0;
+    }
+}
+
 .contents{
     position: absolute;
     width: 95%;

@@ -1,9 +1,13 @@
+
+@media (min-width:720px) {
+    
+}
 .front{
     position: absolute;
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 6vw;
+    height: 6vmax;
 }
 
 .contents{
@@ -15,7 +19,7 @@
     overflow: hidden;
     align-items: center;
     justify-content: space-between;
-    height: 6vw;
+    height: 6vmax;
 }
 
 .options{
@@ -65,5 +69,11 @@
         height: fit-content;
         text-align: center;
         align-items: center;
+    }
+}
+
+@media (max-width:720px) {
+    .front{
+        position: relative;
     }
 }
