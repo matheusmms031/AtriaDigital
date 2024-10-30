@@ -26,7 +26,7 @@ export default function Planos() {
                   delay: 0.1,
                 }}
               >
-                Todos os nossos planos
+                Todos os <span style={{color:"#FF7B00"}}>nossos planos</span>
               </motion.h1>
               <motion.h2
                 className={styles.mainHeading2}
@@ -38,7 +38,7 @@ export default function Planos() {
                   delay: 0.3,
                 }}
               >
-                Confira e veja a melhor escolha para você
+                Confira e veja a <span style={{color:"#FF7B00"}}>melhor escolha</span> para você
               </motion.h2>
             </div>
             <div className={styles.cards}>

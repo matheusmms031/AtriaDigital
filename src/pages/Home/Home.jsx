@@ -24,7 +24,7 @@ export default function Home() {
                                 delay: 0.1,
                             }}
                         >
-                            A melhor conexão da região
+                            A <span style={{color:"#FF7B00"}}>melhor conexão</span> da região
                             <br />
                             metropolitana é na Atria
                         </motion.h1>
