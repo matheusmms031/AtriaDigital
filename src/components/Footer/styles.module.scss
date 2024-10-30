@@ -1,4 +1,4 @@
-.box{
+.box {
     display: flex;
     bottom: 3vh;
     position: absolute;
@@ -9,12 +9,17 @@
     align-items: center;
     flex-direction: row;
 
-    span{
+    span {
         color: white;
         font-weight: 600;
         text-transform: uppercase;
         font-size: 1vmax;
         text-shadow: 0px 0px 5px black;
         cursor: pointer;
+        transition: color 0.6s; // Adiciona uma transição suave de cor
+
+        &:hover {
+            color: #FF7B00; // Nova cor ao passar o mouse
+        }
     }
 }
