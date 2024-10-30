@@ -88,7 +88,6 @@ export default function Sobre() {
                                 }}/>
                             </div>
                             <Carousel
-                            images={images}
                             />
                         </div>
                     </div>
