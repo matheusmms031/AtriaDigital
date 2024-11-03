@@ -1,7 +1,4 @@
 
-@media (min-width:720px) {
-    
-}
 .front{
     position: absolute;
     display: flex;
@@ -72,8 +69,9 @@
     }
 }
 
-@media (max-width:720px) {
+@media (max-width:1024px) {
     .front{
         position: relative;
+        display: none;
     }
 }

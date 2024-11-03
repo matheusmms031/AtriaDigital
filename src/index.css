@@ -16,3 +16,9 @@ body{
   object-fit: cover;
   z-index: -1;
 }
+
+@media (max-width: 1024px) {
+  .video-fundo{
+    display: none;
+  }
+}

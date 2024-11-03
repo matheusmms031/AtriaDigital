@@ -38,7 +38,7 @@ const styles = {
     width: 'calc(200vw)', // largura duplicada para o loop suave
   },
   image: {
-    width: '100vw',
+    width: '2vw',
     height: 'auto',
   },
 };

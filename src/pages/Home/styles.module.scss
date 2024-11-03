@@ -80,8 +80,8 @@
     padding: 2vh 1.7vw; /* 20px e 33px convertidos */
   }
 
-@media (max-width:720px) {
-  .mainContent{
-    
+@media (max-width:1024px) {
+  .home{
+    display: none;
   }
 }

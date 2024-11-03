@@ -3,6 +3,7 @@ import styles from "./styles.module.scss";
 import NavigateNextTwoToneIcon from "@mui/icons-material/NavigateNextTwoTone";
 import { motion } from "framer-motion";
 import { useContext } from "react";
+import stylesMobile from "./stylesMobile.module.scss";
 import { pagesConfigContext } from "../../Contexts/PagesContexts";
 
 export default function Home() {
@@ -10,7 +11,8 @@ export default function Home() {
     const { updateSelectedPage } = useContext(pagesConfigContext);
 
     return (
-        <div className={styles.home}>
+        <>
+            <div className={styles.home}>
             <BoxGeneric>
                 <section className={styles.contentWrapper}>
                     <div className={styles.textContent}>
@@ -72,5 +74,19 @@ export default function Home() {
                 </section>
             </BoxGeneric>
         </div>
+        <div className={stylesMobile.home}>
+            <BoxGeneric className={stylesMobile.firstbox}>
+                <div className={stylesMobile.FirstboxText}>
+                    <h1>
+                    Serviço de luxo e qualidade
+                    </h1>
+                    <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing
+                     elit. Donec tincidunt sagittis laoreet. Morbi tortor lectus, pharetra eget fermentum ac, pulvinar eget eros. Nullam at venenatis tellus.
+                    </p>
+                </div>
+            </BoxGeneric>
+        </div>
+        </>
     );
 }
