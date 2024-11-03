@@ -3,6 +3,7 @@ import styles from "./styles.module.scss";
 import NavigateNextTwoToneIcon from "@mui/icons-material/NavigateNextTwoTone";
 import { motion } from "framer-motion";
 import { useContext } from "react";
+import HelpIcon from '@mui/icons-material/Help';
 import stylesMobile from "./stylesMobile.module.scss";
 import { pagesConfigContext } from "../../Contexts/PagesContexts";
 
@@ -98,8 +99,38 @@ export default function Home() {
 						</p>
 					</div>
 					<div className={stylesMobile.boxContent}>
-						<div>
-						
+						<div className={stylesMobile.card}>
+                            <HelpIcon sx={{ fontSize: 40, color: "#FF7B00" }} />
+                            <div className={stylesMobile.cardText}>
+                                <h3>
+                                    Suporte a semana inteira
+                                </h3>
+                                <p>
+                                    Nós damos suporte toda a semana para nossos clientes.
+                                </p>
+                            </div>
+						</div>
+                        <div className={stylesMobile.card}>
+                            <HelpIcon sx={{ fontSize: 40, color: "#FF7B00" }} />
+                            <div className={stylesMobile.cardText}>
+                                <h3>
+                                    Suporte a semana inteira
+                                </h3>
+                                <p>
+                                    Nós damos suporte toda a semana para nossos clientes.
+                                </p>
+                            </div>
+						</div>
+                        <div className={stylesMobile.card}>
+                            <HelpIcon sx={{ fontSize: 40, color: "#FF7B00" }} />
+                            <div className={stylesMobile.cardText}>
+                                <h3>
+                                    Suporte a semana inteira
+                                </h3>
+                                <p>
+                                    Nós damos suporte toda a semana para nossos clientes.
+                                </p>
+                            </div>
 						</div>
 					</div>
                 </section>

@@ -51,6 +51,7 @@ h1,h2,h3,h4,h5,h6{
     flex-direction: column;
     align-items: center;
     justify-content: start;
+    gap: 50px;
 }
 
 .boxText{
@@ -66,5 +67,39 @@ h1,h2,h3,h4,h5,h6{
         font-size: 20px;
         font-weight: 600;
         color: $color_text_second;
+    }
+}
+
+.boxContent{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.card{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.cardText{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    h3{
+        margin: 0px;
+        color: $color_primary;
+    }
+    p{
+        margin: 0px;
+    }
+}
+
+@media (min-width:1024px) {
+    .home{
+
+        display: none;
     }
 }
