@@ -75,17 +75,19 @@ export default function Home() {
             </BoxGeneric>
         </div>
         <div className={stylesMobile.home}>
-            <BoxGeneric className={stylesMobile.firstbox}>
-                <div className={stylesMobile.FirstboxText}>
-                    <h1>
-                    Serviço de luxo e qualidade
-                    </h1>
-                    <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing
-                     elit. Donec tincidunt sagittis laoreet. Morbi tortor lectus, pharetra eget fermentum ac, pulvinar eget eros. Nullam at venenatis tellus.
-                    </p>
-                </div>
-            </BoxGeneric>
+            <div className={stylesMobile.backgroundFirstBox}>
+                <BoxGeneric className={stylesMobile.firstbox}>
+                    <div className={stylesMobile.FirstboxText}>
+                        <h1>
+                        Serviço de luxo e qualidade
+                        </h1>
+                        <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit. Donec tincidunt sagittis laoreet. Morbi tortor lectus, pharetra eget fermentum ac, pulvinar eget eros. Nullam at venenatis tellus.
+                        </p>
+                    </div>
+                </BoxGeneric>
+            </div>
         </div>
         </>
     );
