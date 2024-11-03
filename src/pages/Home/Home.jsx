@@ -79,13 +79,29 @@ export default function Home() {
                 <div className={stylesMobile.backgroundFirstBox}>
                     <BoxGeneric className={stylesMobile.firstbox}>
                         <div className={stylesMobile.FirstboxText}>
-                            <h1>
+                            <motion.h1
+                                initial={{ opacity: 0, x: 100 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{
+                                    duration: 1.5,
+                                    type: "spring",
+                                    delay: 0.1,
+                                }}
+                            >
                                 Serviço de luxo e qualidade
-                            </h1>
-                            <p>
+                            </motion.h1>
+                            <motion.p
+                                initial={{ opacity: 0, x: 100 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{
+                                    duration: 1.5,
+                                    type: "spring",
+                                    delay: 0.2,
+                                }}
+                            >
                                 Lorem ipsum dolor sit amet, consectetur adipiscing
                                 elit. Donec tincidunt sagittis laoreet. Morbi tortor lectus, pharetra eget fermentum ac, pulvinar eget eros. Nullam at venenatis tellus.
-                            </p>
+                            </motion.p>
                         </div>
                     </BoxGeneric>
                 </div>
