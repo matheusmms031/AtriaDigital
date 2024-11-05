@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import Alert from '@mui/material/Alert';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -8,6 +9,7 @@ const ContactForm = () => {
     phone: '',
     message: ''
   });
+  const [sendSuccess, setSendSuccess] = useState(true);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -16,6 +18,17 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Dados enviados:', formData);
+    if (formData.name && formData.email && formData.phone && formData.message) {
+        setSendSuccess(true);
+        location.href = `https://api.whatsapp.com/send/?phone=553123330000&text=
+        Olá tudo bem? Venho através do site, e tenho interesse em conhecer o plano de 
+        Meu nome é ${formData.name}
+        Meu contato é: ${formData.phone}
+        Meu email é ${formData.email}
+        Mensagem: ${formData.message}`;
+      } else {
+        setSendSuccess(false);
+      }
   };
 
   return (
@@ -74,6 +87,14 @@ const ContactForm = () => {
 
         <button type="submit" style={styles.button}>Enviar</button>
       </form>
+      <p></p>
+      {
+        sendSuccess? (
+            <></>
+        ) : (
+            <Alert severity="warning">Preencha todos os campos por gentileza.</Alert>
+        )
+      }
     </motion.div>
   );
 };
