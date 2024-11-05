@@ -4,17 +4,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import video from "../../assets/1015(4).mp4"
 import Carousel from "../../components/Carousel/Carousel";
-import img1 from "../../assets/imagem1.jpeg"
-import img2 from "../../assets/imagem2.jpg"
-import img3 from "../../assets/imagem3.jpg"
-import img4 from "../../assets/imagem4.jpg"
 
 // Array de imagens para o carrossel
-const images = [
-    img1,
-    img2,
-    img3,
-]
+
 
 export default function Sobre() {
     // O componente Sobre é responsável por renderizar a página "Sobre"

@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import './LoadingScreen.css';
 import { CircularProgress } from '@mui/material';
-import Logo from '../../assets/Logo.svg';
+import Logo from '../../assets/logo2.svg';
 
 const LoadingScreen = ({ isLoading }) => {
   return (
