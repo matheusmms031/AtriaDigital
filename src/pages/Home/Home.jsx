@@ -2,7 +2,10 @@ import BoxGeneric from "../../components/BoxGeneric/BoxGeneric";
 import styles from "./styles.module.scss";
 import NavigateNextTwoToneIcon from "@mui/icons-material/NavigateNextTwoTone";
 import { motion } from "framer-motion";
+import HomeIcon from '@mui/icons-material/Home';
+import HighQualityIcon from '@mui/icons-material/HighQuality';
 import { useContext } from "react";
+import PlanCard from "../../components/PlanCard/PlanCard";
 import HelpIcon from '@mui/icons-material/Help';
 import stylesMobile from "./stylesMobile.module.scss";
 import { pagesConfigContext } from "../../Contexts/PagesContexts";
@@ -99,33 +102,21 @@ export default function Home() {
                                     delay: 0.2,
                                 }}
                             >
-                                Lorem ipsum dolor sit amet, consectetur adipiscing
-                                elit. Donec tincidunt sagittis laoreet. Morbi tortor lectus, pharetra eget fermentum ac, pulvinar eget eros. Nullam at venenatis tellus.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt sagittis laoreet. Morbi tortor lectus, pharetra eget fermentum ac, pulvinar eget eros. Nullam at venenatis tellus. Duis purus ipsum, elementum eget elementum quis, blandit et ipsum. Maecenas sed nisi eget dui euismod accumsan.
                             </motion.p>
                         </div>
                     </BoxGeneric>
                 </div>
                 <section className={stylesMobile.box}>
-					<div className={stylesMobile.boxText}>
-						<h2>
-						A sua experiência é importante
-						</h2>
-						<p>
-						Nossos clientes possuem vantagens especiais para tratar de seus assuntos conosco.
-						</p>
-					</div>
-					<div className={stylesMobile.boxContent}>
-						<div className={stylesMobile.card}>
-                            <HelpIcon sx={{ fontSize: 40, color: "#FF7B00" }} />
-                            <div className={stylesMobile.cardText}>
-                                <h3>
-                                    Suporte a semana inteira
-                                </h3>
-                                <p>
-                                    Nós damos suporte toda a semana para nossos clientes.
-                                </p>
-                            </div>
-						</div>
+                    <div className={stylesMobile.boxText}>
+                        <h2>
+                            A sua experiência é importante
+                        </h2>
+                        <p>
+                            Nossos clientes possuem vantagens especiais para tratar de seus assuntos conosco.
+                        </p>
+                    </div>
+                    <div className={stylesMobile.boxContent}>
                         <div className={stylesMobile.card}>
                             <HelpIcon sx={{ fontSize: 40, color: "#FF7B00" }} />
                             <div className={stylesMobile.cardText}>
@@ -136,19 +127,68 @@ export default function Home() {
                                     Nós damos suporte toda a semana para nossos clientes.
                                 </p>
                             </div>
-						</div>
+                        </div>
                         <div className={stylesMobile.card}>
-                            <HelpIcon sx={{ fontSize: 40, color: "#FF7B00" }} />
+                            <HomeIcon sx={{ fontSize: 40, color: "#FF7B00" }} />
                             <div className={stylesMobile.cardText}>
                                 <h3>
-                                    Suporte a semana inteira
+                                    Atendimento a domicilio 
                                 </h3>
                                 <p>
-                                    Nós damos suporte toda a semana para nossos clientes.
+                                    Nossos técnicos estão sempre à disposição para ir a sua casa.
                                 </p>
                             </div>
-						</div>
-					</div>
+                        </div>
+                        <div className={stylesMobile.card}>
+                            <HighQualityIcon sx={{ fontSize: 40, color: "#FF7B00" }} />
+                            <div className={stylesMobile.cardText}>
+                                <h3>
+                                    Alta banda larga
+                                </h3>
+                                <p>
+                                    Nós disponibilizamos alta banda larga para todos os nossos clientes.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section className={stylesMobile.box}>
+                    <div className={stylesMobile.boxText}>
+                        <h2>
+                            A Atria também é para empresas
+                        </h2>
+                        <p>
+                            Além de domicilios também cobrimos ambientes empresariais de qualquer tipo.
+                        </p>
+                    </div>
+                </section>
+                <section className={stylesMobile.box}>
+                    <div className={stylesMobile.boxText}>
+                        <h2>
+                            Dê uma olhada nos nossos planos
+                        </h2>
+                        <p>
+                            Veja os nossos melhores planos para você e escolha aquele o qual mais te satisfaz
+                        </p>
+                    </div>
+                    <PlanCard
+                    price={`R$ 299.99`}
+                    title={"Básico"}
+                    bandwidth={`500 MEGA`}
+                    features={["Suporte 24/7", "Wi-Fi Grátis", "Instalação Grátis"]}
+                  />
+                  <PlanCard
+                    price={`R$ 299.99`}
+                    title={"Básico"}
+                    bandwidth={`500 MEGA`}
+                    features={["Suporte 24/7", "Wi-Fi Grátis", "Instalação Grátis"]}
+                  />
+                  <PlanCard
+                    price={`R$ 299.99`}
+                    title={"Básico"}
+                    bandwidth={`500 MEGA`}
+                    features={["Suporte 24/7", "Wi-Fi Grátis", "Instalação Grátis"]}
+                  />
                 </section>
             </div>
         </>
