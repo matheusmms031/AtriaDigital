@@ -44,11 +44,9 @@ export default function Home() {
                                     delay: 0.2,
                                 }}
                             >
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                                tincidunt sagittis laoreet. Morbi tortor lectus, pharetra eget
-                                fermentum ac, pulvinar eget eros. Nullam at venenatis tellus. Duis
-                                purus ipsum, elementum eget elementum quis, blandit et ipsum.
-                                Maecenas sed nisi eget dui euismod accumsan.
+                                
+                                Bem-vindo à AtriaDigital, onde conectividade é sinônimo de excelência. Somos uma empresa de telecomunicações especializada em oferecer internet de fibra óptica para os bairros mais sofisticados de Belo Horizonte.
+
                             </motion.p>
                         </div>
                         <div className={styles.iconWrapper}>

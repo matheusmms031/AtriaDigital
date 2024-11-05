@@ -58,11 +58,7 @@ export default function Sobre() {
                                                 delay: 0.2,
                                             }}
                                         >
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                                            tincidunt sagittis laoreet. Morbi tortor lectus, pharetra eget
-                                            fermentum ac, pulvinar eget eros. Nullam at venenatis tellus. Duis
-                                            purus ipsum, elementum eget elementum quis, blandit et ipsum.
-                                            Maecenas sed nisi eget dui euismod accumsan.
+                                            A AtriaDigital é uma empresa de telecomunicações dedicada a fornecer internet de fibra óptica de alta velocidade para bairros de luxo em Belo Horizonte. Com um compromisso de qualidade e excelência, a AtriaDigital entende as demandas de clientes que buscam estabilidade, rapidez e uma experiência de navegação premium. 
                                         </motion.p>
                                         <motion.p
                                             className={styles.description}
@@ -74,11 +70,7 @@ export default function Sobre() {
                                                 delay: 0.2,
                                             }}
                                         >
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                                            tincidunt sagittis laoreet. Morbi tortor lectus, pharetra eget
-                                            fermentum ac, pulvinar eget eros. Nullam at venenatis tellus. Duis
-                                            purus ipsum, elementum eget elementum quis, blandit et ipsum.
-                                            Maecenas sed nisi eget dui euismod accumsan.
+                                            Ao focar em regiões específicas, a AtriaDigital personaliza suas soluções para atender às necessidades tecnológicas dos clientes mais exigentes, acompanhando o avanço de tecnologias como automação residencial, streaming em múltiplos dispositivos e ambientes de trabalho remoto.
                                         </motion.p>
                                     </div>
                                 </div>

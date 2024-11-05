@@ -21,9 +21,16 @@ export default function AppBarGeneric() {
             marginLeft: 0,
             height: 0,
             marginTop:0,
+        },
+        hover: {
+            scale: 1.1,
+            transition: { duration: 0.3 },
+        },
+        tap: {
+            scale: 0.9,
+            transition: { duration: 0.2 },
         }
     };
-
 
     return (
         <div className={styles.appbar}>
@@ -33,10 +40,58 @@ export default function AppBarGeneric() {
                         <MenuIcon sx={{ fontSize: "2vmax", color: 'white' }} onClick={() => { setIsOpen(!isOpen) }} />
                     </motion.div>
                     <motion.ul className={styles.ul}>
-                        <motion.li className={styles.li} onClick={() => { updateSelectedPage("Home") }} variants={variants} animate={isOpen ? "open" : "close"} transition={{ duration: 0.5, delay: 0  }} exit={{ display: 'none' }} initial={{ opacity: 0 }}>HOME</motion.li>
-                        <motion.li className={styles.li} onClick={() => { updateSelectedPage("Sobre") }} variants={variants} animate={isOpen ? "open" : "close"} transition={{ duration: 0.9, delay: 0.1  }} exit={{ display: 'none' }} initial={{ opacity: 0 }}>SOBRE</motion.li>
-                        <motion.li className={styles.li} onClick={() => { updateSelectedPage("Planos") }} variants={variants} animate={isOpen ? "open" : "close"} transition={{ duration: 1.3, delay: 0.2  }} exit={{ display: 'none' }} initial={{ opacity: 0 }}>PLANOS</motion.li>
-                        <motion.li className={styles.li} onClick={() => { updateSelectedPage("Contato") }} variants={variants} animate={isOpen ? "open" : "close"} transition={{ duration: 1.5, delay: 0.3  }} exit={{ display: 'none' }} initial={{ opacity: 0 }}>contato</motion.li>
+                        <motion.li 
+                            className={styles.li} 
+                            onClick={() => { updateSelectedPage("Home") }} 
+                            variants={variants} 
+                            animate={isOpen ? "open" : "close"} 
+                            transition={{ duration: 0.5, delay: 0  }} 
+                            exit={{ display: 'none' }} 
+                            initial={{ opacity: 0 }}
+                            whileHover="hover"
+                            whileTap="tap"
+                        >
+                            HOME
+                        </motion.li>
+                        <motion.li 
+                            className={styles.li} 
+                            onClick={() => { updateSelectedPage("Sobre") }} 
+                            variants={variants} 
+                            animate={isOpen ? "open" : "close"} 
+                            transition={{ duration: 0.9, delay: 0.1  }} 
+                            exit={{ display: 'none' }} 
+                            initial={{ opacity: 0 }}
+                            whileHover="hover"
+                            whileTap="tap"
+                        >
+                            SOBRE
+                        </motion.li>
+                        <motion.li 
+                            className={styles.li} 
+                            onClick={() => { updateSelectedPage("Planos") }} 
+                            variants={variants} 
+                            animate={isOpen ? "open" : "close"} 
+                            transition={{ duration: 1.3, delay: 0.2  }} 
+                            exit={{ display: 'none' }} 
+                            initial={{ opacity: 0 }}
+                            whileHover="hover"
+                            whileTap="tap"
+                        >
+                            PLANOS
+                        </motion.li>
+                        <motion.li 
+                            className={styles.li} 
+                            onClick={() => { updateSelectedPage("Contato") }} 
+                            variants={variants} 
+                            animate={isOpen ? "open" : "close"} 
+                            transition={{ duration: 1.5, delay: 0.3  }} 
+                            exit={{ display: 'none' }} 
+                            initial={{ opacity: 0 }}
+                            whileHover="hover"
+                            whileTap="tap"
+                        >
+                            CONTATO
+                        </motion.li>
                     </motion.ul>
                 </div>
             </div>

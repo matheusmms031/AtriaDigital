@@ -11,7 +11,8 @@ function HomeComponent() {
               A melhor conexão da região metropolitana
             </h1>
             <p className={styles.description}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt sagittis laoreet. Morbi tortor lectus, pharetra eget fermentum ac, pulvinar eget eros. Nullam at venenatis tellus. Duis purus ipsum, elementum eget elementum quis, blandit et ipsum. Maecenas sed nisi eget dui euismod accumsan.
+            A AtriaDigital é uma empresa de telecomunicações dedicada a fornecer internet de fibra óptica de alta velocidade para bairros de luxo em Belo Horizonte. Com um compromisso de qualidade e excelência, a AtriaDigital entende as demandas de clientes que buscam estabilidade, rapidez e uma experiência de navegação premium. Seus serviços são projetados para maximizar a conectividade, oferecendo planos que garantem alta performance, essencial para atividades como streaming em 4K, videoconferências sem interrupções e uso intensivo de dados.
+            Ao focar em regiões específicas, a AtriaDigital personaliza suas soluções para atender às necessidades tecnológicas dos clientes mais exigentes, acompanhando o avanço de tecnologias como automação residencial, streaming em múltiplos dispositivos e ambientes de trabalho remoto.
             </p>
           </div>
           <div className={styles.iconWrapper}>
