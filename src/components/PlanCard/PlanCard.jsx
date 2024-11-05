@@ -1,7 +1,7 @@
 
 import styles from "./PlanCard.module.scss";
 
-const PlanCard = ({ title, price, bandwidth, features }) => {
+const PlanCard = ({ title, price, bandwidth, features, onClick }) => {
   return (
     <div className={styles.planCard}>
       <div className={styles.header}>{title}</div>
@@ -12,7 +12,7 @@ const PlanCard = ({ title, price, bandwidth, features }) => {
           <li key={index} className={styles.feature}>{feature}</li>
         ))}
       </ul>
-      <button className={styles.button}>Escolher Plano</button>
+      <button onClick={onClick} className={styles.button}>Escolher Plano</button>
     </div>
   );
 };

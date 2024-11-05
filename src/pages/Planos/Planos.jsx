@@ -2,6 +2,9 @@ import styles from "./styles.module.scss";
 import BoxGeneric from "../../components/BoxGeneric/BoxGeneric";
 import { motion } from "framer-motion";
 import PlanCard from "../../components/PlanCard/PlanCard";
+import { useState } from "react";
+import { Dialog } from "@mui/material";
+import ContactForm from "../../components/ContactForm/ContactForm";
 
 const cardVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -10,6 +13,19 @@ const cardVariants = {
 };
 
 export default function Planos() {
+
+  const [open, setOpen] = useState(false);
+  const [selectedPlan, setSelectedPlan] = useState(null);
+
+  const handleClickOpen = (title) => {
+    setOpen(true);
+    setSelectedPlan(title);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   return (
     <div className={styles.home}>
       <BoxGeneric>
@@ -26,7 +42,7 @@ export default function Planos() {
                   delay: 0.1,
                 }}
               >
-                Todos os <span style={{color:"#FF7B00"}}>nossos planos</span>
+                Todos os <span style={{ color: "#FF7B00" }}>nossos planos</span>
               </motion.h1>
               <motion.h2
                 className={styles.mainHeading2}
@@ -38,7 +54,7 @@ export default function Planos() {
                   delay: 0.3,
                 }}
               >
-                Confira e veja a <span style={{color:"#FF7B00"}}>melhor escolha</span> para você
+                Confira e veja a <span style={{ color: "#FF7B00" }}>melhor escolha</span> para você
               </motion.h2>
             </div>
             <div className={styles.cards}>
@@ -56,6 +72,7 @@ export default function Planos() {
                     title={title}
                     bandwidth={`${500 + index * 100} MEGA`}
                     features={["Suporte 24/7", "Wi-Fi Grátis", "Instalação Grátis"]}
+                    onClick={() => handleClickOpen(title)}
                   />
                 </motion.div>
               ))}
@@ -63,6 +80,31 @@ export default function Planos() {
           </div>
         </section>
       </BoxGeneric>
+      <Dialog
+        maxWidth="md"
+        fullWidth
+        style={{ backgroundColor: "rgba(0, 0, 0, 0)" }}
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+        backgroundColor="transparent"
+        PaperProps={{
+            style: {
+              backgroundColor: 'transparent',
+              boxShadow: 'none',
+            },
+        }}
+      >
+        <ContactForm
+          animate={{}}
+          initial={{}}
+          title='Solicitação de plano'
+          plan={selectedPlan}
+          phone="553123330000"
+        />
+      </Dialog>
     </div>
   );
 }
+

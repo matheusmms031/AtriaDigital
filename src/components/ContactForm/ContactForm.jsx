@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Alert from '@mui/material/Alert';
 
-const ContactForm = () => {
+const ContactForm = ({title = 'Entre em contato', initial={ opacity: 0, x: 100 }, animate={ opacity: 1, x: 0 }, phone,plan}) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
-    message: ''
+    message: '',
+    rua: '',
+    numero: '',
   });
   const [sendSuccess, setSendSuccess] = useState(true);
 
@@ -20,8 +22,8 @@ const ContactForm = () => {
     console.log('Dados enviados:', formData);
     if (formData.name && formData.email && formData.phone && formData.message) {
         setSendSuccess(true);
-        location.href = `https://api.whatsapp.com/send/?phone=553123330000&text=
-        Olá tudo bem? Venho através do site, e tenho interesse em conhecer o plano de 
+        location.href = `https://api.whatsapp.com/send/?phone=${phone}&text=
+        Olá tudo bem? Venho através do site, e tenho interesse em conhecer o plano ${plan}.
         Meu nome é ${formData.name}
         Meu contato é: ${formData.phone}
         Meu email é ${formData.email}
@@ -33,8 +35,8 @@ const ContactForm = () => {
 
   return (
     <motion.div style={styles.container}
-    initial={{ opacity: 0, x: 100 }}
-    animate={{ opacity: 1, x: 0 }}
+    initial={initial}
+    animate={animate}
     transition={{
         duration: 1.5,
         type: "spring",
@@ -42,7 +44,7 @@ const ContactForm = () => {
     }}
     
     >
-      <h2 style={styles.title}>Entre em Contato</h2>
+      <h2 style={styles.title}>{title}</h2>
       <form onSubmit={handleSubmit} style={styles.form}>
         <label style={styles.label}>Nome</label>
         <input
@@ -68,9 +70,32 @@ const ContactForm = () => {
           <div style={styles.fieldContainer}>
             <label style={styles.label}>Celular</label>
             <input
-              type="tel"
+              type="phone"
               name="phone"
               value={formData.phone}
+              onChange={handleChange}
+              style={styles.input}
+            />
+          </div>
+        </div>
+        <div style={styles.row}>
+          <div style={styles.fieldContainer}>
+            <label style={styles.label}>Rua</label>
+            <input
+              type="text"
+              name="rua"
+              value={formData.rua}
+              onChange={handleChange}
+              style={styles.input}
+            />
+          </div>
+
+          <div style={styles.fieldContainer}>
+            <label style={styles.label}>Número</label>
+            <input
+              type="number"
+              name="numero"
+              value={formData.numero}
               onChange={handleChange}
               style={styles.input}
             />

@@ -2,14 +2,14 @@ import styles from './styles.module.scss'
 import { motion} from "framer-motion";
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
-
+import Logo from '../../assets/logo.svg';
 
 export default function Front() {
     return (
         <div className={styles.front}>
             <div className={styles.contents}>
                 <div className={styles.title}>
-                    <motion.h1
+                    <motion.div
                     style={{color:"white"}}
                         initial={{opacity:0, x:100}}
                         animate={{
@@ -22,8 +22,8 @@ export default function Front() {
                             delay:0.5
                           }}
                     >
-                        LOGO
-                    </motion.h1>
+                        <img src={Logo} alt="Logo Atria Digital" className={styles.logo}/>
+                    </motion.div>
                 </div>
                 <div className={styles.boxsocial}>
                     <motion.div

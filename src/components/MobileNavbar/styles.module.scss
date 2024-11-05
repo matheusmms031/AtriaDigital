@@ -1,0 +1,16 @@
+.nav{
+    position: fixed;
+    width: 100vw;
+    height: 10vh;
+    top: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #646464;
+}
+
+.image{
+    width: 10vmax;
+    height: 10vmax;
+}

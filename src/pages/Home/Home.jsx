@@ -9,6 +9,7 @@ import PlanCard from "../../components/PlanCard/PlanCard";
 import HelpIcon from '@mui/icons-material/Help';
 import stylesMobile from "./stylesMobile.module.scss";
 import { pagesConfigContext } from "../../Contexts/PagesContexts";
+import MobileNavbar from "../../components/MobileNavbar/MobileNavbar";
 
 export default function Home() {
 
@@ -78,6 +79,7 @@ export default function Home() {
             </div>
             <div className={stylesMobile.home}>
                 <div className={stylesMobile.backgroundFirstBox}>
+                    <MobileNavbar/>
                     <BoxGeneric className={stylesMobile.firstbox}>
                         <div className={stylesMobile.FirstboxText}>
                             <motion.h1

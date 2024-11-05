@@ -13,11 +13,6 @@
   }
 
   
-  .loading-text {
-    color: #fff;
-    margin:0;
-    font-size: 4vmax;
-  }
 
 .loading-titles{
   display: flex;
@@ -25,11 +20,12 @@
   align-items: center;
   margin-bottom: 4vh;
 
-  p{
-    margin: 0;
-    font-size: 1.5vmax;
-    color: #fff;
-    font-weight: 900;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  }
 }
+
+.logo2{
+    margin: 0px;
+    width: 30vmax;
+    height: 30vmax;
+}
+
+

@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import './LoadingScreen.css';
 import { CircularProgress } from '@mui/material';
+import Logo from '../../assets/logo2.svg';
 
 const LoadingScreen = ({ isLoading }) => {
   return (
@@ -14,22 +15,16 @@ const LoadingScreen = ({ isLoading }) => {
           transition={{ duration: 1 }}
         >
           <div className="loading-titles">
-            <motion.h1 className="loading-text"
+            <motion.div className="loading-text"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 1 }}
-            >ATRIA DIGITAL</motion.h1>
-            <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1, delay:0.1 }}
             >
-              AONDE TUDO COMEÇA
-            </motion.p>
+                <img src={Logo} alt="Logo Atria Digital" className='logo2'/>
+            </motion.div>
+            <CircularProgress size="3vmax" sx={{ color: "#FF7B00" }} />
           </div>
-          <CircularProgress size="3vmax" sx={{ color: "#FF7B00" }} />
         </motion.div>
       )}
     </AnimatePresence>
