@@ -132,7 +132,7 @@ export default function Home() {
                             <HomeIcon sx={{ fontSize: 40, color: "#FF7B00" }} />
                             <div className={stylesMobile.cardText}>
                                 <h3>
-                                    Atendimento a domicilio 
+                                    Atendimento a domicilio
                                 </h3>
                                 <p>
                                     Nossos técnicos estão sempre à disposição para ir a sua casa.
@@ -172,23 +172,23 @@ export default function Home() {
                         </p>
                     </div>
                     <PlanCard
-                    price={`R$ 299.99`}
-                    title={"Básico"}
-                    bandwidth={`500 MEGA`}
-                    features={["Suporte 24/7", "Wi-Fi Grátis", "Instalação Grátis"]}
-                  />
-                  <PlanCard
-                    price={`R$ 299.99`}
-                    title={"Básico"}
-                    bandwidth={`500 MEGA`}
-                    features={["Suporte 24/7", "Wi-Fi Grátis", "Instalação Grátis"]}
-                  />
-                  <PlanCard
-                    price={`R$ 299.99`}
-                    title={"Básico"}
-                    bandwidth={`500 MEGA`}
-                    features={["Suporte 24/7", "Wi-Fi Grátis", "Instalação Grátis"]}
-                  />
+                        price={`R$ 299.99`}
+                        title={"Básico"}
+                        bandwidth={`500 MEGA`}
+                        features={["Suporte 24/7", "Wi-Fi Grátis", "Instalação Grátis"]}
+                    />
+                    <PlanCard
+                        price={`R$ 299.99`}
+                        title={"Básico"}
+                        bandwidth={`500 MEGA`}
+                        features={["Suporte 24/7", "Wi-Fi Grátis", "Instalação Grátis"]}
+                    />
+                    <PlanCard
+                        price={`R$ 299.99`}
+                        title={"Básico"}
+                        bandwidth={`500 MEGA`}
+                        features={["Suporte 24/7", "Wi-Fi Grátis", "Instalação Grátis"]}
+                    />
                 </section>
             </div>
         </>
