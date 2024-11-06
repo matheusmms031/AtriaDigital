@@ -17,11 +17,12 @@ export function App() {
     // Simula o carregamento de dados
     setTimeout(() => {
       setIsLoading(false);
-    }, 0); // Ajuste o tempo para simular o tempo de carregamento
+    }, 2000); // Ajuste o tempo para simular o tempo de carregamento
   }, []);
 
     return (
         <>
+        <LoadingScreen isLoading={isLoading} />
         <video src={video} autoPlay muted loop className="video-fundo" />
         <img src={fundo} className="video-fundo" />
         {!isLoading && 
