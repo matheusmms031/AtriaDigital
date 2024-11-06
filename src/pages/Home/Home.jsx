@@ -68,7 +68,7 @@ export default function Home() {
                                     }}
                                 >
                                     <NavigateNextTwoToneIcon
-                                        sx={{ fontSize: 90, color: "white" }}
+                                        sx={{ fontSize: 90, color: "white"}}
                                         onClick={() => { updateSelectedPage("Sobre") }}
                                     />
                                 </motion.div>

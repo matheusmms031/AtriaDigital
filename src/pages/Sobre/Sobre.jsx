@@ -34,7 +34,7 @@ export default function Sobre() {
                                         <h1
                                             className={styles.mainHeading}
                                         >
-                                            Sobre a AtriaDigital
+                                            Sobre a Atria Digital
                                         </h1>
                                         <p>Um pouco do que somos</p>
                                     </motion.div>
@@ -50,7 +50,7 @@ export default function Sobre() {
                                                 delay: 0.2,
                                             }}
                                         >
-                                            A AtriaDigital é uma empresa de telecomunicações dedicada a fornecer internet de fibra óptica de alta velocidade para bairros de luxo em Belo Horizonte. Com um compromisso de qualidade e excelência, a AtriaDigital entende as demandas de clientes que buscam estabilidade, rapidez e uma experiência de navegação premium. 
+                                            A Atria Digital é uma empresa de telecomunicações dedicada a fornecer internet de fibra óptica de alta velocidade para bairros de luxo em Belo Horizonte. Com um compromisso de qualidade e excelência, a AtriaDigital entende as demandas de clientes que buscam estabilidade, rapidez e uma experiência de navegação premium. 
                                         </motion.p>
                                         <motion.p
                                             className={styles.description}
