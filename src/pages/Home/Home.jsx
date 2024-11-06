@@ -40,7 +40,7 @@ export default function Home() {
                             >
                                 A <span style={{ color: "#FF7B00" }}>melhor conexão</span> da região
                                 <br />
-                                metropolitana é na Atria
+                                metropolitana é na Átria
                             </motion.h1>
                             <motion.p
                                 className={styles.description}
@@ -52,8 +52,8 @@ export default function Home() {
                                     delay: 0.2,
                                 }}
                             >
-                                
-                                Bem-vindo à AtriaDigital, onde conectividade é sinônimo de excelência. Somos uma empresa de telecomunicações especializada em oferecer internet de fibra óptica para os bairros mais sofisticados de Belo Horizonte.
+
+                                Bem-vindo à Átria Digital, onde conectividade é sinônimo de excelência. Somos uma empresa de telecomunicações especializada em oferecer internet de fibra óptica para os bairros mais sofisticados de Belo Horizonte.
 
                             </motion.p>
                         </div>
@@ -109,7 +109,7 @@ export default function Home() {
                                     delay: 0.2,
                                 }}
                             >
-                                Bem-vindo à AtriaDigital, onde conectividade é sinônimo de excelência. Somos uma empresa de telecomunicações especializada em oferecer internet de fibra óptica para os bairros mais sofisticados de Belo Horizonte.
+                                Bem-vindo à Átria Digital, onde conectividade é sinônimo de excelência. Somos uma empresa de telecomunicações especializada em oferecer internet de fibra óptica para os bairros mais sofisticados de Belo Horizonte.
                             </motion.p>
                         </div>
                     </BoxGeneric>
@@ -162,7 +162,7 @@ export default function Home() {
                 <section className={stylesMobile.box}>
                     <div className={stylesMobile.boxText}>
                         <h2>
-                            A Atria também é para empresas
+                            A Átria também é para empresas
                         </h2>
                         <p>
                             Além de domicilios também cobrimos ambientes empresariais de qualquer tipo.
@@ -201,3 +201,4 @@ export default function Home() {
         </>
     );
 }
+

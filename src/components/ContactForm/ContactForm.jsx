@@ -128,13 +128,15 @@ const styles = {
   container: {
     margin: '0 auto',
     padding: '4vh',
-    border: '0.1vw solid black',
+    border: '0.1vw solid white',
     borderRadius: '0.4vmax',
-    backgroundColor: 'white',
+    color: 'white',
+    backdropFilter: "blur(5px)",
+    backgroundColor: "#ff7b0065",
   },
   title: {
     textAlign: 'center',
-    color: 'black',
+    color: 'white',
     fontSize: '2vmax',
     marginBottom: '2vh',
   },
@@ -144,7 +146,7 @@ const styles = {
     gap: '1.5vh',
   },
   label: {
-    color: 'black',
+    color: 'white',
     fontSize: '1vmax',
     fontWeight: 'bold',
     marginBottom: '0.5vh',
@@ -152,10 +154,11 @@ const styles = {
   input: {
     padding: '1vh',
     fontSize: '0.8vmax',
-    border: '0.1vw solid black',
+    border: '0.1vw solid white',
     borderRadius: '0.4vmax',
-    color: 'black',
-    backgroundColor: 'white',
+    color: 'white',
+    backgroundColor: 'transparent',
+    backdropFilter: "blur(10px)",
   },
   row: {
     display: 'flex',
@@ -171,41 +174,32 @@ const styles = {
     width:"100%",
     padding: '1vh',
     fontSize: '0.8vmax',
-    border: '0.1vw solid black',
+    border: '0.1vw solid white',
     borderRadius: '0.4vmax',
-    color: 'black',
-    backgroundColor: 'white',
+    color: 'white',
+    backgroundColor: 'transparent',
   },
   textarea: {
     padding: '1vh',
     fontSize: '0.8vmax',
     height:"5vmax",
-    border: '0.1vw solid black',
+    border: '0.1vw solid white',
     borderRadius: '0.4vmax',
     resize: "none",
-    color: 'black',
-    backgroundColor: 'white',
+    color: 'white',
+    backgroundColor: 'transparent',
+    backdropFilter: "blur(10px)",
   },
   button: {
     padding: '1vh',
     fontSize: '1vmax',
-    backgroundColor: 'black',
-    color: 'white',
+    color: '#ff7b00',
     border: 'none',
     borderRadius: '0.4vmax',
     cursor: 'pointer',
     transition: 'background-color 0.3s',
-    hover:{
-        backgroundColor:"#fffff",
-    }
+    backgroundColor: "#ffffff",
   },
 };
-
-const styleSheet = document.styleSheets[0];
-styleSheet.insertRule(`
-  button:hover {
-    background-color: orange !important;
-  }
-`, styleSheet.cssRules.length);
 
 export default ContactForm;

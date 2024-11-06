@@ -7,7 +7,6 @@ import Carousel from "../../components/Carousel/Carousel";
 
 // Array de imagens para o carrossel
 
-
 export default function Sobre() {
     // O componente Sobre é responsável por renderizar a página "Sobre"
 
@@ -41,7 +40,7 @@ export default function Sobre() {
                                         <h1
                                             className={styles.mainHeading}
                                         >
-                                            Sobre a Atria Digital
+                                            Sobre a Átria Digital
                                         </h1>
                                         <p>Um pouco do que somos</p>
                                     </motion.div>
@@ -57,7 +56,7 @@ export default function Sobre() {
                                                 delay: 0.2,
                                             }}
                                         >
-                                            A Atria Digital é uma empresa de telecomunicações dedicada a fornecer internet de fibra óptica de alta velocidade para bairros de luxo em Belo Horizonte. Com um compromisso de qualidade e excelência, a AtriaDigital entende as demandas de clientes que buscam estabilidade, rapidez e uma experiência de navegação premium. 
+                                            A Átria Digital é uma empresa de telecomunicações dedicada a fornecer internet de fibra óptica de alta velocidade para bairros de luxo em Belo Horizonte. Com um compromisso de qualidade e excelência, a Átria Digital entende as demandas de clientes que buscam estabilidade, rapidez e uma experiência de navegação premium.
                                         </motion.p>
                                         <motion.p
                                             className={styles.description}
@@ -69,7 +68,7 @@ export default function Sobre() {
                                                 delay: 0.2,
                                             }}
                                         >
-                                            Ao focar em regiões específicas, a AtriaDigital personaliza suas soluções para atender às necessidades tecnológicas dos clientes mais exigentes, acompanhando o avanço de tecnologias como automação residencial, streaming em múltiplos dispositivos e ambientes de trabalho remoto.
+                                            Ao focar em regiões específicas, a Átria Digital personaliza suas soluções para atender às necessidades tecnológicas dos clientes mais exigentes, acompanhando o avanço de tecnologias como automação residencial, streaming em múltiplos dispositivos e ambientes de trabalho remoto.
                                         </motion.p>
                                     </div>
                                 </div>
