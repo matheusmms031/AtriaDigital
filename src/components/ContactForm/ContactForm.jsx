@@ -132,7 +132,8 @@ const styles = {
     borderRadius: '0.4vmax',
     color: 'white',
     backdropFilter: "blur(5px)",
-    backgroundColor: "#ff7b0065",
+    backgroundColor: "transparent",
+
   },
   title: {
     textAlign: 'center',
@@ -146,7 +147,7 @@ const styles = {
     gap: '1.5vh',
   },
   label: {
-    color: 'white',
+    color: '#000000',
     fontSize: '1vmax',
     fontWeight: 'bold',
     marginBottom: '0.5vh',
@@ -154,11 +155,11 @@ const styles = {
   input: {
     padding: '1vh',
     fontSize: '0.8vmax',
-    border: '0.1vw solid white',
+    border: '0.2vw solid white',
     borderRadius: '0.4vmax',
     color: 'white',
-    backgroundColor: 'transparent',
-    backdropFilter: "blur(10px)",
+    backgroundColor: '#ffffff68',
+    
   },
   row: {
     display: 'flex',
@@ -174,21 +175,20 @@ const styles = {
     width:"100%",
     padding: '1vh',
     fontSize: '0.8vmax',
-    border: '0.1vw solid white',
+    border: '0.2vw solid white',
     borderRadius: '0.4vmax',
     color: 'white',
-    backgroundColor: 'transparent',
+    backgroundColor: 'white',
   },
   textarea: {
     padding: '1vh',
     fontSize: '0.8vmax',
     height:"5vmax",
-    border: '0.1vw solid white',
+    border: '0.2vw solid white',
     borderRadius: '0.4vmax',
     resize: "none",
     color: 'white',
-    backgroundColor: 'transparent',
-    backdropFilter: "blur(10px)",
+    backgroundColor: '#ffffff68',
   },
   button: {
     padding: '1vh',
@@ -197,9 +197,17 @@ const styles = {
     border: 'none',
     borderRadius: '0.4vmax',
     cursor: 'pointer',
-    transition: 'background-color 0.3s',
+    transition: '0.3s',
     backgroundColor: "#ffffff",
   },
 };
+
+const styleSheet = document.styleSheets[0];
+styleSheet.insertRule(`
+  button:hover {
+    background-color: #ff7b00!important;
+    color: white !important;
+  }
+`, styleSheet.cssRules.length);
 
 export default ContactForm;
