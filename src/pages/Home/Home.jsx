@@ -19,7 +19,14 @@ export default function Home() {
         <>
             <div className={styles.home}>
                 <BoxGeneric>
-                    <section className={styles.contentWrapper}>
+                    <motion.section className={styles.contentWrapper}
+                        initial={{backdropFilter: "blur(0px)"}}
+                        animate={{backdropFilter: "blur(5px)"}}
+                        transition={{
+                            duration: 1.5,
+                            type: "ease-out",
+                        }}
+                    >
                         <div className={styles.textContent}>
                             <motion.h1
                                 className={styles.mainHeading}
@@ -74,7 +81,7 @@ export default function Home() {
                                 </motion.div>
                             </motion.div>
                         </div>
-                    </section>
+                    </motion.section>
                 </BoxGeneric>
             </div>
             <div className={stylesMobile.home}>

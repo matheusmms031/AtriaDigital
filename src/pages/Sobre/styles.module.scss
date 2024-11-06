@@ -21,6 +21,7 @@
 
 .contentWrapper {
   z-index: 0;
+  padding: 10vh 0px 10vh 0px;
   display: flex;
   flex-direction: column; /* 240px convertido aproximadamente */
   align-items: center;
@@ -28,6 +29,8 @@
   justify-content: start;
   flex-wrap: wrap;
   margin: auto 0;/* 80px e 37px convertidos */
+  backdrop-filter: blur(5px);
+    width: 100vw; /* 973px convertido */
 }
 
 .sobreMenu{

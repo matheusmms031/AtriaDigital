@@ -16,7 +16,14 @@ export default function Sobre() {
             {/* BoxGeneric é provavelmente um componente de layout reutilizável */}
             <BoxGeneric>
                 <section>
-                    <div className={styles.contentWrapper}>
+                    <motion.div className={styles.contentWrapper}
+                    initial={{backdropFilter: "blur(0px)"}}
+                    animate={{backdropFilter: "blur(5px)"}}
+                    transition={{
+                        duration: 1.5,
+                        type: "ease-out",
+                    }}
+                    >
                         {/* AnimatePresence é usado para animações de saída, mas não está sendo utilizado aqui */}
                         <div className={styles.pageContent}>
                             <div className={styles.textContent}>
@@ -79,7 +86,7 @@ export default function Sobre() {
                             {/* Este é o espaço onde o carrossel deve ficar */}
                             {/* Nota: O componente Carousel está importado mas não está sendo utilizado */}
                         </div>
-                    </div>
+                    </motion.div>
                 </section>
             </BoxGeneric>
         </div>
