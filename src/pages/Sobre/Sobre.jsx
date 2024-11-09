@@ -16,8 +16,8 @@ export default function Sobre() {
             <BoxGeneric>
                 <section>
                     <motion.div className={styles.contentWrapper}
-                    initial={{backdropFilter: "blur(0px)"}}
-                    animate={{backdropFilter: "blur(5px)"}}
+                    initial={{backdropFilter: "blur(0px)", backgroundColor:"#0000000"}}
+                    animate={{backdropFilter: "blur(5px)", backgroundColor: "#00000049"}}
                     transition={{
                         duration: 1.5,
                         type: "ease-out",

@@ -1,10 +1,10 @@
 import BoxGeneric from "../../components/BoxGeneric/BoxGeneric";
-import ContactForm from "../../components/ContactForm/ContactForm";
+import ContactGeneric from "../../components/ContactGeneric/ContactGeneric.jsx";
 
 export default function Contato(){
     return(
         <BoxGeneric>
-            <ContactForm/>
+            <ContactGeneric/>
         </BoxGeneric>
     )
 }

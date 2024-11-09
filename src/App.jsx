@@ -30,7 +30,6 @@ export function App() {
             <Front/>
             <AppBarGeneric />
             <PageOrganizer/>
-            <Footer/>
         </PagesConfigProvider>}
         </>
     )

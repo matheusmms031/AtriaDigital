@@ -202,12 +202,4 @@ const styles = {
   },
 };
 
-const styleSheet = document.styleSheets[0];
-styleSheet.insertRule(`
-  button:hover {
-    background-color: #ff7b00!important;
-    color: white !important;
-  }
-`, styleSheet.cssRules.length);
-
 export default ContactForm;
