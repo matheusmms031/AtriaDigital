@@ -110,7 +110,7 @@ export default function ContactGeneric({Firstsection = false,plan='BÁSICO', pho
 
     return(
         <motion.div
-            {...FirstSection? null : { initial: { opacity: 0, x:100 }, animate: { opacity: 1, x:0 } }}
+            {...Firstsection? null : { initial: { opacity: 0, x:100 }, animate: { opacity: 1, x:0 } }}
             transition={{ duration: 1.5, type: "spring", }}
         >
             <div className={styles.ContactGeneric}>
