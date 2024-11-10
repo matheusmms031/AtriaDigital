@@ -1,15 +1,49 @@
 import BoxGeneric from "../../components/BoxGeneric/BoxGeneric";
 import styles from "./styles.module.scss";
 import NavigateNextTwoToneIcon from "@mui/icons-material/NavigateNextTwoTone";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import HomeIcon from '@mui/icons-material/Home';
 import HighQualityIcon from '@mui/icons-material/HighQuality';
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import PlanCard from "../../components/PlanCard/PlanCard";
 import HelpIcon from '@mui/icons-material/Help';
 import stylesMobile from "./stylesMobile.module.scss";
 import { pagesConfigContext } from "../../Contexts/PagesContexts";
 import MobileNavbar from "../../components/MobileNavbar/MobileNavbar";
+import { useInView } from 'react-intersection-observer';
+
+const ScrollSection = ({ children }) => {
+    // Controla a animação
+    const controls = useAnimation();
+    // Ref para observar a visibilidade do elemento
+    const [ref, inView] = useInView({
+        triggerOnce: false, // Animação ocorre apenas uma vez
+        threshold: 0.1 // Inicia quando 10% do elemento está visível
+    });
+
+    // Inicia a animação quando o elemento está visível
+    useEffect(() => {
+        if (inView) {
+            controls.start({
+                opacity: 1,
+                y: 0,
+                transition: { duration: 0.5, ease: 'easeOut' }
+            });
+        } else {
+            controls.start({ opacity: 0, y: 50 });
+        }
+    }, [controls, inView]);
+
+    return (
+        <motion.div
+            ref={ref}
+            animate={controls}
+            initial={{ opacity: 0, y: 50 }}
+        >
+            {children}
+        </motion.div>
+    );
+};
 
 export default function Home() {
 
@@ -115,14 +149,16 @@ export default function Home() {
                     </BoxGeneric>
                 </div>
                 <section className={stylesMobile.box}>
-                    <div className={stylesMobile.boxText}>
-                        <h2>
-                            A sua experiência é importante
-                        </h2>
-                        <p>
-                            Nossos clientes possuem vantagens especiais para tratar de seus assuntos conosco.
-                        </p>
-                    </div>
+                    <ScrollSection>
+                        <div className={stylesMobile.boxText}>
+                            <h2>
+                                A sua experiência é importante
+                            </h2>
+                            <p>
+                                Nossos clientes possuem vantagens especiais para tratar de seus assuntos conosco.
+                            </p>
+                        </div>
+                    </ScrollSection>
                     <div className={stylesMobile.boxContent}>
                         <div className={stylesMobile.card}>
                             <HelpIcon sx={{ fontSize: 40, color: "#FF7B00" }} />
