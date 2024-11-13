@@ -69,26 +69,12 @@ export default function Sobre() {
                             }}>
                             <motion.li
                                 whileHover={{ backgroundColor: "#FF7B00", color: "#fff" }}
+                                style={{ borderRadius: "0px 30px 30px 0px" }}
                                 onClick={() => setPageSelect("Historia")}
                                 variants={variants}
                                 animate={pageSelect === "Historia"? "select" : "notSelect" }
                             >
                                 Vantagens
-                            </motion.li>
-                        </motion.div>
-                        <motion.div
-                            initial={{ opacity: 0}}
-                            animate={{ opacity: 1}}
-                            transition={{
-                                duration: 1.5,
-                                type: "spring",
-                                delay: 0.3,
-                            }}>
-                            <motion.li
-                                style={{ borderRadius: "0px 30px 30px 0px" }}
-                                whileHover={{ backgroundColor: "#FF7B00", color: "#fff" }}
-                            >
-                                Área de atuação
                             </motion.li>
                         </motion.div>
                     </motion.ul>
