@@ -21,7 +21,7 @@
 
 .contentWrapper {
   z-index: 0;
-  padding: 10vh 0px 10vh 0px;
+  padding: 5vh 0px 5vh 0px;
   display: flex;
   flex-direction: column; /* 240px convertido aproximadamente */
   align-items: center;
@@ -36,21 +36,26 @@
 }
 
 .sobreMenu{
-  font-size: large;
-  color: #ffffff;
+  color: #FF7B00;
+  padding: 0px;
+  background-color: #ffffff;
   font-weight: 600;
   display: flex;
   flex-direction: row;
-  gap: 3vw;
   list-style: none;
+  border-radius: 30px;
 
   li{
-    font-size: 1.1vmax;
-    font-size: 1.1vmax;
+    font-size: 1vmax;
+    padding: 1vh 1.8vw; /* 10px e 37px convertidos */
     cursor: pointer;
-
+    -webkit-box-shadow: inset -1px 15px 78px -28px rgba(0,0,0,0.59);
+    -moz-box-shadow: inset -1px 15px 78px -28px rgba(0,0,0,0.59);
+    box-shadow: inset -1px 15px 78px -28px rgba(0, 0, 0, 0.205)
   }
 }
+
+
 
 .textContent {
   display: flex; /* 240px convertido */
@@ -137,4 +142,9 @@
     font-size: 1.4vw;
   }
   margin-bottom: 2.5vh;
+}
+
+.pageContent{
+    display: flex;
+    height: 45vh;
 }

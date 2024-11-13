@@ -16,6 +16,11 @@ export default function Sobre() {
 
     const PageComponent = pages[pageSelect];
 
+    const variants = {
+        select: {backgroundColor: "#FF7B00", color: "#fff"},
+        notSelect: {backgroundColor: "#fff", color: "#FF7B00"}
+    };
+
     return (
         <div className={styles.home}>
             <BoxGeneric>
@@ -27,62 +32,85 @@ export default function Sobre() {
                         type: "ease-out",
                     }}
                 >
-                        <ul className={styles.sobreMenu}>
+                    <motion.ul className={styles.sobreMenu}
+                    initial={{ opacity: 0}}
+                    animate={{ opacity: 1}}
+                    transition={{
+                        duration: 1.5,
+                        type: "spring",
+                        delay: 0.3,
+                    }}>
+                        <motion.div
+                            initial={{ opacity: 0}}
+                            animate={{ opacity: 1}}
+                            transition={{
+                                duration: 1.5,
+                                type: "spring",
+                                delay: 0.3,
+                            }}>
                             <motion.li
-                                initial={{ opacity: 0, x: 100 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                transition={{
-                                    duration: 1.5,
-                                    type: "spring",
-                                    delay: 0.5,
-                                }}
+                                style={{ borderRadius: "30px 0px 0px 30px" }}
                                 onClick={() => setPageSelect("Sobre")}
+                                whileHover={{ backgroundColor: "#FF7B00", color: "#fff" }}
+                                variants={variants}
+                                animate={pageSelect === "Sobre"? "select" : "notSelect" }
                             >
                                 Sobre a Atria
                             </motion.li>
-                            <motion.li
-                                initial={{ opacity: 0, x: 100 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                transition={{
-                                    duration: 1.5,
-                                    type: "spring",
-                                    delay: 0.8,
-                                }}
-                                onClick={() => setPageSelect("Historia")}
-                            >
-                                A história
-                            </motion.li>
-                            <motion.li
-                                initial={{ opacity: 0, x: 100 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                transition={{
-                                    duration: 1.5,
-                                    type: "spring",
-                                    delay: 1.1,
-                                }}
-                            >
-                                Fazer parte
-                            </motion.li>
-                        </ul>
 
-                        <div className={styles.pageContent}>
-                            <AnimatePresence mode="wait">
-                                {PageComponent && (
-                                    <motion.div
-                                        key={pageSelect}
-                                        initial={{ opacity: 0, x: 100 }}
-                                        animate={{ opacity: 1, x: 0 }}
-                                        exit={{ opacity: 0, x: -100 }}
-                                        transition={{
-                                            duration: 0.5,
-                                            type: "spring",
-                                        }}
-                                    >
-                                        <PageComponent />
-                                    </motion.div>
-                                )}
-                            </AnimatePresence>
-                        </div>
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0,}}
+                            animate={{ opacity: 1,}}
+                            transition={{
+                                duration: 1.5,
+                                type: "spring",
+                                delay: 0.3,
+                            }}>
+                            <motion.li
+                                whileHover={{ backgroundColor: "#FF7B00", color: "#fff" }}
+                                onClick={() => setPageSelect("Historia")}
+                                variants={variants}
+                                animate={pageSelect === "Historia"? "select" : "notSelect" }
+                            >
+                                Vantagens
+                            </motion.li>
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0}}
+                            animate={{ opacity: 1}}
+                            transition={{
+                                duration: 1.5,
+                                type: "spring",
+                                delay: 0.3,
+                            }}>
+                            <motion.li
+                                style={{ borderRadius: "0px 30px 30px 0px" }}
+                                whileHover={{ backgroundColor: "#FF7B00", color: "#fff" }}
+                            >
+                                Área de atuação
+                            </motion.li>
+                        </motion.div>
+                    </motion.ul>
+
+                    <div className={styles.pageContent}>
+                        <AnimatePresence mode="wait">
+                            {PageComponent && (
+                                <motion.div
+                                    key={pageSelect}
+                                    initial={{ opacity: 0, x: 100 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    exit={{ opacity: 0, x: -100 }}
+                                    transition={{
+                                        duration: 0.5,
+                                        type: "spring",
+                                    }}
+                                >
+                                    <PageComponent />
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
+                    </div>
                 </motion.div>
             </BoxGeneric>
         </div>

@@ -5,7 +5,6 @@ import video from "../../../assets/1015(4).mp4";
 
 export function SobreAtria() {
     return (
-        <div className={styles.pageContent}>
             <div className={styles.textContent}>
                 <div className={styles.boxtext}>
                     <motion.div className={styles.titles}
@@ -58,7 +57,6 @@ export function SobreAtria() {
                         delay: 0.2,
                     }} />
             </div>
-        </div>
             )
 }
 
@@ -66,18 +64,20 @@ export function Ahistoria() {
     return (
         <div className={styles.textContent}>
         <div className={styles.boxtext}>
-                <motion.h1
-                    className={styles.mainHeading}
-                    initial={{ opacity: 0, x: 100 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{
-                        duration: 1.5,
-                        type: "spring",
-                        delay: 0.1,
-                    }}
-                >
-                    Página de Sobre
-                </motion.h1>
+            <motion.div className={styles.titles}
+                        initial={{ opacity: 0, x: 100 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{
+                            duration: 1.5,
+                            type: "spring",
+                            delay: 0.1,
+                        }}
+                    >
+                        <h1 className={styles.mainHeading}>
+                            As nossas vantagens
+                        </h1>
+                        <p>Algumas das regalias de ser Átria</p>
+                    </motion.div>
                 <div className={styles.boxDescriptions}>
                 <motion.p
                     className={styles.description}
