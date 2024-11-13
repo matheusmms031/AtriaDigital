@@ -19,15 +19,18 @@
   }
   
   .contentWrapper {
-    z-index: 0;
+    z-index: 0; /* index -1 pois cobriu o menu */
     display: flex;
     min-width: 12vw; /* 240px convertido aproximadamente */
     align-items: center;
     gap: 0.5vw; /* 10px convertido */
-    justify-content: start;
+    justify-content: center;
     flex-wrap: wrap;
     margin: auto 0;
     padding: 8vh 2vw; /* 80px e 37px convertidos */
+    backdrop-filter: blur(5px);
+    background-color: #00000049;
+    width: 100vw; /* 973px convertido */
   }
   
   .textContent {
@@ -40,6 +43,10 @@
     justify-content: start;
     width: 48.65vw; /* 973px convertido */
     margin: auto 0;
+    
+    h1{
+        text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.77);
+    }
   }
   
   .mainHeading {

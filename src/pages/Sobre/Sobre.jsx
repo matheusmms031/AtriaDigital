@@ -2,87 +2,117 @@ import BoxGeneric from "../../components/BoxGeneric/BoxGeneric";
 import styles from "./styles.module.scss";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import video from "../../assets/1015(4).mp4"
+import video from "../../assets/1015(4).mp4";
 import Carousel from "../../components/Carousel/Carousel";
-
-// Array de imagens para o carrossel
-
+import { Ahistoria, SobreAtria } from "./sections/Sections";
 
 export default function Sobre() {
-    // O componente Sobre é responsável por renderizar a página "Sobre"
+    const [pageSelect, setPageSelect] = useState("Sobre");
+
+    const pages = {
+        "Sobre": SobreAtria,
+        "Historia": Ahistoria
+    };
+
+    const PageComponent = pages[pageSelect];
+
+    const variants = {
+        select: {backgroundColor: "#FF7B00", color: "#fff"},
+        notSelect: {backgroundColor: "#fff", color: "#FF7B00"}
+    };
 
     return (
         <div className={styles.home}>
-            {/* BoxGeneric é provavelmente um componente de layout reutilizável */}
             <BoxGeneric>
-                <section>
-                    <div className={styles.contentWrapper}>
-                        {/* AnimatePresence é usado para animações de saída, mas não está sendo utilizado aqui */}
-                        <div className={styles.pageContent}>
-                            <div className={styles.textContent}>
-                                <div className={styles.boxtext}>
-                                    {/* Título animado usando framer-motion */}
-                                    <motion.div className={styles.titles}
+                <motion.div className={styles.contentWrapper}
+                    initial={{ backdropFilter: "blur(0px)", backgroundColor: "#0000000" }}
+                    animate={{ backdropFilter: "blur(5px)", backgroundColor: "#00000049" }}
+                    transition={{
+                        duration: 1.5,
+                        type: "ease-out",
+                    }}
+                >
+                    <motion.ul className={styles.sobreMenu}
+                    initial={{ opacity: 0}}
+                    animate={{ opacity: 1}}
+                    transition={{
+                        duration: 1.5,
+                        type: "spring",
+                        delay: 0.3,
+                    }}>
+                        <motion.div
+                            initial={{ opacity: 0}}
+                            animate={{ opacity: 1}}
+                            transition={{
+                                duration: 1.5,
+                                type: "spring",
+                                delay: 0.3,
+                            }}>
+                            <motion.li
+                                style={{ borderRadius: "30px 0px 0px 30px" }}
+                                onClick={() => setPageSelect("Sobre")}
+                                whileHover={{ backgroundColor: "#FF7B00", color: "#fff" }}
+                                variants={variants}
+                                animate={pageSelect === "Sobre"? "select" : "notSelect" }
+                            >
+                                Sobre a Atria
+                            </motion.li>
+
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0,}}
+                            animate={{ opacity: 1,}}
+                            transition={{
+                                duration: 1.5,
+                                type: "spring",
+                                delay: 0.3,
+                            }}>
+                            <motion.li
+                                whileHover={{ backgroundColor: "#FF7B00", color: "#fff" }}
+                                onClick={() => setPageSelect("Historia")}
+                                variants={variants}
+                                animate={pageSelect === "Historia"? "select" : "notSelect" }
+                            >
+                                Vantagens
+                            </motion.li>
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0}}
+                            animate={{ opacity: 1}}
+                            transition={{
+                                duration: 1.5,
+                                type: "spring",
+                                delay: 0.3,
+                            }}>
+                            <motion.li
+                                style={{ borderRadius: "0px 30px 30px 0px" }}
+                                whileHover={{ backgroundColor: "#FF7B00", color: "#fff" }}
+                            >
+                                Área de atuação
+                            </motion.li>
+                        </motion.div>
+                    </motion.ul>
+
+                    <div className={styles.pageContent}>
+                        <AnimatePresence mode="wait">
+                            {PageComponent && (
+                                <motion.div
+                                    key={pageSelect}
                                     initial={{ opacity: 0, x: 100 }}
                                     animate={{ opacity: 1, x: 0 }}
+                                    exit={{ opacity: 0, x: -100 }}
                                     transition={{
-                                        duration: 1.5,
+                                        duration: 0.5,
                                         type: "spring",
-                                        delay: 0.1,
                                     }}
-                                    >
-                                        <h1
-                                            className={styles.mainHeading}
-                                        >
-                                            Sobre a AtriaDigital
-                                        </h1>
-                                        <p>Um pouco do que somos</p>
-                                    </motion.div>
-                                    <div className={styles.boxDescriptions}>
-                                        {/* Parágrafos de descrição animados */}
-                                        <motion.p
-                                            className={styles.description}
-                                            initial={{ opacity: 0, x: 100 }}
-                                            animate={{ opacity: 1, x: 0 }}
-                                            transition={{
-                                                duration: 1.5,
-                                                type: "spring",
-                                                delay: 0.2,
-                                            }}
-                                        >
-                                            A AtriaDigital é uma empresa de telecomunicações dedicada a fornecer internet de fibra óptica de alta velocidade para bairros de luxo em Belo Horizonte. Com um compromisso de qualidade e excelência, a AtriaDigital entende as demandas de clientes que buscam estabilidade, rapidez e uma experiência de navegação premium. 
-                                        </motion.p>
-                                        <motion.p
-                                            className={styles.description}
-                                            initial={{ opacity: 0, x: 100 }}
-                                            animate={{ opacity: 1, x: 0 }}
-                                            transition={{
-                                                duration: 1.5,
-                                                type: "spring",
-                                                delay: 0.2,
-                                            }}
-                                        >
-                                            Ao focar em regiões específicas, a AtriaDigital personaliza suas soluções para atender às necessidades tecnológicas dos clientes mais exigentes, acompanhando o avanço de tecnologias como automação residencial, streaming em múltiplos dispositivos e ambientes de trabalho remoto.
-                                        </motion.p>
-                                    </div>
-                                </div>
-                                {/* Vídeo animado */}
-                                <motion.video src={video} className={styles.video} autoPlay muted loop style={{ width: "30vmax", height: "18vmax", display: "block", position: "relative" }}
-                                initial={{ opacity: 0, x: 100 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                transition={{
-                                    duration: 1.5,
-                                    type: "spring",
-                                    delay: 0.2,
-                                }}/>
-                            </div>
-                            {/* Este é o espaço onde o carrossel deve ficar */}
-                            {/* Nota: O componente Carousel está importado mas não está sendo utilizado */}
-                        </div>
+                                >
+                                    <PageComponent />
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
                     </div>
-                </section>
+                </motion.div>
             </BoxGeneric>
         </div>
     );
 }
-

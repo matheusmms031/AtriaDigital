@@ -5,6 +5,7 @@ import PlanCard from "../../components/PlanCard/PlanCard";
 import { useState } from "react";
 import { Dialog } from "@mui/material";
 import ContactForm from "../../components/ContactForm/ContactForm";
+import ContactGeneric from "../../components/ContactGeneric/ContactGeneric";
 
 const cardVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -81,9 +82,9 @@ export default function Planos() {
         </section>
       </BoxGeneric>
       <Dialog
-        maxWidth="md"
+        maxWidth="xl"
         fullWidth
-        style={{ backgroundColor: "rgba(0, 0, 0, 0)" }}
+        style={{ backgroundColor: "rgba(0, 0, 0, 0)" ,display: "flex", alignItems: "center", justifyContent: "center" }}
         open={open}
         onClose={handleClose}
         aria-labelledby="alert-dialog-title"
@@ -96,13 +97,7 @@ export default function Planos() {
             },
         }}
       >
-        <ContactForm
-          animate={{}}
-          initial={{}}
-          title='Solicitação de plano'
-          plan={selectedPlan}
-          phone="553123330000"
-        />
+        <ContactGeneric Firstsection={true}/>
       </Dialog>
     </div>
   );

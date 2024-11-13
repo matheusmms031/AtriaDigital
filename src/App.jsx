@@ -7,6 +7,7 @@ import Footer from "./components/Footer/Footer.jsx";
 import { useContext } from "react";
 import LoadingScreen from "./components/LoadingScreen/LoadingScreen.jsx";
 import Front from "./components/Front/Front.jsx";
+import fundo from "./assets/fundo.png";
 
 export function App() {
 
@@ -16,19 +17,19 @@ export function App() {
     // Simula o carregamento de dados
     setTimeout(() => {
       setIsLoading(false);
-    }, 3000); // Ajuste o tempo para simular o tempo de carregamento
+    }, 2000); // Ajuste o tempo para simular o tempo de carregamento
   }, []);
 
     return (
         <>
         <LoadingScreen isLoading={isLoading} />
         <video src={video} autoPlay muted loop className="video-fundo" />
+        <img src={fundo} className="video-fundo" />
         {!isLoading && 
         <PagesConfigProvider>
             <Front/>
             <AppBarGeneric />
             <PageOrganizer/>
-            <Footer/>
         </PagesConfigProvider>}
         </>
     )

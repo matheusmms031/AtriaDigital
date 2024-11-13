@@ -1,16 +1,30 @@
 .nav{
     position: fixed;
     width: 100vw;
+    max-width: 100vw;
     height: 8vh;
     top: 0px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
-    background-color: #646464;
+    justify-content: center;
+    background-color: #000000;
+}
+
+.navcontent{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85vw;
 }
 
 .image{
     width: 10vmax;
     height: 10vmax;
+}
+
+.button{
+    background-color: none;
+    border: none;
+    color: white;
 }
