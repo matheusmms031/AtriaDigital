@@ -22,15 +22,13 @@ export function App() {
 
     return (
         <>
-        <LoadingScreen isLoading={isLoading} />
         <video src={video} autoPlay muted loop className="video-fundo" />
         <img src={fundo} className="video-fundo" />
-        {!isLoading && 
         <PagesConfigProvider>
             <Front/>
             <AppBarGeneric />
             <PageOrganizer/>
-        </PagesConfigProvider>}
+        </PagesConfigProvider>
         </>
     )
 }

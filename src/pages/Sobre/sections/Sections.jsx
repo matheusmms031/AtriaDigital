@@ -96,7 +96,15 @@ export function Ahistoria() {
                     </motion.p>
                 </div>
                 <div className={styles.columncard}>
-                <div className={styles.card}>
+                <motion.div className={styles.card}
+                initial={{ opacity: 0, x: 100 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{
+                    duration: 1.5,
+                    type: "spring",
+                    delay: 0.3,
+                }}
+                >
                     <HighQualityIcon sx={{ fontSize: 40, color: "#FF7B00" }} />
                     <div className={styles.cardText}>
                         <h3>
@@ -106,8 +114,15 @@ export function Ahistoria() {
                             Nós disponibilizamos alta banda larga.
                         </p>
                     </div>
-                </div>
-                <div className={styles.card}>
+                </motion.div>
+                <motion.div className={styles.card}
+                initial={{ opacity: 0, x: 100 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{
+                    duration: 1.5,
+                    type: "spring",
+                    delay: 0.4,
+                }}>
                     <HelpIcon sx={{ fontSize: 40, color: "#FF7B00" }} />
                     <div className={styles.cardText}>
                         <h3>
@@ -117,8 +132,15 @@ export function Ahistoria() {
                             Suporte para nossos clientes na semana.
                         </p>
                     </div>
-                </div>
-                <div className={styles.card}>
+                </motion.div>
+                <motion.div className={styles.card}
+                initial={{ opacity: 0, x: 100 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{
+                    duration: 1.5,
+                    type: "spring",
+                    delay: 0.5,
+                }}>
                 <HomeIcon sx={{ fontSize: 40, color: "#FF7B00" }} />
                             <div className={styles.cardText}>
                                 <h3>
@@ -128,8 +150,15 @@ export function Ahistoria() {
                                     Nossos técnicos estão sempre à disposição para ir a sua casa.
                                 </p>
                             </div>
-                </div>
-                <div className={styles.card}>
+                </motion.div>
+                <motion.div className={styles.card}
+                initial={{ opacity: 0, x: 100 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{
+                    duration: 1.5,
+                    type: "spring",
+                    delay: 0.6,
+                }}>
                     <HighQualityIcon sx={{ fontSize: 40, color: "#FF7B00" }} />
                     <div className={styles.cardText}>
                         <h3>
@@ -139,7 +168,7 @@ export function Ahistoria() {
                             Nós disponibilizamos alta banda larga.
                         </p>
                     </div>
-                </div>
+                </motion.div>
             </div>
             </div>
         </div>

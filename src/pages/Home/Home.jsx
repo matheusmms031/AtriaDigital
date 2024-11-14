@@ -11,6 +11,8 @@ import stylesMobile from "./stylesMobile.module.scss";
 import { pagesConfigContext } from "../../Contexts/PagesContexts";
 import MobileNavbar from "../../components/MobileNavbar/MobileNavbar";
 import { useInView } from 'react-intersection-observer';
+import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
+
 
 const ScrollSection = ({ children }) => {
     // Controla a animação
@@ -132,7 +134,7 @@ export default function Home() {
                                     delay: 0.1,
                                 }}
                             >
-                                Serviço de luxo e qualidade
+                                Serviço de <span style={{color:"#FF7B00"}}>luxo</span> e <span style={{color:"#FF7B00"}}>qualidade</span>
                             </motion.h1>
                             <motion.p
                                 initial={{ opacity: 0, x: 100 }}
@@ -145,6 +147,22 @@ export default function Home() {
                             >
                                 Bem-vindo à Átria Digital, onde conectividade é sinônimo de excelência. Somos uma empresa de telecomunicações especializada em oferecer internet de fibra óptica para os bairros mais sofisticados de Belo Horizonte.
                             </motion.p>
+                        <motion.div
+                        initial={{ opacity: 0, x: 100 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{
+                            duration: 1.5,
+                            type: "spring",
+                            delay: 0.3,
+                        }}
+                        >
+                                <motion.a className={stylesMobile.buttontitles}
+                                href="#planos"
+                                >
+                                    <span>Assine agora</span>
+                                    <KeyboardDoubleArrowRightIcon sx={{ fontSize: "7vw", color: "#fffff" }} />
+                                </motion.a>
+                        </motion.div>
                         </div>
                     </BoxGeneric>
                 </div>
@@ -160,6 +178,7 @@ export default function Home() {
                         </div>
                     </ScrollSection>
                     <div className={stylesMobile.boxContent}>
+                    <ScrollSection>
                         <div className={stylesMobile.card}>
                             <HelpIcon sx={{ fontSize: 40, color: "#FF7B00" }} />
                             <div className={stylesMobile.cardText}>
@@ -171,6 +190,8 @@ export default function Home() {
                                 </p>
                             </div>
                         </div>
+                        </ScrollSection>
+                        <ScrollSection>
                         <div className={stylesMobile.card}>
                             <HomeIcon sx={{ fontSize: 40, color: "#FF7B00" }} />
                             <div className={stylesMobile.cardText}>
@@ -182,6 +203,8 @@ export default function Home() {
                                 </p>
                             </div>
                         </div>
+                        </ScrollSection>
+                        <ScrollSection>
                         <div className={stylesMobile.card}>
                             <HighQualityIcon sx={{ fontSize: 40, color: "#FF7B00" }} />
                             <div className={stylesMobile.cardText}>
@@ -193,8 +216,10 @@ export default function Home() {
                                 </p>
                             </div>
                         </div>
+                        </ScrollSection>
                     </div>
                 </section>
+                <ScrollSection>
                 <section className={stylesMobile.box}>
                     <div className={stylesMobile.boxText}>
                         <h2>
@@ -205,7 +230,9 @@ export default function Home() {
                         </p>
                     </div>
                 </section>
-                <section className={stylesMobile.box}>
+                </ScrollSection>
+                <section className={stylesMobile.box} id="planos">
+                <ScrollSection>
                     <div className={stylesMobile.boxText}>
                         <h2>
                             Dê uma olhada nos nossos planos
@@ -214,24 +241,31 @@ export default function Home() {
                             Veja os nossos melhores planos para você e escolha aquele o qual mais te satisfaz
                         </p>
                     </div>
+                    </ScrollSection>
+                    <ScrollSection>
                     <PlanCard
                         price={`R$ 299.99`}
                         title={"Básico"}
                         bandwidth={`500 MEGA`}
                         features={["Suporte 24/7", "Wi-Fi Grátis", "Instalação Grátis"]}
                     />
+                    </ScrollSection>
+                    <ScrollSection>
                     <PlanCard
                         price={`R$ 299.99`}
                         title={"Básico"}
                         bandwidth={`500 MEGA`}
                         features={["Suporte 24/7", "Wi-Fi Grátis", "Instalação Grátis"]}
                     />
+                    </ScrollSection>
+                    <ScrollSection>
                     <PlanCard
                         price={`R$ 299.99`}
                         title={"Básico"}
                         bandwidth={`500 MEGA`}
                         features={["Suporte 24/7", "Wi-Fi Grátis", "Instalação Grátis"]}
                     />
+                    </ScrollSection>
                 </section>
             </div>
         </>

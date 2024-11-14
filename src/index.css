@@ -4,6 +4,7 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   margin: 0px;
   height: 100vh;
+  scroll-behavior: smooth;
 }
 body{
   margin: 0px;
