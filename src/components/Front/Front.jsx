@@ -2,7 +2,7 @@ import styles from './styles.module.scss'
 import { motion} from "framer-motion";
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import Logo from '../../assets/logo.svg';
+import Logo from '../../assets/Logo.svg';
 
 export default function Front() {
     return (

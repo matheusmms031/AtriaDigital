@@ -11,10 +11,9 @@
     display: flex;
     flex-direction: column;
     align-items: start;
-    background: rgb(0,0,0);
-    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 9%);
+    background-image: linear-gradient(180deg, rgba(255,255,255,0) 90%, rgba(255,255,255,1) 100%);
+    backdrop-filter: blur(3px);
     height: 110vh;
-    overflow: hidden;
 }
 
 .firstbox{
@@ -39,10 +38,12 @@ h1,h2,h3,h4,h5,h6{
     h1{
         font-size: 	11.1627906977vw;
         text-align: center;
+        text-shadow: 2px 1px 5px rgba(0,0,0,0.39);
     }
     p{
         font-size: 4.1vw;
         text-align: center;
+        text-shadow: 2px 1px 11px rgba(0,0,0,0.55);
         width: fit-content;
     }
 }
@@ -83,8 +84,8 @@ h1,h2,h3,h4,h5,h6{
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 20px;
-    padding: 10px 12px 10px 12px;
+    gap: 2.2vh;
+    padding: 2.4vw 1.3vh 2.4vw 1.3vh;
 }
 
 .cardText{
@@ -93,13 +94,24 @@ h1,h2,h3,h4,h5,h6{
     gap: 5px;
 
     h3{
+        font-size: 5.3vw;
         margin: 0px;
         color: $color_primary;
     }
     p{
         margin: 0px;
+        font-size: 4.1vw;
     }
 }
+
+.videofundo{
+  width: 100vw;
+  height: 110vh;
+  position: absolute;
+  object-fit: cover;
+  z-index: 0;
+}
+
 
 @media (min-width:1024px) {
     .home{

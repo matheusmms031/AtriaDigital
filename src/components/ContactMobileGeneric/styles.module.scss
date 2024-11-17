@@ -1,0 +1,56 @@
+.contactmobile{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 4vh;
+    background-color: white;
+    padding: 7vw 6vw;
+}
+
+.formsbox{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    width: 100%;
+
+    button{
+        margin-top: 2vh;
+        padding: 3vw;
+        font-weight: 600;
+        border-radius: 5px;
+        -webkit-box-shadow: inset 0px 0px 13px 0px rgba(0,0,0,0.23);
+        -moz-box-shadow: inset 0px 0px 13px 0px rgba(0,0,0,0.23);
+        box-shadow: inset 0px 0px 13px 0px rgba(0,0,0,0.23);
+        background-color: #FF7B00;
+        color: white;
+        cursor: pointer;
+        border: none;
+    }
+}
+
+.texts{
+    text-align: center;
+}
+
+.itemform{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5vh;
+    span{
+        font-size: 3vw;
+        font-weight: 600;
+        color: #646464;
+    }
+    input{
+        height: 7vw;
+        width: 100%;
+        padding: 0.2vw 0vw 0.2vw 1vw;
+        border: none;
+        box-shadow: 2px ;
+        -webkit-box-shadow: inset 0px 0px 13px 0px rgba(0,0,0,0.23);
+        -moz-box-shadow: inset 0px 0px 13px 0px rgba(0,0,0,0.23);
+        box-shadow: inset 0px 0px 13px 0px rgba(0,0,0,0.23);
+        border-radius: 5px;
+    }
+}

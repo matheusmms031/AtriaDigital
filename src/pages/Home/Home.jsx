@@ -4,7 +4,7 @@ import NavigateNextTwoToneIcon from "@mui/icons-material/NavigateNextTwoTone";
 import { motion, useAnimation } from "framer-motion";
 import HomeIcon from '@mui/icons-material/Home';
 import HighQualityIcon from '@mui/icons-material/HighQuality';
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState} from "react";
 import PlanCard from "../../components/PlanCard/PlanCard";
 import HelpIcon from '@mui/icons-material/Help';
 import stylesMobile from "./stylesMobile.module.scss";
@@ -12,7 +12,9 @@ import { pagesConfigContext } from "../../Contexts/PagesContexts";
 import MobileNavbar from "../../components/MobileNavbar/MobileNavbar";
 import { useInView } from 'react-intersection-observer';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
-
+import video from "../../assets/videofundoteste.mp4";
+import ContactMobileGeneric from "../../components/ContactMobileGeneric/ContactMobileGeneric";
+import { Dialog } from "@mui/material";
 
 const ScrollSection = ({ children }) => {
     // Controla a animação
@@ -48,6 +50,18 @@ const ScrollSection = ({ children }) => {
 };
 
 export default function Home() {
+
+    const [open, setOpen] = useState(false);
+    const [selectedPlan, setSelectedPlan] = useState(null);
+  
+    const handleClickOpen = (title) => {
+      setOpen(true);
+      setSelectedPlan(title);
+    };
+  
+    const handleClose = () => {
+      setOpen(false);
+    };
 
     const { updateSelectedPage } = useContext(pagesConfigContext);
 
@@ -121,8 +135,26 @@ export default function Home() {
                 </BoxGeneric>
             </div>
             <div className={stylesMobile.home}>
-                <div className={stylesMobile.backgroundFirstBox}>
+            <Dialog
+                maxWidth="xl"
+                fullWidth
+                style={{ backgroundColor: "rgba(0, 0, 0, 0)" ,display: "flex", alignItems: "center", justifyContent: "center" }}
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="alert-dialog-title"
+                aria-describedby="alert-dialog-description"
+                backgroundColor="transparent"
+                PaperProps={{
+                    style: {
+                    backgroundColor: 'transparent',
+                    boxShadow: 'none',
+                    },
+                }}
+            >
+        <ContactMobileGeneric/>
+      </Dialog>
                     <MobileNavbar/>
+                <div className={stylesMobile.backgroundFirstBox}>
                     <BoxGeneric className={stylesMobile.firstbox}>
                         <div className={stylesMobile.FirstboxText}>
                             <motion.h1
@@ -180,7 +212,7 @@ export default function Home() {
                     <div className={stylesMobile.boxContent}>
                     <ScrollSection>
                         <div className={stylesMobile.card}>
-                            <HelpIcon sx={{ fontSize: 40, color: "#FF7B00" }} />
+                            <HelpIcon sx={{ fontSize: "9vw", color: "#FF7B00" }} />
                             <div className={stylesMobile.cardText}>
                                 <h3>
                                     Suporte a semana inteira
@@ -193,7 +225,7 @@ export default function Home() {
                         </ScrollSection>
                         <ScrollSection>
                         <div className={stylesMobile.card}>
-                            <HomeIcon sx={{ fontSize: 40, color: "#FF7B00" }} />
+                            <HomeIcon sx={{ fontSize: "9vw", color: "#FF7B00" }} />
                             <div className={stylesMobile.cardText}>
                                 <h3>
                                     Atendimento a domicilio
@@ -206,7 +238,7 @@ export default function Home() {
                         </ScrollSection>
                         <ScrollSection>
                         <div className={stylesMobile.card}>
-                            <HighQualityIcon sx={{ fontSize: 40, color: "#FF7B00" }} />
+                            <HighQualityIcon sx={{ fontSize: "9vw", color: "#FF7B00" }} />
                             <div className={stylesMobile.cardText}>
                                 <h3>
                                     Alta banda larga
@@ -244,6 +276,7 @@ export default function Home() {
                     </ScrollSection>
                     <ScrollSection>
                     <PlanCard
+                        onClick={() => handleClickOpen("title")}
                         price={`R$ 299.99`}
                         title={"Básico"}
                         bandwidth={`500 MEGA`}

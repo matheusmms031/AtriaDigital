@@ -1,4 +1,3 @@
-import video from "./assets/1015(4).mp4";
 import { useState, useEffect } from "react";
 import AppBarGeneric from './components/AppBarGeneric/AppBarGeneric.jsx';
 import { PagesConfigProvider } from "./Contexts/PagesContexts.jsx";
@@ -8,6 +7,7 @@ import { useContext } from "react";
 import LoadingScreen from "./components/LoadingScreen/LoadingScreen.jsx";
 import Front from "./components/Front/Front.jsx";
 import fundo from "./assets/fundo.png";
+import video from "./assets/videofundoteste.mp4";
 
 export function App() {
 
@@ -24,7 +24,6 @@ export function App() {
         <>
         <LoadingScreen isLoading={isLoading} />
         <video src={video} autoPlay muted loop className="video-fundo" />
-        <img src={fundo} className="video-fundo" />
         {!isLoading && 
         <PagesConfigProvider>
             <Front/>
