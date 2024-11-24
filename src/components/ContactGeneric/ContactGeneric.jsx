@@ -6,7 +6,7 @@ import arrow from '../../assets/arrow.svg'
 import arrowdown from '../../assets/arrowdown.svg'
 import { Alert } from "@mui/material";
 
-    function FirstSection() {
+    function FirstSection({data}) {
         return(
             <motion.section 
                 className={styles.Firstsection}
@@ -41,7 +41,7 @@ import { Alert } from "@mui/material";
                 >
                     <div style={{display:'flex',alignItems:'end', flexDirection:'column'}} >
                         <span style={{fontSize:"1vw"}}>Fibra Óptica</span>
-                        <h2>PLANO BÁSICO</h2>
+                        <h2>PLANO {data.title}</h2>
                         <div style={{display:'flex', gap:'0.3vw'}}>
                             <motion.div 
                                 className={styles.assets}
@@ -49,34 +49,17 @@ import { Alert } from "@mui/material";
                                 animate={{ opacity: 1 }}
                                 transition={{ duration: 0.5, delay: 0.1 }}
                             >
-                                <span>500 MEGA</span>
-                                <img src={arrow} style={{width:"0.6vw"}}/>
-                            </motion.div>
-                            <motion.div 
-                                className={styles.assets}
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                transition={{ duration: 0.5, delay: 0.2 }}
-                            >
-                                <span>500 MEGA</span>
-                                <img src={arrowdown} style={{width:"0.6vw"}}/>
+                                <span>{data.banda}</span>
+                                <img src={arrow} style={{width:"0.8vw"}}/>
                             </motion.div>
                         </div>
                     </div>
-                    <motion.span 
-                        className={styles.price}
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 0.5, delay: 0.3 }}
-                    >
-                        R$ 100,00
-                    </motion.span>
                 </motion.div>
             </motion.section>
         )
     }
 
-export default function ContactGeneric({Firstsection = false,plan='BÁSICO', phone='+5511999999999'}) {
+export default function ContactGeneric({Firstsection = false,data = {}, phone='+5511999999999'}) {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -114,7 +97,7 @@ export default function ContactGeneric({Firstsection = false,plan='BÁSICO', pho
             transition={{ duration: 1.5, type: "spring", }}
         >
             <div className={styles.ContactGeneric}>
-                { Firstsection ? <FirstSection/> : null}
+                { Firstsection ? <FirstSection data={data}/> : null}
                 <motion.section 
                     className={styles.Secondsection}
                     initial={{ opacity: 0 }}

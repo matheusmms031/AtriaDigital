@@ -11,6 +11,46 @@ import plan3 from "../../assets/fundoplan3.png";
 import plan4 from "../../assets/fundoplan4.png";
 import ContactGeneric from "../../components/ContactGeneric/ContactGeneric";
 
+const plans = [
+    {
+      title: "TURBO",
+      banda: "600 MEGA",
+      price: "R$ 120,000",
+      img: plan1,
+      ponto:false,
+      qpontos:0,
+      wifi6:false,
+    },
+    {
+      title: "ULTRA",
+      banda: "800 MEGA",
+      price: "R$ 240,000",
+      img: plan2,
+      ponto:false,
+      qpontos:0,
+      wifi6:false,
+    },
+    {
+      title: "MASTER",
+      banda: "1 GIGA",
+      price: "R$ 360,000",
+      img: plan3,
+      ponto:true,
+      qpontos:1,
+      wifi6:true,
+    },
+    {
+      title: "PREMIUM",
+      banda: "2 GIGA",
+      price: "R$ 480,000",
+      img: plan4,
+      ponto:true,
+      qpontos:2,
+      wifi6:true,
+    },
+  ];
+
+
 const cardVariants = {
   hidden: { opacity: 0, y: 50 },
   visible: { opacity: 1, y: 0, transition: { duration: 1.5, type: "spring" } },
@@ -63,7 +103,9 @@ export default function Planos() {
               </motion.h2>
             </div>
             <div className={styles.cards}>
+            {plans.map((data, index) => (
                 <motion.div
+                  key={index}
                   className={styles.cardContainer}
                   variants={cardVariants}
                   initial="hidden"
@@ -71,55 +113,16 @@ export default function Planos() {
                   whileHover="hover"
                 >
                   <PlanCard
-                    title="TURBO"
-                    banda="600 MEGA"
-                    onClick={handleClickOpen}
-                    fundoimg={plan1}
+                    title={data.title}
+                    banda={data.banda}
+                    onClick={() => handleClickOpen(data)}
+                    fundoimg={data.img}
+                    ponto={data.ponto}
+                    qpontos={data.qpontos}
+                    wifi6={data.wifi6}
                   />
                 </motion.div>
-                <motion.div
-                  className={styles.cardContainer}
-                  variants={cardVariants}
-                  initial="hidden"
-                  animate="visible"
-                  whileHover="hover"
-                >
-                  <PlanCard
-                    title="ULTRA"
-                    banda="800 MEGA"
-                    onClick={handleClickOpen}
-                    fundoimg={plan2}
-
-                  />
-                </motion.div>
-                <motion.div
-                  className={styles.cardContainer}
-                  variants={cardVariants}
-                  initial="hidden"
-                  animate="visible"
-                  whileHover="hover"
-                >
-                  <PlanCard
-                  title="MASTER"
-                  banda="1 GIGA"
-                  onClick={handleClickOpen}
-                  fundoimg={plan3}
-                  />
-                </motion.div>
-                <motion.div
-                  className={styles.cardContainer}
-                  variants={cardVariants}
-                  initial="hidden"
-                  animate="visible"
-                  whileHover="hover"
-                >
-                  <PlanCard
-                  title="PREMIUM"
-                  banda="2 GIGA"
-                  onClick={handleClickOpen}
-                  fundoimg={plan4}
-                  />
-                </motion.div>
+            ))}
             </div>
           </div>
         </section>
@@ -140,7 +143,7 @@ export default function Planos() {
             },
         }}
       >
-        <ContactGeneric Firstsection={true}/>
+        <ContactGeneric Firstsection="true" data={selectedPlan}/>
       </Dialog>
     </div>
   );
