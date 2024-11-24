@@ -20,6 +20,7 @@ const plans = [
       ponto:false,
       qpontos:0,
       wifi6:false,
+      sup24:true,
     },
     {
       title: "ULTRA",
@@ -29,6 +30,7 @@ const plans = [
       ponto:false,
       qpontos:0,
       wifi6:false,
+      sup24:true,
     },
     {
       title: "MASTER",
@@ -38,6 +40,8 @@ const plans = [
       ponto:true,
       qpontos:1,
       wifi6:true,
+      sup24:true,
+      supmega:true,
     },
     {
       title: "PREMIUM",
@@ -47,6 +51,8 @@ const plans = [
       ponto:true,
       qpontos:2,
       wifi6:true,
+      sup24:true,
+      supmega:true,
     },
   ];
 
@@ -120,6 +126,8 @@ export default function Planos() {
                     ponto={data.ponto}
                     qpontos={data.qpontos}
                     wifi6={data.wifi6}
+                    sup24={data.sup24}
+                    supmega={data.supmega}
                   />
                 </motion.div>
             ))}

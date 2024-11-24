@@ -7,8 +7,10 @@ import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp
 import RouterIcon from '@mui/icons-material/Router';
 import WifiIcon from '@mui/icons-material/Wifi';
 import fundo from "../../assets/fundoplan1.png";
+import SupportAgentIcon from '@mui/icons-material/SupportAgent';
+import HelpIcon from '@mui/icons-material/Help';
 
-const PlanCard = ({ title='teste', banda='banda', onClick, fundoimg = fundo, wifi6=false, ponto=false,qpontos=0,}) => {
+const PlanCard = ({ title='teste', banda='banda', onClick, fundoimg = fundo, wifi6=false, ponto=false,qpontos=0,sup24=false,supmega=false}) => {
     return (
         <div className={styles.planCard}
         onClick={onClick}>
@@ -48,6 +50,27 @@ const PlanCard = ({ title='teste', banda='banda', onClick, fundoimg = fundo, wif
                                 <RouterIcon sx={{color:"#ffffff"}}/> <span>{qpontos} ponto{qpontos > 1 ? "s":""} adiciona{ qpontos > 1 ? "is" : "l"}</span>
                         </motion.div>
                     }
+                    {sup24 && 
+                        <motion.div
+                            className={styles.option}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 0.5, delay: 0.2 }}
+                        >
+                                <HelpIcon sx={{color:"#ffffff"}}/> <span>Suporte 24 horas</span>
+                        </motion.div>
+                    }
+                    {supmega && 
+                        <motion.div
+                            className={styles.option}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 0.5, delay: 0.2 }}
+                        >
+                                <SupportAgentIcon sx={{color:"#ffffff"}}/> <span>Atendimento rápido</span>
+                        </motion.div>
+                    }
+                    
                     </div>
                 </div>
                 <img src={features} className={styles.features} />

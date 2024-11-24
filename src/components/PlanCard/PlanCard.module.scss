@@ -92,19 +92,14 @@
 @media (max-width: 1024px) {
     .planCard {
         width: 80vw;
+        height: 50vh;
+    }
+    .fundo{
+        z-index: -1;
     }
     .header{
         padding: 3.5vmax;
         font-size: 3vmax;
-    }
-    .price{
-        font-size: 2.5vmax;
-    }
-    .bandwidth{
-        font-size: 2.8vmax;
-    }
-    .feature{
-        font-size: 2vmax;
     }
     .button{
         width: 100%;

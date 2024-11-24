@@ -59,6 +59,7 @@
     align-items:end;
     color: white;
     width: fit-content;
+    cursor: pointer;
 
     span{
         margin-right: 0.5vw;
@@ -67,6 +68,10 @@
         text-align: center;
         align-items: center;
     }
+}
+
+a{
+    text-decoration: none;
 }
 
 @media (max-width:1024px) {

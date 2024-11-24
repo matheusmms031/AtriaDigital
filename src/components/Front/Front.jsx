@@ -26,22 +26,24 @@ export default function Front() {
                     </motion.div>
                 </div>
                 <div className={styles.boxsocial}>
-                    <motion.div
-                        className={styles.socialmedia}
-                        initial={{ opacity: 0, x: 100 }}
-                        animate={{
-                            opacity: 1,
-                            x: 0,
-                        }}
-                        transition={{
-                            duration: 1.5,
-                            ease: [0, 0.71, 0.2, 1.01],
-                            delay: 0.5
-                        }}
-                    >
-                        <span>Instagram</span>
-                        <InstagramIcon sx={{ fontSize: "1vmax", marginBottom: '0.1vmax' }} />
-                    </motion.div>
+                    <a href='https://www.instagram.com/' target="_blank">
+                        <motion.div
+                            className={styles.socialmedia}
+                            initial={{ opacity: 0, x: 100 }}
+                            animate={{
+                                opacity: 1,
+                                x: 0,
+                            }}
+                            transition={{
+                                duration: 1.5,
+                                ease: [0, 0.71, 0.2, 1.01],
+                                delay: 0.5
+                            }}
+                        >
+                                <span src>Instagram</span>
+                                <InstagramIcon sx={{ fontSize: "1vmax", marginBottom: '0.1vmax' }} />
+                        </motion.div>
+                    </a>
                     <motion.div
                         className={styles.socialmedia}
                         initial={{ opacity: 0, x: 100 }}
