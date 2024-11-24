@@ -1,76 +1,74 @@
 
 .planCard {
-  background: #fff;
-  color: #FF7B00;
-  border-radius: 1vmax; /* Substitui 16px por uma medida escalável */
+  color: #FF7B00; /* Substitui 16px por uma medida escalável */
   box-shadow: 0px 0.5vmax 1.5vmax rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  width: 15vw;
+  width: 18vw;
   height: 55vh;
-  text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: end;
   transition: transform 0.3s, box-shadow 0.3s;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 1vmax;
 
   &:hover {
     transform: translateY(-1vmax);
-    box-shadow: 0px 0.75vmax 2vmax rgba(0, 0, 0, 0.25);
+    background-color: #0000002a;
   }
 }
 
-.header {
-  background: #FF7B00;
-  padding: 1.8vmax;
-  font-size: 1.2vmax;
-  font-weight: bold;
-  color: #fff;
-  width: 100%;
+.fundo{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index: -1;
+    filter: blur(1px);
+    border-radius: 1vmax;
 }
 
-.bandwidth {
-  font-size: 1.5vmax;
-  font-weight: bold;
-  color: #333;
-  margin-top: 2vh;
+.assets{
+    display: flex;
+    align-items: center;
+    gap: 0.2vw;
+    span{
+        font-size: 0.8vw;
+        font-weight: 500;
+    }
+    color: #FF7B00;
 }
 
-.price {
-  font-size: 1.3vmax;
-  color: #555;
-  margin: 1vh 0;
+.features{
+    object-fit: contain;
+    width: 100%;
+    margin-top: 2vh;
 }
 
-.features {
-  list-style: none;
-  padding: 0;
-  margin: 2vh 0;
-  flex-grow: 1;
-  width: 100%;
-}
+.header{
+    background-color: #0000003f;
+    padding: 1.5vw;
 
-.feature {
-  font-size: 1vmax;
-  padding: 0.8vh 0;
-  border-bottom: 0.1vmax solid #ddd;
-  color: #555;
-}
+    .fibra{
+        font-size: 1vw;
+        font-weight: 600;
+        text-shadow: 0px 0px 20px #000000;
+    }
 
-.button {
-  width: fit-content;
-  background: #FF7B00;
-  color: #fff;
-  font-size: 0.8vmax;
-  width: 100%;
-  height: 10%;
-  border: none;
-  cursor: pointer;
-  transition: background 0.3s;
+    h2{
+        font-size: 1.8vw;
+        color: #ffffff;
+        text-shadow: 0px 0px 20px #000000;
+    }
 
-  &:hover {
-    background: #111;
-  }
+    span{
+        color: rgb(255, 255, 255);
+        font-size: 1.4vw;
+        font-weight: 600;
+        text-shadow: 0px 0px 20px #000000;
+    }
+
 }
 
 @media (max-width: 1024px) {

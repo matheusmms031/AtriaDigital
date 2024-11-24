@@ -277,26 +277,14 @@ export default function Home() {
                     <ScrollSection>
                     <PlanCard
                         onClick={() => handleClickOpen("title")}
-                        price={`R$ 299.99`}
-                        title={"Básico"}
-                        bandwidth={`500 MEGA`}
-                        features={["Suporte 24/7", "Wi-Fi Grátis", "Instalação Grátis"]}
                     />
                     </ScrollSection>
                     <ScrollSection>
                     <PlanCard
-                        price={`R$ 299.99`}
-                        title={"Básico"}
-                        bandwidth={`500 MEGA`}
-                        features={["Suporte 24/7", "Wi-Fi Grátis", "Instalação Grátis"]}
                     />
                     </ScrollSection>
                     <ScrollSection>
                     <PlanCard
-                        price={`R$ 299.99`}
-                        title={"Básico"}
-                        bandwidth={`500 MEGA`}
-                        features={["Suporte 24/7", "Wi-Fi Grátis", "Instalação Grátis"]}
                     />
                     </ScrollSection>
                 </section>

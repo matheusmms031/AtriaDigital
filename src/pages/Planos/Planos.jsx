@@ -5,6 +5,10 @@ import PlanCard from "../../components/PlanCard/PlanCard";
 import { useState } from "react";
 import { Dialog } from "@mui/material";
 import ContactForm from "../../components/ContactForm/ContactForm";
+import plan1 from "../../assets/fundoplan1.png";
+import plan2 from "../../assets/fundoplan2.png";
+import plan3 from "../../assets/fundoplan3.png";
+import plan4 from "../../assets/fundoplan4.png";
 import ContactGeneric from "../../components/ContactGeneric/ContactGeneric";
 
 const cardVariants = {
@@ -59,9 +63,7 @@ export default function Planos() {
               </motion.h2>
             </div>
             <div className={styles.cards}>
-              {["BÁSICO", "INTERMEDIÁRIO", "AVANÇADO"].map((title, index) => (
                 <motion.div
-                  key={index}
                   className={styles.cardContainer}
                   variants={cardVariants}
                   initial="hidden"
@@ -69,14 +71,55 @@ export default function Planos() {
                   whileHover="hover"
                 >
                   <PlanCard
-                    price={`R$ ${(299.99 + index * 100).toFixed(2)}`}
-                    title={title}
-                    bandwidth={`${500 + index * 100} MEGA`}
-                    features={["Suporte 24/7", "Wi-Fi Grátis", "Instalação Grátis"]}
-                    onClick={() => handleClickOpen(title)}
+                    title="TURBO"
+                    banda="600 MEGA"
+                    onClick={handleClickOpen}
+                    fundoimg={plan1}
                   />
                 </motion.div>
-              ))}
+                <motion.div
+                  className={styles.cardContainer}
+                  variants={cardVariants}
+                  initial="hidden"
+                  animate="visible"
+                  whileHover="hover"
+                >
+                  <PlanCard
+                    title="ULTRA"
+                    banda="800 MEGA"
+                    onClick={handleClickOpen}
+                    fundoimg={plan2}
+
+                  />
+                </motion.div>
+                <motion.div
+                  className={styles.cardContainer}
+                  variants={cardVariants}
+                  initial="hidden"
+                  animate="visible"
+                  whileHover="hover"
+                >
+                  <PlanCard
+                  title="MASTER"
+                  banda="1 GIGA"
+                  onClick={handleClickOpen}
+                  fundoimg={plan3}
+                  />
+                </motion.div>
+                <motion.div
+                  className={styles.cardContainer}
+                  variants={cardVariants}
+                  initial="hidden"
+                  animate="visible"
+                  whileHover="hover"
+                >
+                  <PlanCard
+                  title="PREMIUM"
+                  banda="2 GIGA"
+                  onClick={handleClickOpen}
+                  fundoimg={plan4}
+                  />
+                </motion.div>
             </div>
           </div>
         </section>
