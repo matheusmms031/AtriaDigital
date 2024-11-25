@@ -20,13 +20,17 @@ import video from "../../assets/videofundoteste.mp4";
 import ContactMobileGeneric from "../../components/ContactMobileGeneric/ContactMobileGeneric";
 import { Dialog } from "@mui/material";
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-
 import Box from '@mui/material/Box';
 import Fab from '@mui/material/Fab';
 import AddIcon from '@mui/icons-material/Add';
 import EditIcon from '@mui/icons-material/Edit';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import NavigationIcon from '@mui/icons-material/Navigation';
+import { createTheme } from '@mui/material/styles';
+
+const theme = createTheme({
+  palette:"#FF7B00"
+});
 
 const ScrollSection = ({ children, ...rest }) => {
     // Controla a animação
@@ -351,7 +355,7 @@ export default function Home() {
             ))}
                 </section>
                 <div className={stylesMobile.iconwhat}>
-                    <Fab color="primary" aria-label="add" size="largest">
+                    <Fab sx={{ bgcolor: theme.palette }} aria-label="add" size="largest">
                         <WhatsAppIcon sx={{ fontSize:"10vw" }}/>
                     </Fab>
                 </div>
