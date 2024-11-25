@@ -28,9 +28,9 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import NavigationIcon from '@mui/icons-material/Navigation';
 import { createTheme } from '@mui/material/styles';
 
-const theme = createTheme({
+const theme = {
   palette:"#FF7B00"
-});
+}
 
 const ScrollSection = ({ children, ...rest }) => {
     // Controla a animação
@@ -356,7 +356,7 @@ export default function Home() {
                 </section>
                 <div className={stylesMobile.iconwhat}>
                     <Fab sx={{ bgcolor: theme.palette }} aria-label="add" size="largest">
-                        <WhatsAppIcon sx={{ fontSize:"10vw" }}/>
+                        <WhatsAppIcon sx={{ fontSize:"10vw", color:"white"}}/>
                     </Fab>
                 </div>
             </div>
