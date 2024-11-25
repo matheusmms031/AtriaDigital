@@ -2,7 +2,7 @@ import styles from './styles.module.scss'
 import { useState } from "react";
 
 
-export default function ContactMobileGeneric() {
+export default function ContactMobileGeneric({data}) {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -24,7 +24,7 @@ export default function ContactMobileGeneric() {
         if (formData.name && formData.email && formData.phone && formData.bairro && formData.numero, formData.rua) {
             setSendSuccess(true);
             location.href = `https://api.whatsapp.com/send/?phone=${phone}&text=
-            Olá tudo bem? Venho através do site, e tenho interesse em conhecer o plano ${plan}.
+            Olá tudo bem? Venho através do site, e tenho interesse em conhecer o plano ${data.title}.
             Meu nome é ${formData.name}
             Meu contato é: ${formData.phone}
             Meu email é ${formData.email}
@@ -38,7 +38,6 @@ export default function ContactMobileGeneric() {
       <div className={styles.contactmobile}>
         <div className={styles.texts}>
           <h2>Entre em contato conosco</h2>
-          <h3>Faça parte da Atria</h3>
         </div>
         <form className={styles.formsbox}>
           <div className={styles.itemform}>

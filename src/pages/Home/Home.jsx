@@ -9,6 +9,10 @@ import PlanCard from "../../components/PlanCard/PlanCard";
 import HelpIcon from '@mui/icons-material/Help';
 import stylesMobile from "./stylesMobile.module.scss";
 import { pagesConfigContext } from "../../Contexts/PagesContexts";
+import plan1 from "../../assets/fundoplan1.png";
+import plan2 from "../../assets/fundoplan2.png";
+import plan3 from "../../assets/fundoplan3.png";
+import plan4 from "../../assets/fundoplan4.png";
 import MobileNavbar from "../../components/MobileNavbar/MobileNavbar";
 import { useInView } from 'react-intersection-observer';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
@@ -16,7 +20,7 @@ import video from "../../assets/videofundoteste.mp4";
 import ContactMobileGeneric from "../../components/ContactMobileGeneric/ContactMobileGeneric";
 import { Dialog } from "@mui/material";
 
-const ScrollSection = ({ children }) => {
+const ScrollSection = ({ children, ...rest }) => {
     // Controla a animação
     const controls = useAnimation();
     // Ref para observar a visibilidade do elemento
@@ -43,6 +47,7 @@ const ScrollSection = ({ children }) => {
             ref={ref}
             animate={controls}
             initial={{ opacity: 0, y: 50 }}
+            {...rest}
         >
             {children}
         </motion.div>
@@ -50,6 +55,51 @@ const ScrollSection = ({ children }) => {
 };
 
 export default function Home() {
+
+    const plans = [
+        {
+          title: "TURBO",
+          banda: "600 MEGA",
+          price: "R$ 120,000",
+          img: plan1,
+          ponto:false,
+          qpontos:0,
+          wifi6:false,
+          sup24:true,
+        },
+        {
+          title: "ULTRA",
+          banda: "800 MEGA",
+          price: "R$ 240,000",
+          img: plan2,
+          ponto:false,
+          qpontos:0,
+          wifi6:false,
+          sup24:true,
+        },
+        {
+          title: "MASTER",
+          banda: "1 GIGA",
+          price: "R$ 360,000",
+          img: plan3,
+          ponto:true,
+          qpontos:1,
+          wifi6:true,
+          sup24:true,
+          supmega:true,
+        },
+        {
+          title: "PREMIUM",
+          banda: "2 GIGA",
+          price: "R$ 480,000",
+          img: plan4,
+          ponto:true,
+          qpontos:2,
+          wifi6:true,
+          sup24:true,
+          supmega:true,
+        },
+      ];
 
     const [open, setOpen] = useState(false);
     const [selectedPlan, setSelectedPlan] = useState(null);
@@ -274,19 +324,23 @@ export default function Home() {
                         </p>
                     </div>
                     </ScrollSection>
-                    <ScrollSection>
-                    <PlanCard
-                        onClick={() => handleClickOpen("title")}
-                    />
-                    </ScrollSection>
-                    <ScrollSection>
-                    <PlanCard
-                    />
-                    </ScrollSection>
-                    <ScrollSection>
-                    <PlanCard
-                    />
-                    </ScrollSection>
+                    {plans.map((data, index) => (
+                <ScrollSection
+                  key={index}
+                >
+                  <PlanCard
+                    onClick={() => handleClickOpen(data)}
+                    title={data.title}
+                    banda={data.banda}
+                    fundoimg={data.img}
+                    ponto={data.ponto}
+                    qpontos={data.qpontos}
+                    wifi6={data.wifi6}
+                    sup24={data.sup24}
+                    supmega={data.supmega}
+                  />
+                </ScrollSection>
+            ))}
                 </section>
             </div>
         </>
