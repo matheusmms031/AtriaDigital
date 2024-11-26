@@ -2,7 +2,7 @@ import styles from './styles.module.scss'
 import { useState } from "react";
 
 
-export default function ContactMobileGeneric({data}) {
+export default function ContactMobileGeneric({data = {}, phone="+553123331401"}) {
     const [formData, setFormData] = useState({
         name: '',
         email: '',

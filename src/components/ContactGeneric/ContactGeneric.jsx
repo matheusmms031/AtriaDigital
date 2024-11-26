@@ -59,7 +59,7 @@ import { Alert } from "@mui/material";
         )
     }
 
-export default function ContactGeneric({Firstsection = false,data = {}, phone='+5511999999999'}) {
+export default function ContactGeneric({Firstsection = false,data = {}, phone='+553123331401'}) {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -81,7 +81,7 @@ export default function ContactGeneric({Firstsection = false,data = {}, phone='+
         if (formData.name && formData.email && formData.phone && formData.bairro && formData.numero, formData.rua) {
             setSendSuccess(true);
             location.href = `https://api.whatsapp.com/send/?phone=${phone}&text=
-            Olá tudo bem? Venho através do site, e tenho interesse em conhecer o plano ${plan}.
+            Olá tudo bem? Venho através do site, e tenho interesse em conhecer o plano ${data.title}.
             Meu nome é ${formData.name}
             Meu contato é: ${formData.phone}
             Meu email é ${formData.email}

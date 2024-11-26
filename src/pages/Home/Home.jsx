@@ -213,7 +213,7 @@ export default function Home() {
                     },
                 }}
             >
-        <ContactMobileGeneric/>
+        <ContactMobileGeneric />
       </Dialog>
                     <MobileNavbar/>
                 <div className={stylesMobile.backgroundFirstBox}>
@@ -355,9 +355,11 @@ export default function Home() {
             ))}
                 </section>
                 <div className={stylesMobile.iconwhat}>
-                    <Fab sx={{ bgcolor: theme.palette }} aria-label="add" size="largest">
-                        <WhatsAppIcon sx={{ fontSize:"10vw", color:"white"}}/>
-                    </Fab>
+                    <a href="https://api.whatsapp.com/send/?phone=+553123331401" target="_blank">
+                        <Fab sx={{ bgcolor: theme.palette }} aria-label="add" size="largest">
+                            <WhatsAppIcon sx={{ fontSize:"10vw", color:"white"}}/>
+                        </Fab>
+                    </a>
                 </div>
             </div>
         </>
