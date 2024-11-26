@@ -8,7 +8,9 @@ export default function MobileNavbar(){
             <div className={styles.navcontent}>
                 <img src={Logo} alt="Atria Digital" className={styles.image}/>
                 <div className={styles.buttons}>
-                    <AccountCircleIcon className={styles.icon} sx={{color:'white',fontSize:'9vw'}}/>
+                    <a href='https://sac2i.com.br/central_assinante_web/login' className={styles.link} target="_blank">
+                        <AccountCircleIcon className={styles.icon} sx={{color:'white',fontSize:'9vw'}}/>
+                    </a>
                 </div>
             </div>
         </nav>
