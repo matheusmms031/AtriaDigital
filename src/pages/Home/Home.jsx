@@ -16,17 +16,10 @@ import plan4 from "../../assets/newfundo2.jpg";
 import MobileNavbar from "../../components/MobileNavbar/MobileNavbar";
 import { useInView } from 'react-intersection-observer';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
-import video from "../../assets/videofundoteste.mp4";
 import ContactMobileGeneric from "../../components/ContactMobileGeneric/ContactMobileGeneric";
 import { Dialog } from "@mui/material";
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import Box from '@mui/material/Box';
 import Fab from '@mui/material/Fab';
-import AddIcon from '@mui/icons-material/Add';
-import EditIcon from '@mui/icons-material/Edit';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import NavigationIcon from '@mui/icons-material/Navigation';
-import { createTheme } from '@mui/material/styles';
 
 const theme = {
   palette:"#FF7B00"
