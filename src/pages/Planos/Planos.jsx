@@ -6,9 +6,9 @@ import { useState } from "react";
 import { Dialog } from "@mui/material";
 import ContactForm from "../../components/ContactForm/ContactForm";
 import plan1 from "../../assets/fundoplan1.png";
-import plan2 from "../../assets/fundoplan2.png";
-import plan3 from "../../assets/fundoplan3.png";
-import plan4 from "../../assets/fundoplan4.png";
+import plan3 from "../../assets/fundoplan2.png";
+import plan2 from "../../assets/newfundo1.jpg";
+import plan4 from "../../assets/newfundo2.jpg";
 import ContactGeneric from "../../components/ContactGeneric/ContactGeneric";
 
 const plans = [
