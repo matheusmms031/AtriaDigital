@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import HighQualityIcon from "@mui/icons-material/HighQuality";
 import HelpIcon from '@mui/icons-material/Help';
 import HomeIcon from '@mui/icons-material/Home';
+import LiveTvIcon from '@mui/icons-material/LiveTv';
 import video from "../../../assets/1015(4).mp4";
 
 export function SobreAtria() {
@@ -159,13 +160,13 @@ export function Ahistoria() {
                     type: "spring",
                     delay: 0.6,
                 }}>
-                    <HighQualityIcon sx={{ fontSize: 40, color: "#FF7B00" }} />
+                    <LiveTvIcon sx={{ fontSize: 40, color: "#FF7B00" }} />
                     <div className={styles.cardText}>
                         <h3>
-                            Alta banda larga
+                            Serviços de streaming
                         </h3>
                         <p>
-                            Nós disponibilizamos alta banda larga.
+                            Serviços de streaming junto com os pacotes de assinatura.
                         </p>
                     </div>
                 </motion.div>
