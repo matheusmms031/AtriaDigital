@@ -3,6 +3,7 @@ import styles from './styles.module.scss'
 import { motion } from "framer-motion";
 import imageteste from '../../assets/imageteste2.jpeg'
 import { Alert } from "@mui/material";
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
     function FirstSection({data}) {
         return(
@@ -12,26 +13,43 @@ import { Alert } from "@mui/material";
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1 }}
             >
-                <img src={imageteste} className={styles.imagefundo}/>
                 <motion.div 
                     className={styles.box}
                     initial={{ y: -20 }}
                     animate={{ y: 0 }}
                     transition={{ duration: 0.5 }}
                 >
-                    <h1>
-                        {data.title}
-                    </h1>
+                    <div>
+                        <h1>
+                            {data.title}
+                        </h1>
+                        <h2>
+                            {data.banda}
+                        </h2>
+                    </div>
                     <h3>
-                        Seja nosso cliente e garanta a gama de vantagens e oportunidades que te esperam.
+                        {data.desc}
                     </h3>
-                </motion.div>
-                <motion.div 
+                    <motion.div 
                     className={styles.box2}
                     initial={{ x: 20 }}
                     animate={{ x: 0 }}
                     transition={{ duration: 0.5 }}
                 >
+                    <ul>
+                        { data.details.map((item, index) => ( <li key={index}>{item}</li> ))}
+                    </ul>
+                </motion.div>
+                <motion.div 
+                    className={styles.button}
+                    initial={{ y: 20 }}
+                    animate={{ y: 0 }}
+                    transition={{ duration: 0.5 }}
+                ><a>
+                    <WhatsAppIcon sx={{ fontSize: "1.5vw", color: "#ffffff" }} />
+                    <span>ASSINE JÁ</span>
+                    </a>
+                </motion.div>
                 </motion.div>
             </motion.section>
         )

@@ -21,6 +21,13 @@ const plans = [
       qpontos:0,
       wifi6:false,
       sup24:true,
+      details:[
+        "Tecnologia xPON para garantir estabilidade de ponta e conexão contínua.",
+        "Roteador Wi-Fi 6 de última geração, assegurando cobertura uniforme e velocidade em múltiplos dispositivos.",
+        "Atendimento técnico especializado com resolução em até 6 horas.",
+        "Monitoramento inteligente da rede com ajustes proativos para evitar interrupções.",
+        "Consulta inicial personalizada, para adaptar a rede às necessidades do cliente."
+      ],
     },
     {
       title: "Conectividade Refinada",
@@ -31,6 +38,14 @@ const plans = [
       qpontos:0,
       wifi6:false,
       sup24:true,
+      details:[
+        "Tecnologia xPON para garantir estabilidade de ponta e conexão contínua.",
+        "Roteador Wi-Fi 6 de última geração, assegurando cobertura uniforme e velocidade em múltiplos dispositivos.",
+        "Atendimento técnico especializado com resolução em até 6 horas.",
+        "Monitoramento inteligente da rede com ajustes proativos para evitar interrupções.",
+        "Consulta inicial personalizada, para adaptar a rede às necessidades do cliente."
+      ],
+      desc:"Conectividade sob medida para residências que demandam estabilidade e velocidade com sofisticação."
     },
     {
       title: "MASTER",
@@ -42,6 +57,13 @@ const plans = [
       wifi6:true,
       sup24:true,
       supmega:true,
+      details:[
+        "Tecnologia xPON para garantir estabilidade de ponta e conexão contínua.",
+        "Roteador Wi-Fi 6 de última geração, assegurando cobertura uniforme e velocidade em múltiplos dispositivos.",
+        "Atendimento técnico especializado com resolução em até 6 horas.",
+        "Monitoramento inteligente da rede com ajustes proativos para evitar interrupções.",
+        "Consulta inicial personalizada, para adaptar a rede às necessidades do cliente."
+      ]
     },
     {
       title: "PREMIUM",
@@ -53,6 +75,13 @@ const plans = [
       wifi6:true,
       sup24:true,
       supmega:true,
+      details:[
+        "Tecnologia xPON para garantir estabilidade de ponta e conexão contínua.",
+        "Roteador Wi-Fi 6 de última geração, assegurando cobertura uniforme e velocidade em múltiplos dispositivos.",
+        "Atendimento técnico especializado com resolução em até 6 horas.",
+        "Monitoramento inteligente da rede com ajustes proativos para evitar interrupções.",
+        "Consulta inicial personalizada, para adaptar a rede às necessidades do cliente."
+      ]
     },
   ];
 

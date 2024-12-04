@@ -6,7 +6,8 @@
     display: flex;
     overflow: hidden;
     flex-direction: row;
-    background-color: beige;
+    background-image: url("../../assets/imageteste.jpeg");
+    background-size: contain;
 }
 
 .imagefundo{
@@ -27,11 +28,29 @@
         z-index: -1;
 }
 
+.button{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    
+    a{
+        padding: 1vw 3vw;
+        background-color: $color_primary;
+        font-weight: 600;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        gap: 0.5vw;
+    }
+}
+
 .Firstsection{
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    background-color: $color_primary;
+    background-color: #0000006e;
     width: 23.91vw;
     z-index: 1;
     position: relative;
@@ -60,13 +79,18 @@
         font-size: 1.81vw;
         line-height: 120%;
         font-weight: 600;
+        text-shadow: 1px 1px 8px black;
         text-transform: uppercase;
         
     }
+    h2{
+        text-shadow: 1px 1px 8px black;
+    }
     h3{
-        font-size: 1.01vw;
+        font-size: 0.97vw;
         line-height: 113%;
-        font-weight: normal;
+        text-shadow: 1px 1px 8px black;
+        font-weight: 600;
     }
 }
 
@@ -87,17 +111,20 @@
     }
 }
 .box2{
-    padding: 4.6vh 1.51vw 4.6vh 1.51vw;
     color: white;
     display: flex;
-    flex-grow: 1;
     flex-direction: column;
-    align-items: end;
-    justify-content: end;
     gap: 1vh;
 
     h2{
         font-size: 1.81vw;
+    }
+    li{
+        color: #ffffff;
+        font-size: 0.9vw;
+        font-weight: normal;
+        text-shadow: 1px 1px 6px black;
+        margin-bottom: 2vh;
     }
 }
 
