@@ -77,7 +77,7 @@ export default function AppBarGeneric() {
                             whileHover="hover"
                             whileTap="tap"
                         >
-                            PLANOS
+                            SOLUÇÕES
                         </motion.li>
                         <motion.li 
                             className={styles.li} 

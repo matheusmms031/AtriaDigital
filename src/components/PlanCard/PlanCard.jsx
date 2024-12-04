@@ -1,23 +1,20 @@
-import arrow from '../../assets/arrow.svg'
-import arrowdown from '../../assets/arrowdown.svg'
 import styles from "./PlanCard.module.scss";
 import { motion } from "framer-motion";
 import features from "../../assets/features.png";
-import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
 import RouterIcon from '@mui/icons-material/Router';
 import WifiIcon from '@mui/icons-material/Wifi';
 import fundo from "../../assets/fundoplan1.png";
 import SupportAgentIcon from '@mui/icons-material/SupportAgent';
 import HelpIcon from '@mui/icons-material/Help';
 
-const PlanCard = ({ title='teste', banda='banda', onClick, fundoimg = fundo, wifi6=false, ponto=false,qpontos=0,sup24=false,supmega=false}) => {
+const PlanCard = ({ title='teste', banda='banda', onClick, fundoimg = fundo, wifi6=false, ponto=false,qpontos=0,sup24=false,supmega=false, solucao="Solução", ...rest}) => {
     return (
-        <div className={styles.planCard}
+        <div className={styles.planCard} {...rest}
         onClick={onClick}>
             <div style={{display:'flex',width:"100%",height:"100%",flexDirection:"column", backgroundColor:"#0000003f", borderRadius:"1vmax"}}>
                 <img src={fundoimg} className={styles.fundo}/>
                 <div className={styles.header}>
-                    <span className={styles.fibra}>Fibra óptica</span>
+                    <span className={styles.fibra}>{solucao}</span>
                     <h2>{title}</h2>
                     <div style={{ display: 'flex', gap: '0.3vw' }}>
                         <motion.div
@@ -73,7 +70,7 @@ const PlanCard = ({ title='teste', banda='banda', onClick, fundoimg = fundo, wif
                     
                     </div>
                 </div>
-                <img src={features} className={styles.features} />
+                
             </div>
         </div>
     );

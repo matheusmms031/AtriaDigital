@@ -9,6 +9,14 @@
     background-color: beige;
 }
 
+.imagefundo{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index: -1;
+}
+
 .logo{
     width: 25vw;
         height: auto;
@@ -26,6 +34,7 @@
     background-color: $color_primary;
     width: 23.91vw;
     z-index: 1;
+    position: relative;
 }
 
 .Secondsection{
@@ -50,7 +59,8 @@
     h1{
         font-size: 1.81vw;
         line-height: 120%;
-        font-weight: 500;
+        font-weight: 600;
+        text-transform: uppercase;
         
     }
     h3{

@@ -1,9 +1,7 @@
 import { useState } from "react";
 import styles from './styles.module.scss'
-import ContactImage from "../../assets/contact.svg"
 import { motion } from "framer-motion";
-import arrow from '../../assets/arrow.svg'
-import arrowdown from '../../assets/arrowdown.svg'
+import imageteste from '../../assets/imageteste2.jpeg'
 import { Alert } from "@mui/material";
 
     function FirstSection({data}) {
@@ -14,6 +12,7 @@ import { Alert } from "@mui/material";
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1 }}
             >
+                <img src={imageteste} className={styles.imagefundo}/>
                 <motion.div 
                     className={styles.box}
                     initial={{ y: -20 }}
@@ -21,39 +20,18 @@ import { Alert } from "@mui/material";
                     transition={{ duration: 0.5 }}
                 >
                     <h1>
-                        Entre em contato para fazer parte da Átria
+                        {data.title}
                     </h1>
                     <h3>
-                        Seja nosso cliente fiel e garanta a gama de vantagens e oportunidades que te esperam
+                        Seja nosso cliente e garanta a gama de vantagens e oportunidades que te esperam.
                     </h3>
                 </motion.div>
-                <motion.img 
-                    src={ContactImage} 
-                    alt="Contato" 
-                    className={styles.logo}
-                    transition={{ duration: 0.5 }}
-                />
                 <motion.div 
                     className={styles.box2}
                     initial={{ x: 20 }}
                     animate={{ x: 0 }}
                     transition={{ duration: 0.5 }}
                 >
-                    <div style={{display:'flex',alignItems:'end', flexDirection:'column'}} >
-                        <span style={{fontSize:"1vw"}}>Fibra Óptica</span>
-                        <h2>PLANO {data.title}</h2>
-                        <div style={{display:'flex', gap:'0.3vw'}}>
-                            <motion.div 
-                                className={styles.assets}
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                transition={{ duration: 0.5, delay: 0.1 }}
-                            >
-                                <span>{data.banda}</span>
-                                <img src={arrow} style={{width:"0.8vw"}}/>
-                            </motion.div>
-                        </div>
-                    </div>
                 </motion.div>
             </motion.section>
         )
