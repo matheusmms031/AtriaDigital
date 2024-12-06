@@ -1,13 +1,13 @@
 @import "../../variables/colors";
 
 .ContactGeneric{
-    height: 82vh;
     position: relative;
     display: flex;
     overflow: hidden;
     flex-direction: row;
     background-image: url("../../assets/imageteste.jpeg");
-    background-size: contain;
+    background-size:cover;
+    object-fit: cover;
 }
 
 .imagefundo{
@@ -121,10 +121,10 @@
     }
     li{
         color: #ffffff;
-        font-size: 0.9vw;
+        font-size: 0.8vw;
         font-weight: normal;
         text-shadow: 1px 1px 6px black;
-        margin-bottom: 2vh;
+        margin-bottom: 1.5vh;
     }
 }
 

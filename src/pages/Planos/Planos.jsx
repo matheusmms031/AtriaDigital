@@ -48,7 +48,7 @@ const plans = [
       desc:"Conectividade sob medida para residências que demandam estabilidade e velocidade com sofisticação."
     },
     {
-      title: "MASTER",
+      title: "Experiência Exclusiva",
       banda: "1 GIGA",
       price: "R$ 360,000",
       img: plan3,
@@ -58,12 +58,14 @@ const plans = [
       sup24:true,
       supmega:true,
       details:[
-        "Tecnologia xPON para garantir estabilidade de ponta e conexão contínua.",
-        "Roteador Wi-Fi 6 de última geração, assegurando cobertura uniforme e velocidade em múltiplos dispositivos.",
-        "Atendimento técnico especializado com resolução em até 6 horas.",
-        "Monitoramento inteligente da rede com ajustes proativos para evitar interrupções.",
-        "Consulta inicial personalizada, para adaptar a rede às necessidades do cliente."
-      ]
+        "Conexão via xGpon, uma das tecnologias mais avançadas do mercado, para oferecer máxima estabilidade e eficiência.",
+        "Roteador Wi-Fi 6 Plus, projetado para grandes residências, otimizando alcance e desempenho.",
+        "Atendimento técnico especializado com resolução em até 4 horas, priorizando a conveniência do cliente.",
+        "App de controle de rede exclusivo, com relatórios de desempenho e gestão simplificada de dispositivos conectados.",
+        "Backup de conexão para continuidade do serviço mesmo em situações emergenciais.",
+        "Personalização completa da rede residencial por especialistas em conectividade."
+      ],
+      desc:"Velocidade e performance para residências conectadas e sofisticadas."
     },
     {
       title: "PREMIUM",
@@ -76,12 +78,16 @@ const plans = [
       sup24:true,
       supmega:true,
       details:[
-        "Tecnologia xPON para garantir estabilidade de ponta e conexão contínua.",
-        "Roteador Wi-Fi 6 de última geração, assegurando cobertura uniforme e velocidade em múltiplos dispositivos.",
-        "Atendimento técnico especializado com resolução em até 6 horas.",
-        "Monitoramento inteligente da rede com ajustes proativos para evitar interrupções.",
-        "Consulta inicial personalizada, para adaptar a rede às necessidades do cliente."
-      ]
+        "Tecnologia xGpon de ponta, proporcionando velocidades ultra rápidas e baixa latência.",
+        "Wi-Fi 7 com suporte a múltiplos dispositivos simultâneos e cobertura otimizada para residências de até 600m².",
+        "Até 03 pontos de rede mesh cabeados para garantir a melhor experiência em qualquer ambiente da residência.",
+        "Atendimento VIP com técnico especializado em até 3 horas no local, com total discrição e profissionalismo.",
+        "Kit premium de conectividade, incluindo cabos de alta performance e acessórios exclusivos.",
+        "Monitoramento em tempo real da rede, com ajustes automáticos para garantir máxima performance.",
+        "Consultoria tecnológica personalizada, com mapeamento da residência para otimizar a distribuição da rede.",
+        "Gerente de contas dedicado, garantindo suporte exclusivo e atendimento prioritário."
+      ],
+      desc:"O plano 02GB é uma verdadeira revolução tecnológica, unindo o poder do xGpon com a inovação do Wi-Fi 7, oferecendo a conexão mais avançada disponível no mercado. "
     },
   ];
 
