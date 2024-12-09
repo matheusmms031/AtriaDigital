@@ -8,6 +8,7 @@
 }
 body{
   margin: 0px;
+  font-family: "Inter";
 }
 
 .video-fundo{
@@ -23,3 +24,16 @@ body{
     height: 110vh;
   }
 }
+@font-face {
+    font-family: "Inter";   /*Can be any text*/
+    src: local("Inter"),
+      url("./fonts/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+  }
+  
+
+  @font-face {
+    font-family: "Albert";   /*Can be any text*/
+    src: local("Albert"),
+      url("./fonts/AlbertSans-VariableFont_wght.ttf") format("truetype");
+  }
+  

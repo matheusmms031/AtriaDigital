@@ -52,14 +52,7 @@ export function SobreAtria() {
                     </motion.p>
                 </div>
             </div>
-            <motion.video src={video} className={styles.video} autoPlay muted loop style={{ width: "30vmax", height: "18vmax", display: "block", position: "relative" }}
-                initial={{ opacity: 0, x: 100 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{
-                    duration: 1.5,
-                    type: "spring",
-                    delay: 0.2,
-                }} />
+        
         </div>
     )
 }
@@ -151,6 +144,42 @@ export function Ahistoria() {
                                     Nossos técnicos estão sempre à disposição para ir a sua casa.
                                 </p>
                             </div>
+                </motion.div>
+                <motion.div className={styles.card}
+                initial={{ opacity: 0, x: 100 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{
+                    duration: 1.5,
+                    type: "spring",
+                    delay: 0.6,
+                }}>
+                    <LiveTvIcon sx={{ fontSize: 40, color: "#FF7B00" }} />
+                    <div className={styles.cardText}>
+                        <h3>
+                            Serviços de streaming
+                        </h3>
+                        <p>
+                            Serviços de streaming junto com os pacotes de assinatura.
+                        </p>
+                    </div>
+                </motion.div>
+                <motion.div className={styles.card}
+                initial={{ opacity: 0, x: 100 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{
+                    duration: 1.5,
+                    type: "spring",
+                    delay: 0.6,
+                }}>
+                    <LiveTvIcon sx={{ fontSize: 40, color: "#FF7B00" }} />
+                    <div className={styles.cardText}>
+                        <h3>
+                            Serviços de streaming
+                        </h3>
+                        <p>
+                            Serviços de streaming junto com os pacotes de assinatura.
+                        </p>
+                    </div>
                 </motion.div>
                 <motion.div className={styles.card}
                 initial={{ opacity: 0, x: 100 }}

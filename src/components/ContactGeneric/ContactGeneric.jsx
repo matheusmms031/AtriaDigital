@@ -1,8 +1,6 @@
 import { useState } from "react";
 import styles from './styles.module.scss'
 import { motion } from "framer-motion";
-import imageteste from '../../assets/imageteste2.jpeg'
-import { Alert } from "@mui/material";
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
     function FirstSection({data}) {
@@ -13,6 +11,7 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1 }}
             >
+                <img src={data.img} className={styles.imagefundo}/>
                 <motion.div 
                     className={styles.box}
                     initial={{ y: -20 }}
@@ -27,28 +26,12 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
                             {data.banda}
                         </h2>
                     </div>
-                    <h3>
-                        {data.desc}
-                    </h3>
                     <motion.div 
                     className={styles.box2}
                     initial={{ x: 20 }}
                     animate={{ x: 0 }}
                     transition={{ duration: 0.5 }}
                 >
-                    <ul>
-                        { data.details.map((item, index) => ( <li key={index}>{item}</li> ))}
-                    </ul>
-                </motion.div>
-                <motion.div 
-                    className={styles.button}
-                    initial={{ y: 20 }}
-                    animate={{ y: 0 }}
-                    transition={{ duration: 0.5 }}
-                ><a>
-                    <WhatsAppIcon sx={{ fontSize: "1.5vw", color: "#ffffff" }} />
-                    <span>ASSINE JÁ</span>
-                    </a>
                 </motion.div>
                 </motion.div>
             </motion.section>
@@ -94,6 +77,33 @@ export default function ContactGeneric({Firstsection = false,data = {}, phone='+
         >
             <div className={styles.ContactGeneric}>
                 { Firstsection ? <FirstSection data={data}/> : null}
+                <motion.section 
+                    className={styles.Secondsection}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.75 }}
+                >
+                <motion.div className={styles.boxleft}
+                     initial={{ opacity: 0 }}
+                     animate={{ opacity: 1 }}
+                     transition={{ duration: 1 }}
+                >
+                    <data.desc className={styles.desc}></data.desc>
+                    <div className={styles.boxdetails}>
+                        {data.details.map((item, index) => (<span className={styles.details}>{item}</span>))}
+                    </div>
+                </motion.div>
+                <motion.div 
+                    className={styles.button}
+                    initial={{ y: 20 }}
+                    animate={{ y: 0 }}
+                    transition={{ duration: 0.5 }}
+                ><a>
+                    <WhatsAppIcon sx={{ fontSize: "1.5vw", color: "#ffffff" }} />
+                    <span>ASSINE JÁ</span>
+                    </a>
+                </motion.div>
+                </motion.section>
                 
             </div>
         </motion.div>

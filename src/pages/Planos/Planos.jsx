@@ -6,7 +6,7 @@ import { useState } from "react";
 import { Dialog } from "@mui/material";
 import ContactForm from "../../components/ContactForm/ContactForm";
 import plan1 from "../../assets/fundoplan1.png";
-import plan3 from "../../assets/imageteste3.jpeg";
+import plan3 from "../../assets/imageteste2.jpeg";
 import plan2 from "../../assets/imageteste.jpeg";
 import plan4 from "../../assets/imageteste3.jpeg";
 import ContactGeneric from "../../components/ContactGeneric/ContactGeneric";
@@ -45,7 +45,13 @@ const plans = [
         "Monitoramento inteligente da rede com ajustes proativos para evitar interrupções.",
         "Consulta inicial personalizada, para adaptar a rede às necessidades do cliente."
       ],
-      desc:"Conectividade sob medida para residências que demandam estabilidade e velocidade com sofisticação."
+      desc: ({...rest}) => {
+        return (
+          <span {...rest}>
+            Conectividade sob medida para residências que demandam estabilidade e velocidade com sofisticação. 
+          </span>
+        );
+      }
     },
     {
       title: "Experiência Exclusiva",
@@ -65,10 +71,16 @@ const plans = [
         "Backup de conexão para continuidade do serviço mesmo em situações emergenciais.",
         "Personalização completa da rede residencial por especialistas em conectividade."
       ],
-      desc:"Velocidade e performance para residências conectadas e sofisticadas."
+      desc: ({...rest}) => {
+        return (
+          <span {...rest}>
+            Velocidade e performance para residências conectadas e sofisticadas, ideal para famílias que utilizam diversos dispositivos simultaneamente.
+          </span>
+        );
+      }
     },
     {
-      title: "PREMIUM",
+      title: "Conectividade sem Limites",
       banda: "2 GIGA",
       price: "R$ 480,000",
       img: plan4,
@@ -87,7 +99,13 @@ const plans = [
         "Consultoria tecnológica personalizada, com mapeamento da residência para otimizar a distribuição da rede.",
         "Gerente de contas dedicado, garantindo suporte exclusivo e atendimento prioritário."
       ],
-      desc:"O plano 02GB é uma verdadeira revolução tecnológica, unindo o poder do xGpon com a inovação do Wi-Fi 7, oferecendo a conexão mais avançada disponível no mercado. "
+      desc: ({...rest}) => {
+        return (
+          <span {...rest}>
+           Desenvolvido para atender às necessidades de residências sofisticadas e conectadas, entregando velocidades impressionantes, cobertura total e suporte de excelência. 
+          </span>
+        );
+      }
     },
   ];
 

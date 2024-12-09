@@ -10,9 +10,9 @@ import HelpIcon from '@mui/icons-material/Help';
 import stylesMobile from "./stylesMobile.module.scss";
 import { pagesConfigContext } from "../../Contexts/PagesContexts";
 import plan1 from "../../assets/fundoplan1.png";
-import plan3 from "../../assets/fundoplan2.png";
-import plan2 from "../../assets/newfundo1.jpg";
-import plan4 from "../../assets/newfundo2.jpg";
+import plan3 from "../../assets/imageteste2.jpeg";
+import plan2 from "../../assets/imageteste.jpeg";
+import plan4 from "../../assets/imageteste3.jpeg";
 import MobileNavbar from "../../components/MobileNavbar/MobileNavbar";
 import { useInView } from 'react-intersection-observer';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
@@ -20,6 +20,7 @@ import ContactMobileGeneric from "../../components/ContactMobileGeneric/ContactM
 import { Dialog } from "@mui/material";
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import Fab from '@mui/material/Fab';
+
 
 const theme = {
   palette:"#FF7B00"
@@ -71,9 +72,16 @@ export default function Home() {
           qpontos:0,
           wifi6:false,
           sup24:true,
+          details:[
+            "Tecnologia xPON para garantir estabilidade de ponta e conexão contínua.",
+            "Roteador Wi-Fi 6 de última geração, assegurando cobertura uniforme e velocidade em múltiplos dispositivos.",
+            "Atendimento técnico especializado com resolução em até 6 horas.",
+            "Monitoramento inteligente da rede com ajustes proativos para evitar interrupções.",
+            "Consulta inicial personalizada, para adaptar a rede às necessidades do cliente."
+          ],
         },
         {
-          title: "ULTRA",
+          title: "Conectividade Refinada",
           banda: "800 MEGA",
           price: "R$ 240,000",
           img: plan2,
@@ -81,9 +89,23 @@ export default function Home() {
           qpontos:0,
           wifi6:false,
           sup24:true,
+          details:[
+            "Tecnologia xPON para garantir estabilidade de ponta e conexão contínua.",
+            "Roteador Wi-Fi 6 de última geração, assegurando cobertura uniforme e velocidade em múltiplos dispositivos.",
+            "Atendimento técnico especializado com resolução em até 6 horas.",
+            "Monitoramento inteligente da rede com ajustes proativos para evitar interrupções.",
+            "Consulta inicial personalizada, para adaptar a rede às necessidades do cliente."
+          ],
+          desc: ({...rest}) => {
+            return (
+              <span {...rest}>
+                Conectividade sob medida para residências que demandam estabilidade e velocidade com sofisticação. 
+              </span>
+            );
+          }
         },
         {
-          title: "MASTER",
+          title: "Experiência Exclusiva",
           banda: "1 GIGA",
           price: "R$ 360,000",
           img: plan3,
@@ -92,9 +114,24 @@ export default function Home() {
           wifi6:true,
           sup24:true,
           supmega:true,
+          details:[
+            "Conexão via xGpon, uma das tecnologias mais avançadas do mercado, para oferecer máxima estabilidade e eficiência.",
+            "Roteador Wi-Fi 6 Plus, projetado para grandes residências, otimizando alcance e desempenho.",
+            "Atendimento técnico especializado com resolução em até 4 horas, priorizando a conveniência do cliente.",
+            "App de controle de rede exclusivo, com relatórios de desempenho e gestão simplificada de dispositivos conectados.",
+            "Backup de conexão para continuidade do serviço mesmo em situações emergenciais.",
+            "Personalização completa da rede residencial por especialistas em conectividade."
+          ],
+          desc: ({...rest}) => {
+            return (
+              <span {...rest}>
+                Velocidade e performance para residências conectadas e sofisticadas, ideal para famílias que utilizam diversos dispositivos simultaneamente.
+              </span>
+            );
+          }
         },
         {
-          title: "PREMIUM",
+          title: "Conectividade sem Limites",
           banda: "2 GIGA",
           price: "R$ 480,000",
           img: plan4,
@@ -103,9 +140,26 @@ export default function Home() {
           wifi6:true,
           sup24:true,
           supmega:true,
+          details:[
+            "Tecnologia xGpon de ponta, proporcionando velocidades ultra rápidas e baixa latência.",
+            "Wi-Fi 7 com suporte a múltiplos dispositivos simultâneos e cobertura otimizada para residências de até 600m².",
+            "Até 03 pontos de rede mesh cabeados para garantir a melhor experiência em qualquer ambiente da residência.",
+            "Atendimento VIP com técnico especializado em até 3 horas no local, com total discrição e profissionalismo.",
+            "Kit premium de conectividade, incluindo cabos de alta performance e acessórios exclusivos.",
+            "Monitoramento em tempo real da rede, com ajustes automáticos para garantir máxima performance.",
+            "Consultoria tecnológica personalizada, com mapeamento da residência para otimizar a distribuição da rede.",
+            "Gerente de contas dedicado, garantindo suporte exclusivo e atendimento prioritário."
+          ],
+          desc: ({...rest}) => {
+            return (
+              <span {...rest}>
+               Desenvolvido para atender às necessidades de residências sofisticadas e conectadas, entregando velocidades impressionantes, cobertura total e suporte de excelência. 
+              </span>
+            );
+          }
         },
       ];
-
+    
     const [open, setOpen] = useState(false);
     const [selectedPlan, setSelectedPlan] = useState(null);
   
