@@ -8,6 +8,15 @@
     width: 1200px;
 }
 
+.ContactGeneric2{
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    flex-direction: row;
+    width: 1200px;
+    justify-content: center;
+}
+
 .imagefundo{
     width: 100%;
     height: 100%;
@@ -51,6 +60,12 @@
     width: 40vw;
     z-index: 1;
     position: relative;
+}
+
+.boxqualquer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .Secondsection{
