@@ -4,14 +4,15 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import video from "../../assets/1015(4).mp4";
 import Carousel from "../../components/Carousel/Carousel";
-import { Ahistoria, SobreAtria } from "./sections/Sections";
+import { Ahistoria, Missao, SobreAtria } from "./sections/Sections";
 
 export default function Sobre() {
     const [pageSelect, setPageSelect] = useState("Sobre");
 
     const pages = {
         "Sobre": SobreAtria,
-        "Historia": Ahistoria
+        "Historia": Ahistoria,
+        "Missão": Missao,
     };
 
     const PageComponent = pages[pageSelect];
@@ -58,6 +59,23 @@ export default function Sobre() {
                                 Sobre a Atria
                             </motion.li>
 
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0,}}
+                            animate={{ opacity: 1,}}
+                            transition={{
+                                duration: 1.5,
+                                type: "spring",
+                                delay: 0.3,
+                            }}>
+                            <motion.li
+                                whileHover={{ backgroundColor: "#FF7B00", color: "#fff" }}
+                                onClick={() => setPageSelect("Missão")}
+                                variants={variants}
+                                animate={pageSelect === "Missão"? "select" : "notSelect" }
+                            >
+                                Missão
+                            </motion.li>
                         </motion.div>
                         <motion.div
                             initial={{ opacity: 0,}}

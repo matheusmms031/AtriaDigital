@@ -45,7 +45,7 @@ export default function Front() {
                                 <InstagramIcon sx={{ fontSize: "1.5vmax", marginBottom: '0.1vmax' }} />
                         </motion.div>
                     </a>
-                    <a href='https://sac2i.com.br/central_assinante_web/login' target="_blank">
+                    <a href='https://central.2itelecom.hubsoft.com.br' target="_blank">
                         <motion.div
                             className={styles.socialmedia}
                             initial={{ opacity: 0, x: 100 }}

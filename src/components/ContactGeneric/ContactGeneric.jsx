@@ -90,7 +90,7 @@ export default function ContactGeneric({Firstsection = false,data = {}, phone='+
                 >
                     <data.desc className={styles.desc}></data.desc>
                     <div className={styles.boxdetails}>
-                        {data.details.map((item, index) => (<span className={styles.details}>{item}</span>))}
+                        {data.details.map((item, index) => (<li className={styles.details}>{item}</li>))}
                     </div>
                 </motion.div>
                 <motion.div 

@@ -56,6 +56,54 @@ export function SobreAtria() {
         </div>
     )
 }
+export function Missao() {
+    return (
+        <div className={styles.textContent}>
+            <div className={styles.boxtext}>
+                <motion.div className={styles.titles}
+                    initial={{ opacity: 0, x: 100 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{
+                        duration: 1.5,
+                        type: "spring",
+                        delay: 0.1,
+                    }}
+                >
+                    <h1 className={styles.mainHeading}>
+                    <span style={{ color: "#FF7B00" }}>A nossa</span> missão 
+                    </h1>
+                    <p>Nosso maior objetivo</p>
+                </motion.div>
+                <div className={styles.boxDescriptions}>
+                    <motion.p
+                        className={styles.description}
+                        initial={{ opacity: 0, x: 100 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{
+                            duration: 1.5,
+                            type: "spring",
+                            delay: 0.2,
+                        }}
+                    >
+                        A Átria Digital é uma empresa de telecomunicações dedicada a fornecer internet de fibra óptica de alta velocidade para bairros de luxo em Belo Horizonte. Com um compromisso de qualidade e excelência, a Átria Digital entende as demandas de clientes que buscam estabilidade, rapidez e uma experiência de navegação premium.
+                    </motion.p>
+                    <motion.p
+                        className={styles.description}
+                        initial={{ opacity: 0, x: 100 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{
+                            duration: 1.5,
+                            type: "spring",
+                            delay: 0.2,
+                        }}
+                    >
+                        Ao focar em regiões específicas, a Átria Digital personaliza suas soluções para atender às necessidades tecnológicas dos clientes mais exigentes, acompanhando o avanço de tecnologias como automação residencial, streaming em múltiplos dispositivos e ambientes de trabalho remoto.
+                    </motion.p>
+                </div>
+            </div>
+        </div>
+    )
+}
 
 export function Ahistoria() {
     return (
