@@ -3,6 +3,7 @@ import ContactGeneric from "../../components/ContactGeneric/ContactGeneric.jsx";
 import { useState } from "react";
 import styles from "../../components/ContactGeneric/styles.module.scss";
 import { motion } from "framer-motion";
+import { Alert } from "@mui/material";
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 export default function Contato() {
 
@@ -26,8 +27,8 @@ export default function Contato() {
         console.log('Dados enviados:', formData);
         if (formData.name && formData.email && formData.phone && formData.bairro && formData.numero, formData.rua) {
             setSendSuccess(true);
-            location.href = `https://api.whatsapp.com/send/?phone=${phone}&text=
-            Olá tudo bem? Venho através do site, e tenho interesse em conhecer o plano ${data.title}.
+            location.href = `https://api.whatsapp.com/send/?phone=32123&text=
+            Olá tudo bem?.
             Meu nome é ${formData.name}
             Meu contato é: ${formData.phone}
             Meu email é ${formData.email}
@@ -167,6 +168,13 @@ export default function Contato() {
                                     </motion.div>
                                 
                         </div>
+                        {
+                            sendSuccess ? (
+                                <></>
+                            ) : (
+                                <Alert severity="warning">Preencha todos os campos por gentileza.</Alert>
+                            )
+                        }
                         <motion.button
                             type="submit"
                             initial={{ color: '#000' }}
@@ -175,13 +183,6 @@ export default function Contato() {
                         >
                             ENVIAR
                         </motion.button>
-                        {
-                            sendSuccess ? (
-                                <></>
-                            ) : (
-                                <Alert severity="warning">Preencha todos os campos por gentileza.</Alert>
-                            )
-                        }
                     </form>
                 </motion.section>
             </div>
