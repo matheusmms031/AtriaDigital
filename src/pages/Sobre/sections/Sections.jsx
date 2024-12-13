@@ -70,7 +70,7 @@ export function Missao() {
                     }}
                 >
                     <h1 className={styles.mainHeading}>
-                    <span style={{ color: "#FF7B00" }}>A nossa</span> missão 
+                    <span style={{ color: "#FF7B00" }}>Missão</span> da Átria Digital
                     </h1>
                     <p>Nosso maior objetivo</p>
                 </motion.div>
@@ -85,7 +85,7 @@ export function Missao() {
                             delay: 0.2,
                         }}
                     >
-                        A Átria Digital é uma empresa de telecomunicações dedicada a fornecer internet de fibra óptica de alta velocidade para bairros de luxo em Belo Horizonte. Com um compromisso de qualidade e excelência, a Átria Digital entende as demandas de clientes que buscam estabilidade, rapidez e uma experiência de navegação premium.
+                        Na Átria Digital, nossa missão é redefinir os padrões de conectividade e tecnologia, proporcionando uma experiência que vai além da simples oferta de serviços de internet. Combinamos inovação, excelência e atendimento exclusivo para atender às necessidades de um público exigente e sofisticado, garantindo que cada cliente tenha acesso ao melhor da tecnologia global.
                     </motion.p>
                     <motion.p
                         className={styles.description}
@@ -97,7 +97,7 @@ export function Missao() {
                             delay: 0.2,
                         }}
                     >
-                        Ao focar em regiões específicas, a Átria Digital personaliza suas soluções para atender às necessidades tecnológicas dos clientes mais exigentes, acompanhando o avanço de tecnologias como automação residencial, streaming em múltiplos dispositivos e ambientes de trabalho remoto.
+                        Somos movidos pelo compromisso de conectar pessoas, residências e negócios com soluções inteligentes e personalizadas, utilizando as tecnologias mais avançadas, como xGpon e Wi-Fi 7, para entregar velocidades incomparáveis e máxima estabilidade. Nosso foco está em oferecer não apenas uma conexão de alta performance, mas também um suporte diferenciado que coloca nossos clientes no centro de tudo o que fazemos.
                     </motion.p>
                 </div>
             </div>

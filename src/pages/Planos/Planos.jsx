@@ -5,7 +5,7 @@ import PlanCard from "../../components/PlanCard/PlanCard";
 import { useState } from "react";
 import { Dialog } from "@mui/material";
 import ContactForm from "../../components/ContactForm/ContactForm";
-import plan1 from "../../assets/fundoplan1.png";
+import plan1 from "../../assets/image5.jpeg";
 import plan3 from "../../assets/imageteste2.jpeg";
 import plan2 from "../../assets/imageteste.jpeg";
 import plan4 from "../../assets/imageteste3.jpeg";
@@ -13,7 +13,7 @@ import ContactGeneric from "../../components/ContactGeneric/ContactGeneric";
 
 const plans = [
     {
-      title: "TURBO",
+      title: "Conectividade para Pequenos Negócios",
       banda: "600 MEGA",
       price: "R$ 120,000",
       img: plan1,
@@ -22,12 +22,22 @@ const plans = [
       wifi6:false,
       sup24:true,
       details:[
-        "Tecnologia xPON para garantir estabilidade de ponta e conexão contínua.",
-        "Roteador Wi-Fi 6 de última geração, assegurando cobertura uniforme e velocidade em múltiplos dispositivos.",
+        "Sem fidelidade: Contrate sem compromissos de longo prazo.",
+        "Primeiro mês grátis, sem custo de mensalidade.",
+        "Conexão via tecnologia xPON para máxima estabilidade.",
+        "Roteador Wi-Fi 6 de alta performance incluso.",
+        "Monitoramento remoto da rede, garantindo disponibilidade proativa.",
         "Atendimento técnico especializado com resolução em até 6 horas.",
-        "Monitoramento inteligente da rede com ajustes proativos para evitar interrupções.",
-        "Consulta inicial personalizada, para adaptar a rede às necessidades do cliente."
+        "Manutenção preventiva anual, mantendo sua rede sempre atualizada.",
+        "Consultoria inicial personalizada para adaptar a rede às necessidades específicas do negócio."
       ],
+      desc: ({...rest}) => {
+        return (
+          <span {...rest}>
+            Pensado para pequenos negócios que precisam de estabilidade e performance para crescer.
+          </span>
+        );
+      }
     },
     {
       title: "Conectividade Refinada",
