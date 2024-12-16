@@ -2,7 +2,7 @@ import { useState } from "react";
 import styles from './styles.module.scss'
 import { motion } from "framer-motion";
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-
+import features from "../../assets/features.png"
 function FirstSection({ data }) {
     return (
         <motion.section
@@ -95,16 +95,20 @@ export default function ContactGeneric({ Firstsection = false, data = {}, phone 
                     </motion.div>
                     <motion.div
                         className={styles.button}
-                        initial={{ y: 20 }}
-                        animate={{ y: 0 }}
-                        transition={{ duration: 0.5 }}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 1 }}
                     >   <a href={`https://api.whatsapp.com/send/?phone=31999848584&text=Olá tudo bem? Venho através do site, e tenho interesse em conhecer o plano ${data.title}.`}>
                             <WhatsAppIcon sx={{ fontSize: "1.5vw", color: "#ffffff" }} />
                             <span>ASSINE JÁ</span>
                         </a>
                     </motion.div>
+                    <motion.img 
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1, delay: 0.2 }}
+                    src={features} className={styles.features}/>
                 </motion.section>
-
             </div>
         </motion.div>
     )

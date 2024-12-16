@@ -44,8 +44,8 @@ const plans = [
       banda: "800 MEGA",
       price: "R$ 240,000",
       img: plan2,
-      ponto:false,
-      qpontos:0,
+      ponto: true,
+      qpontos: 1,
       wifi6:true,
       sup24:true,
       details:[

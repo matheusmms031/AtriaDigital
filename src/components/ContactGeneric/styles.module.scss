@@ -17,7 +17,7 @@
     display: flex;
     overflow: hidden;
     flex-direction: row;
-    width: 1200px;
+    width: 62vw;
 }
 
 .ContactGeneric2{
@@ -86,7 +86,7 @@
     align-items: center;
     gap: 5vh;
     width: fit-content;
-    justify-content: center;
+    justify-content: space-between;
     padding: 50px 40px 50px 40px;
     background-color: rgb(226, 226, 226);
     min-height: 70vh;
@@ -272,3 +272,8 @@
     }
 }
 
+.features{
+    width: 30vmax;
+    position: relative;
+    bottom: 0px;
+}
