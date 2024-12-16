@@ -39,6 +39,8 @@ export default function Contato() {
       };
 
     return (
+        <div
+        className={styles.home}>
         <BoxGeneric>
             <motion.div>
             <div className={styles.ContactGeneric2}>
@@ -188,5 +190,6 @@ export default function Contato() {
             </div>
             </motion.div>
         </BoxGeneric >
+        </div>
     )
 }

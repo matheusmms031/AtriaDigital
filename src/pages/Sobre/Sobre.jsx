@@ -26,12 +26,6 @@ export default function Sobre() {
         <div className={styles.home}>
             <BoxGeneric>
                 <motion.div className={styles.contentWrapper}
-                    initial={{ backdropFilter: "blur(0px)", backgroundColor: "#0000000" }}
-                    animate={{ backdropFilter: "blur(5px)", backgroundColor: "#00000049" }}
-                    transition={{
-                        duration: 1.5,
-                        type: "ease-out",
-                    }}
                 >
                     <motion.ul className={styles.sobreMenu}
                     initial={{ opacity: 0}}
@@ -56,7 +50,7 @@ export default function Sobre() {
                                 variants={variants}
                                 animate={pageSelect === "Sobre"? "select" : "notSelect" }
                             >
-                                Sobre a Atria
+                                Sobre a Átria
                             </motion.li>
 
                         </motion.div>

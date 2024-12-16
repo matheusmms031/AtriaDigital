@@ -35,5 +35,13 @@ body{
     font-family: "Albert";   /*Can be any text*/
     src: local("Albert"),
       url("./fonts/AlbertSans-VariableFont_wght.ttf") format("truetype");
+
+    
   }
-  
+
+  @font-face {
+    font-family: "Rubik";   /*Can be any text*/
+    src: local("Rubik"),
+      url("./fonts/Rubik-VariableFont_wght.ttf") format("truetype");
+    
+  }

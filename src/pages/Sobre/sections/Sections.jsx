@@ -9,7 +9,14 @@ import video from "../../../assets/1015(4).mp4";
 
 export function SobreAtria() {
     return (
-        <div className={styles.textContent}>
+        <motion.div className={styles.textContent}
+        initial={{ opacity: 0, x: 100 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{
+                        duration: 1.5,
+                        type: "spring",
+                        delay: 0.1,
+                    }}>
             <div className={styles.boxtext}>
                 <motion.div className={styles.titles}
                     initial={{ opacity: 0, x: 100 }}
@@ -17,7 +24,7 @@ export function SobreAtria() {
                     transition={{
                         duration: 1.5,
                         type: "spring",
-                        delay: 0.1,
+                        delay: 0.2,
                     }}
                 >
                     <h1 className={styles.mainHeading}>
@@ -33,10 +40,10 @@ export function SobreAtria() {
                         transition={{
                             duration: 1.5,
                             type: "spring",
-                            delay: 0.2,
+                            delay: 0.3,
                         }}
                     >
-                        A Átria Digital é uma empresa de telecomunicações dedicada a fornecer internet de fibra óptica de alta velocidade para bairros de luxo em Belo Horizonte. Com um compromisso de qualidade e excelência, a Átria Digital entende as demandas de clientes que buscam estabilidade, rapidez e uma experiência de navegação premium.
+                        A Átria Digital é mais do que uma empresa de telecomunicações somos a escolha de quem exige o máximo em conectividade. Especializada em oferecer internet via fibra óptica de altíssima velocidade, atendemos exclusivamente aos bairros mais nobres de Belo Horizonte, entregando uma experiência incomparável em tecnologia e atendimento.
                     </motion.p>
                     <motion.p
                         className={styles.description}
@@ -45,20 +52,41 @@ export function SobreAtria() {
                         transition={{
                             duration: 1.5,
                             type: "spring",
-                            delay: 0.2,
+                            delay: 0.4,
                         }}
                     >
-                        Ao focar em regiões específicas, a Átria Digital personaliza suas soluções para atender às necessidades tecnológicas dos clientes mais exigentes, acompanhando o avanço de tecnologias como automação residencial, streaming em múltiplos dispositivos e ambientes de trabalho remoto.
+                        Nosso compromisso com a qualidade e a excelência vai além de fornecer conexão rápida e estável. Entendemos as necessidades de um público exigente que valoriza desempenho superior, privacidade e exclusividade. Por isso, nossas soluções são projetadas para atender às demandas de residências e negócios de alto padrão, acompanhando as inovações tecnológicas que definem o estilo de vida moderno.
+                    </motion.p>
+                    <motion.p
+                        className={styles.description}
+                        initial={{ opacity: 0, x: 100 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{
+                            duration: 1.5,
+                            type: "spring",
+                            delay: 0.5,
+                        }}
+                    >
+                        Com foco em tecnologias avançadas, a Átria Digital oferece uma conectividade feita sob medida. Atuamos para que cada cliente não apenas tenha acesso à melhor internet, mas também vivencie um atendimento diferenciado e proativo, alinhado aos mais altos padrões de sofisticação e confiabilidade.
+                        Na Átria Digital, conectamos mais do que redes: conectamos você ao futuro.
                     </motion.p>
                 </div>
             </div>
         
-        </div>
+        </motion.div>
     )
 }
 export function Missao() {
     return (
-        <div className={styles.textContent}>
+        <motion.div className={styles.textContent}
+        initial={{ opacity: 0,}}
+                    animate={{ opacity: 1,}}
+                    transition={{
+                        duration: 1.5,
+                        type: "spring",
+                        delay: 0.1,
+                    }}>
+
             <div className={styles.boxtext}>
                 <motion.div className={styles.titles}
                     initial={{ opacity: 0, x: 100 }}
@@ -66,7 +94,7 @@ export function Missao() {
                     transition={{
                         duration: 1.5,
                         type: "spring",
-                        delay: 0.1,
+                        delay: 0.2,
                     }}
                 >
                     <h1 className={styles.mainHeading}>
@@ -82,7 +110,7 @@ export function Missao() {
                         transition={{
                             duration: 1.5,
                             type: "spring",
-                            delay: 0.2,
+                            delay: 0.3,
                         }}
                     >
                         Na Átria Digital, nossa missão é redefinir os padrões de conectividade e tecnologia, proporcionando uma experiência que vai além da simples oferta de serviços de internet. Combinamos inovação, excelência e atendimento exclusivo para atender às necessidades de um público exigente e sofisticado, garantindo que cada cliente tenha acesso ao melhor da tecnologia global.
@@ -94,14 +122,14 @@ export function Missao() {
                         transition={{
                             duration: 1.5,
                             type: "spring",
-                            delay: 0.2,
+                            delay: 0.4,
                         }}
                     >
                         Somos movidos pelo compromisso de conectar pessoas, residências e negócios com soluções inteligentes e personalizadas, utilizando as tecnologias mais avançadas, como xGpon e Wi-Fi 7, para entregar velocidades incomparáveis e máxima estabilidade. Nosso foco está em oferecer não apenas uma conexão de alta performance, mas também um suporte diferenciado que coloca nossos clientes no centro de tudo o que fazemos.
                     </motion.p>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 
@@ -123,20 +151,6 @@ export function Ahistoria() {
                     </h1>
                     <p>Algumas das regalias de ser Átria</p>
                 </motion.div>
-                <div className={styles.boxDescriptions}>
-                    <motion.p
-                        className={styles.description}
-                        initial={{ opacity: 0, x: 100 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{
-                            duration: 1.5,
-                            type: "spring",
-                            delay: 0.2,
-                        }}
-                    >
-                        A Átria Digital possui vantagens incriveis para seus clientes, proporcionando internet rápida e segura, com uma velocidade de download e upload adequada para todos os tipos de uso.
-                    </motion.p>
-                </div>
                 <div className={styles.columncard}>
                 <motion.div className={styles.card}
                 initial={{ opacity: 0, x: 100 }}
@@ -150,10 +164,10 @@ export function Ahistoria() {
                     <HighQualityIcon sx={{ fontSize: 40, color: "#FF7B00" }} />
                     <div className={styles.cardText}>
                         <h3>
-                            Alta banda larga
+                            Conexão de Alta Velocidade
                         </h3>
                         <p>
-                            Nós disponibilizamos alta banda larga.
+                        Velocidades impressionantes, perfeitas para streaming, automação residencial e trabalho remoto.
                         </p>
                     </div>
                 </motion.div>
@@ -168,10 +182,10 @@ export function Ahistoria() {
                     <HelpIcon sx={{ fontSize: 40, color: "#FF7B00" }} />
                     <div className={styles.cardText}>
                         <h3>
-                            Suporte a semana inteira
+                            Atendimento Disponível 24 horas
                         </h3>
                         <p>
-                            Suporte para nossos clientes na semana.
+                            Nossa equipe está pronta para atender você a qualquer dia, garantindo suporte rápido e eficaz quando você precisar.
                         </p>
                     </div>
                 </motion.div>
@@ -186,10 +200,11 @@ export function Ahistoria() {
                 <HomeIcon sx={{ fontSize: 40, color: "#FF7B00" }} />
                             <div className={styles.cardText}>
                                 <h3>
-                                    Atendimento a domicilio
+                                                                    
+                                Atendimento VIP no Local
                                 </h3>
                                 <p>
-                                    Nossos técnicos estão sempre à disposição para ir a sua casa.
+                                Técnicos especializados disponíveis em até 3 horas para resolver qualquer demanda diretamente no seu domicílio.
                                 </p>
                             </div>
                 </motion.div>
@@ -204,10 +219,10 @@ export function Ahistoria() {
                     <LiveTvIcon sx={{ fontSize: 40, color: "#FF7B00" }} />
                     <div className={styles.cardText}>
                         <h3>
-                            Serviços de streaming
+                        Suporte Premium para Dispositivos
                         </h3>
                         <p>
-                            Serviços de streaming junto com os pacotes de assinatura.
+                        Conexão otimizada para múltiplos dispositivos e streaming em 4K ou 8K, garantindo qualidade sem interrupções.
                         </p>
                     </div>
                 </motion.div>
@@ -222,10 +237,10 @@ export function Ahistoria() {
                     <LiveTvIcon sx={{ fontSize: 40, color: "#FF7B00" }} />
                     <div className={styles.cardText}>
                         <h3>
-                            Serviços de streaming
+                        Cobertura Total com Tecnologia Mesh
                         </h3>
                         <p>
-                            Serviços de streaming junto com os pacotes de assinatura.
+                        Rede Wi-Fi avançada com pontos mesh cabeados para conexão estável e cobertura impecável em toda a residência.
                         </p>
                     </div>
                 </motion.div>
@@ -240,10 +255,10 @@ export function Ahistoria() {
                     <LiveTvIcon sx={{ fontSize: 40, color: "#FF7B00" }} />
                     <div className={styles.cardText}>
                         <h3>
-                            Serviços de streaming
+                        Tecnologia de Ponta e Sem Fidelidade
                         </h3>
                         <p>
-                            Serviços de streaming junto com os pacotes de assinatura.
+                        Infraestrutura moderna com xGpon e Wi-Fi 6 e 7, aliada à flexibilidade de planos sem contratos longos e 1º mês grátis.
                         </p>
                     </div>
                 </motion.div>

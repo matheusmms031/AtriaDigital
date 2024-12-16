@@ -13,13 +13,13 @@ import ContactGeneric from "../../components/ContactGeneric/ContactGeneric";
 
 const plans = [
     {
-      title: "Conectividade para Pequenos Negócios",
+      title: "Para Pequenos Negócios",
       banda: "600 MEGA",
       price: "R$ 120,000",
       img: plan1,
       ponto:false,
       qpontos:0,
-      wifi6:false,
+      wifi6:true,
       sup24:true,
       details:[
         "Sem fidelidade: Contrate sem compromissos de longo prazo.",
@@ -46,7 +46,7 @@ const plans = [
       img: plan2,
       ponto:false,
       qpontos:0,
-      wifi6:false,
+      wifi6:true,
       sup24:true,
       details:[
         "Tecnologia xPON para garantir estabilidade de ponta e conexão contínua.",

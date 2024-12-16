@@ -6,6 +6,8 @@
       object-fit: cover;
       z-index: -1;
   }
+  backdrop-filter: blur(5px);
+  background-color: #00000049;
 }
 
 
