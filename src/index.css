@@ -52,30 +52,30 @@ body{
   }
 
   @font-face {
-    font-family: "BDSans"; 
-    font-weight: bold; 
-    src: local("BDSans"),
-      url("./fonts/BDSans-Bold.otf") format("opentype");
-  }
-
-  @font-face {
-    font-family: "BDSans"; 
-    font-weight: normal; 
+    font-family: "BDSans";
+    font-weight: 400; /* Normal */
     src: local("BDSans"),
       url("./fonts/BDSans-Regular.otf") format("opentype");
   }
 
   @font-face {
-    font-family: "BDSans"; 
-    font-weight: lighter; 
+    font-family: "BDSans";
+    font-weight: 300; /* Lighter */
     src: local("BDSans"),
       url("./fonts/BDSans-Thin.otf") format("opentype");
   }
 
   @font-face {
-    font-family: "BDSans"; 
-    font-weight: bolder; 
+    font-family: "BDSans";
+    font-weight: 900; /* Bolder */
     src: local("BDSans"),
       url("./fonts/BDSans-Black.otf") format("opentype");
+  }
+
+  @font-face {
+    font-family: "BDSans";
+    font-weight: 700; /* Bold */
+    src: local("BDSans"),
+      url("./fonts/BDSans-Bold.otf") format("opentype");
   }
 

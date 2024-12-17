@@ -48,6 +48,7 @@
     
     h1{
         text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.77);
+
     }
   }
   
@@ -55,12 +56,17 @@
     font-size: 4vw; /* 48px convertido */
     margin-top: 2vh; /* 20px convertido */
     margin-bottom: 0.3vh; /* 10px convertido */
+    font-family: "BDSans";
+    font-weight: 900;
+
   }
 
   .subtitle{
     margin-top: 0px;
     margin-bottom: 2vh;
-    font-size: 2.5vw; /* 48px convertido */
+    font-size: 2vw; /* 48px convertido */
+    font-weight: 700;
+    font-family: "BDSans";
   }
   
   .description {
@@ -69,6 +75,9 @@
     margin-bottom: 3vh;
     margin-top: 0;
     text-shadow: 0.1vw 0.1vw 0.5vw black; /* sombras convertidas */
+    font-family: "Nunito";
+    line-height: 1.2vw;
+    text-align: justify;
   }
   
   .iconWrapper {
