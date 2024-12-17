@@ -6,7 +6,7 @@ import { useState } from "react";
 import { Dialog } from "@mui/material";
 import ContactForm from "../../components/ContactForm/ContactForm";
 import plan1 from "../../assets/image5.jpeg";
-import plan3 from "../../assets/imageteste2.jpeg";
+import plan3 from "../../assets/imageteste10.jpeg";
 import plan2 from "../../assets/imageteste.jpeg";
 import plan4 from "../../assets/imageteste3.jpeg";
 import ContactGeneric from "../../components/ContactGeneric/ContactGeneric";
@@ -64,7 +64,7 @@ const plans = [
       }
     },
     {
-      title: "Experiência Exclusiva",
+      title: "Conexão Gamer Suprema",
       banda: "1 GIGA",
       price: "R$ 360,000",
       img: plan3,
@@ -73,18 +73,21 @@ const plans = [
       wifi6:true,
       sup24:true,
       supmega:true,
+      ippublico:true,
       details:[
-        "Conexão via xGpon, uma das tecnologias mais avançadas do mercado, para oferecer máxima estabilidade e eficiência.",
-        "Roteador Wi-Fi 6 Plus, projetado para grandes residências, otimizando alcance e desempenho.",
-        "Atendimento técnico especializado com resolução em até 4 horas, priorizando a conveniência do cliente.",
-        "App de controle de rede exclusivo, com relatórios de desempenho e gestão simplificada de dispositivos conectados.",
-        "Backup de conexão para continuidade do serviço mesmo em situações emergenciais.",
-        "Personalização completa da rede residencial por especialistas em conectividade."
+        "Alta Velocidade e Estabilidade: Conexão via xGpon, garantindo resposta instantânea e máxima eficiência.",
+        "IP Público Fixo e NAT Aberto: Ideal para partidas online sem restrições e maior segurança na conexão.",
+        "Roteador Wi-Fi 6 Plus: Cobertura ampla e suporte para múltiplos dispositivos em simultâneo.",
+        "Ponto Mesh Cabeado Incluso: Conexão perfeita em qualquer ambiente da sua casa, sem perda de sinal.",
+        "Garantia de Upload Mínimo de 50% e velocidade estável para transmissões ao vivo, uploads rápidos e jogos online competitivos.",
+        "Suporte Presencial Prioritário: Técnico especializado no local em até 4 horas, com foco na resolução imediata.",
+        "Monitoramento Proativo e App Exclusivo: Controle total da rede e personalização do desempenho com relatórios em tempo real.",
+
       ],
       desc: ({...rest}) => {
         return (
           <span {...rest}>
-            Velocidade e performance para residências conectadas e sofisticadas, ideal para famílias que utilizam diversos dispositivos simultaneamente.
+            Desenvolvido para gamers e usuários exigentes, o Plano 01GB é a escolha definitiva para quem busca desempenho sem limites.
           </span>
         );
       }
@@ -96,9 +99,9 @@ const plans = [
       img: plan4,
       ponto:true,
       qpontos:2,
-      wifi6:true,
       sup24:true,
       supmega:true,
+      wifi7:true,
       details:[
         "Tecnologia xGpon de ponta, proporcionando velocidades ultra rápidas e baixa latência.",
         "Wi-Fi 7 com suporte a múltiplos dispositivos simultâneos e cobertura otimizada para residências de até 600m².",
@@ -191,6 +194,8 @@ export default function Planos() {
                     wifi6={data.wifi6}
                     sup24={data.sup24}
                     supmega={data.supmega}
+                    ippublico={data.ippublico}
+                    wifi7={data.wifi7}
                   />
                 </motion.div>
             ))}

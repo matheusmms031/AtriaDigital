@@ -43,5 +43,39 @@ body{
     font-family: "Rubik";   /*Can be any text*/
     src: local("Rubik"),
       url("./fonts/Rubik-VariableFont_wght.ttf") format("truetype");
-    
   }
+  
+  @font-face {
+    font-family: "Nunito";   /*Can be any text*/
+    src: local("Nunito"),
+      url("./fonts/Nunito-VariableFont_wght.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "BDSans"; 
+    font-weight: bold; 
+    src: local("BDSans"),
+      url("./fonts/BDSans-Bold.otf") format("opentype");
+  }
+
+  @font-face {
+    font-family: "BDSans"; 
+    font-weight: normal; 
+    src: local("BDSans"),
+      url("./fonts/BDSans-Regular.otf") format("opentype");
+  }
+
+  @font-face {
+    font-family: "BDSans"; 
+    font-weight: lighter; 
+    src: local("BDSans"),
+      url("./fonts/BDSans-Thin.otf") format("opentype");
+  }
+
+  @font-face {
+    font-family: "BDSans"; 
+    font-weight: bolder; 
+    src: local("BDSans"),
+      url("./fonts/BDSans-Black.otf") format("opentype");
+  }
+

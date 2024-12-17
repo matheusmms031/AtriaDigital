@@ -92,6 +92,9 @@ export default function ContactGeneric({ Firstsection = false, data = {}, phone 
                         <div className={styles.boxdetails}>
                             {data.details.map((item, index) => (<li className={styles.details}>{item}</li>))}
                         </div>
+                        <div className={styles.termo}>
+
+                        </div>
                     </motion.div>
                     <motion.div
                         className={styles.button}

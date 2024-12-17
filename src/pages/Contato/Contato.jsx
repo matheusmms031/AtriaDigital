@@ -45,7 +45,7 @@ export default function Contato() {
             <motion.div>
             <div className={styles.ContactGeneric2}>
                 <motion.section
-                    className={styles.Secondsection}
+                    className={styles.Secondsection2}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.75 }}
