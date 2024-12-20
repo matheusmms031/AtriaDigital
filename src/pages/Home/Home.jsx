@@ -26,7 +26,7 @@ import Fab from '@mui/material/Fab';
 
 
 const theme = {
-    palette: "#FF7B00"
+    palette: "#e8e120"
 }
 
 const ScrollSection = ({ children, ...rest }) => {
@@ -192,8 +192,7 @@ export default function Home() {
             <div className={styles.home}>
                 <BoxGeneric>
                     <motion.section className={styles.contentWrapper}
-                        initial={{ backdropFilter: "blur(0px)", backgroundColor: "#0000000" }}
-                        animate={{ backdropFilter: "blur(5px)", backgroundColor: "#00000049" }}
+
                         transition={{
                             duration: 1.5,
                             type: "ease-out",
@@ -210,9 +209,9 @@ export default function Home() {
                                     delay: 0.1,
                                 }}
                             >
-                                <span style={{ color: "#FF7B00" }}>Átria Digital</span>
+                                <span style={{ color: "#e8e120" }}>Olá,<br/> Vila da Serra</span>
                             </motion.h1>
-                            <motion.h2
+                            <motion.div
                                 className={styles.subtitle}
                                 initial={{ opacity: 0, x: 100 }}
                                 animate={{ opacity: 1, x: 0 }}
@@ -222,22 +221,11 @@ export default function Home() {
                                     delay: 0.1,
                                 }}
                             >
-                                A Conexão que Redefine Padrões
-                            </motion.h2>
-                            <motion.p
-                                className={styles.description}
-                                initial={{ opacity: 0, x: 100 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                transition={{
-                                    duration: 1.5,
-                                    type: "spring",
-                                    delay: 0.2,
-                                }}
-                            >
-
-                                Bem-vindo à Átria Digital, onde conectividade se transforma em excelência. Somos a referência em internet de fibra óptica ultrarrápida, projetada para atender os bairros mais sofisticados de Belo Horizonte. Combinando tecnologia de ponta e atendimento exclusivo, entregamos uma experiência premium que vai além da velocidade, conectando você ao futuro com confiança e inovação.
-
-                            </motion.p>
+                                <span>
+                                    
+                                CHEGAMOS
+                                </span>
+                            </motion.div>
                         </div>
                         <div className={styles.iconWrapper}>
                             <motion.div
@@ -298,7 +286,7 @@ export default function Home() {
                                     delay: 0.1,
                                 }}
                             >
-                                Serviço de <span style={{ color: "#FF7B00" }}>luxo</span> e <span style={{ color: "#FF7B00" }}>qualidade</span>
+                                Serviço de <span style={{ color: "#e8e120" }}>luxo</span> e <span style={{ color: "#e8e120" }}>qualidade</span>
                             </motion.h1>
                             <motion.p
                                 initial={{ opacity: 0, x: 100 }}
@@ -324,7 +312,7 @@ export default function Home() {
                                     href="#planos"
                                 >
                                     <span>Assine agora</span>
-                                    <KeyboardDoubleArrowRightIcon sx={{ fontSize: "7vw", color: "#fffff" }} />
+                                    <KeyboardDoubleArrowRightIcon sx={{ fontSize: "7vw", color: "#000000" }} />
                                 </motion.a>
                             </motion.div>
                         </div>
@@ -344,7 +332,7 @@ export default function Home() {
                     <div className={stylesMobile.boxContent}>
                         <ScrollSection>
                             <div className={stylesMobile.card}>
-                                <HelpIcon sx={{ fontSize: "9vw", color: "#FF7B00" }} />
+                                <HelpIcon sx={{ fontSize: "9vw", color: "#e8e120" }} />
                                 <div className={stylesMobile.cardText}>
                                     <h3>
                                     Atendimento Disponível 24 horas
@@ -357,7 +345,7 @@ export default function Home() {
                         </ScrollSection>
                         <ScrollSection>
                             <div className={stylesMobile.card}>
-                                <HomeIcon sx={{ fontSize: "9vw", color: "#FF7B00" }} />
+                                <HomeIcon sx={{ fontSize: "9vw", color: "#e8e120" }} />
                                 <div className={stylesMobile.cardText}>
                                     <h3>
                                     Atendimento VIP no Local
@@ -370,7 +358,7 @@ export default function Home() {
                         </ScrollSection>
                         <ScrollSection>
                             <div className={stylesMobile.card}>
-                                <HighQualityIcon sx={{ fontSize: "9vw", color: "#FF7B00" }} />
+                                <HighQualityIcon sx={{ fontSize: "9vw", color: "#e8e120" }} />
                                 <div className={stylesMobile.cardText}>
                                     <h3>
                                     Conexão de Alta Velocidade
@@ -383,7 +371,7 @@ export default function Home() {
                         </ScrollSection>
                         <ScrollSection>
                             <div className={stylesMobile.card}>
-                                <LiveTvIcon sx={{ fontSize: "9vw", color: "#FF7B00" }} />
+                                <LiveTvIcon sx={{ fontSize: "9vw", color: "#e8e120" }} />
                                 <div className={stylesMobile.cardText}>
                                     <h3>
                                         Suporte Premium para Dispositivos
@@ -396,7 +384,7 @@ export default function Home() {
                         </ScrollSection>
                         <ScrollSection>
                             <div className={stylesMobile.card}>
-                                <DeviceHubIcon sx={{ fontSize: "9vw", color: "#FF7B00" }} />
+                                <DeviceHubIcon sx={{ fontSize: "9vw", color: "#e8e120" }} />
                                 <div className={stylesMobile.cardText}>
                                     <h3>
                                         Cobertura Total com Tecnologia Mesh
@@ -409,7 +397,7 @@ export default function Home() {
                         </ScrollSection>
                         <ScrollSection>
                             <div className={stylesMobile.card}>
-                                <SignalCellularAltIcon sx={{ fontSize: "9vw", color: "#FF7B00" }} />
+                                <SignalCellularAltIcon sx={{ fontSize: "9vw", color: "#e8e120" }} />
                                 <div className={stylesMobile.cardText}>
                                     <h3>
                                     Tecnologia de Ponta e Sem Fidelidade
@@ -465,8 +453,8 @@ export default function Home() {
                 </section>
                 <div className={stylesMobile.iconwhat}>
                     <a href="https://api.whatsapp.com/send/?phone=+553123331401" target="_blank">
-                        <Fab sx={{ bgcolor: theme.palette }} aria-label="add" size="largest">
-                            <WhatsAppIcon sx={{ fontSize: "10vw", color: "white" }} />
+                        <Fab sx={{ bgcolor: theme.palette, padding:"3vw" }} aria-label="add" size="largest">
+                            <WhatsAppIcon sx={{ fontSize: "10vw", color: "black" }} />
                         </Fab>
                     </a>
                 </div>

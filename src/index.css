@@ -22,6 +22,7 @@ body{
 @media (max-width: 1024px) {
   .video-fundo{
     height: 110vh;
+    z-index: 1;
   }
 }
 @font-face {

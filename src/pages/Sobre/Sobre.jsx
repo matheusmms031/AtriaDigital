@@ -2,7 +2,6 @@ import BoxGeneric from "../../components/BoxGeneric/BoxGeneric";
 import styles from "./styles.module.scss";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import video from "../../assets/1015(4).mp4";
 import Carousel from "../../components/Carousel/Carousel";
 import { Ahistoria, Missao, SobreAtria } from "./sections/Sections";
 
@@ -18,8 +17,8 @@ export default function Sobre() {
     const PageComponent = pages[pageSelect];
 
     const variants = {
-        select: {backgroundColor: "#FF7B00", color: "#fff"},
-        notSelect: {backgroundColor: "#fff", color: "#FF7B00"}
+        select: {backgroundColor: "#e8e120", color: "#000000"},
+        notSelect: {backgroundColor: "#151515", color: "#e8e120"}
     };
 
     return (
@@ -46,7 +45,7 @@ export default function Sobre() {
                             <motion.li
                                 style={{ borderRadius: "30px 0px 0px 30px" }}
                                 onClick={() => setPageSelect("Sobre")}
-                                whileHover={{ backgroundColor: "#FF7B00", color: "#fff" }}
+                                whileHover={{ backgroundColor: "#e8e120", color: "#000000" }}
                                 variants={variants}
                                 animate={pageSelect === "Sobre"? "select" : "notSelect" }
                             >
@@ -63,7 +62,7 @@ export default function Sobre() {
                                 delay: 0.3,
                             }}>
                             <motion.li
-                                whileHover={{ backgroundColor: "#FF7B00", color: "#fff" }}
+                                whileHover={{ backgroundColor: "#e8e120", color: "#000000" }}
                                 onClick={() => setPageSelect("Missão")}
                                 variants={variants}
                                 animate={pageSelect === "Missão"? "select" : "notSelect" }
@@ -80,7 +79,7 @@ export default function Sobre() {
                                 delay: 0.3,
                             }}>
                             <motion.li
-                                whileHover={{ backgroundColor: "#FF7B00", color: "#fff" }}
+                                whileHover={{ backgroundColor: "#e8e120", color: "#000000" }}
                                 style={{ borderRadius: "0px 30px 30px 0px" }}
                                 onClick={() => setPageSelect("Historia")}
                                 variants={variants}

@@ -2,7 +2,8 @@ import { useState } from "react";
 import styles from './styles.module.scss'
 import { motion } from "framer-motion";
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import features from "../../assets/features.png"
+import features from "../../assets/features.png";
+import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
 function FirstSection({ data }) {
     return (
         <motion.section
@@ -92,8 +93,10 @@ export default function ContactGeneric({ Firstsection = false, data = {}, phone 
                         <div className={styles.boxdetails}>
                             {data.details.map((item, index) => (<li className={styles.details}>{item}</li>))}
                         </div>
-                        <div className={styles.termo}>
-
+                        <div className={styles.termobox}>
+                            <div className={styles.termo}>
+                                <ErrorOutlineIcon sx={{ fontSize: "1.2vw", color: "#FF7B00" }} /> <span>Termos e Condições</span>
+                            </div>
                         </div>
                     </motion.div>
                     <motion.div

@@ -27,7 +27,6 @@ export function App() {
         {!isLoading && 
         <PagesConfigProvider>
             <Front/>
-            <AppBarGeneric />
             <PageOrganizer/>
         </PagesConfigProvider>}
         </>

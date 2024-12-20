@@ -7,7 +7,7 @@
       z-index: -1;
   }
   backdrop-filter: blur(5px);
-  background-color: #00000049;
+  background-color: #0000005e;
 }
   .mainContent {
     position: relative;
@@ -30,8 +30,6 @@
     flex-wrap: wrap;
     margin: auto 0;
     padding: 8vh 2vw; /* 80px e 37px convertidos */
-    backdrop-filter: blur(5px);
-    background-color: #00000049;
     width: 100vw; /* 973px convertido */
   }
   
@@ -53,20 +51,36 @@
   }
   
   .mainHeading {
-    font-size: 4vw; /* 48px convertido */
+    font-size: 5vw; /* 48px convertido */
     margin-top: 2vh; /* 20px convertido */
     margin-bottom: 0.3vh; /* 10px convertido */
     font-family: "BDSans";
-    font-weight: 900;
+    font-weight: 700;
+    letter-spacing: -5%;
+    line-height: 95%;
 
   }
 
+  .titlebox{
+    display: flex;
+    align-items: center;
+    gap: 0.8vw;
+  }
+
   .subtitle{
-    margin-top: 0px;
+    padding: 0.5vw 2vw;
+    margin-top: 5vh;
+    background-color: #151515;
+    width: fit-content;
     margin-bottom: 2vh;
     font-size: 2vw; /* 48px convertido */
-    font-weight: 700;
+    font-weight: 900;
     font-family: "BDSans";
+
+    span{
+        line-height: 0%;
+        margin: 0px;
+    }
   }
   
   .description {

@@ -291,3 +291,18 @@
     position: relative;
     bottom: 0px;
 }
+
+.termo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2vw;
+    width: fit-content;
+}
+
+.termobox{
+    width: 100%;
+    align-items: flex-start;
+    justify-content: flex-start;
+}

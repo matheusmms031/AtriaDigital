@@ -5,7 +5,8 @@ import HighQualityIcon from "@mui/icons-material/HighQuality";
 import HelpIcon from '@mui/icons-material/Help';
 import HomeIcon from '@mui/icons-material/Home';
 import LiveTvIcon from '@mui/icons-material/LiveTv';
-import video from "../../../assets/1015(4).mp4";
+import RssFeedIcon from '@mui/icons-material/RssFeed';
+import RouterIcon from '@mui/icons-material/Router';
 
 export function SobreAtria() {
     return (
@@ -28,7 +29,7 @@ export function SobreAtria() {
                     }}
                 >
                     <h1 className={styles.mainHeading}>
-                    <span style={{ color: "#FF7B00" }}>Sobre</span> a Átria Digital
+                    <span style={{ color: "#e8e120" }}>Sobre</span> a Átria Digital
                     </h1>
                     <p>Um pouco do que somos</p>
                 </motion.div>
@@ -98,7 +99,7 @@ export function Missao() {
                     }}
                 >
                     <h1 className={styles.mainHeading}>
-                    <span style={{ color: "#FF7B00" }}>Missão</span> da Átria Digital
+                    <span style={{ color: "#e8e120" }}>Missão</span> da Átria Digital
                     </h1>
                     <p>Nosso maior objetivo</p>
                 </motion.div>
@@ -147,7 +148,7 @@ export function Ahistoria() {
                     }}
                 >
                     <h1 className={styles.mainHeading}>
-                        As nossas <span style={{ color: "#FF7B00" }}>vantagens</span>
+                        As nossas <span style={{ color: "#e8e120" }}>vantagens</span>
                     </h1>
                     <p>Algumas das regalias de ser Átria</p>
                 </motion.div>
@@ -161,7 +162,7 @@ export function Ahistoria() {
                     delay: 0.3,
                 }}
                 >
-                    <HighQualityIcon sx={{ fontSize: 40, color: "#FF7B00" }} />
+                    <HighQualityIcon sx={{ fontSize: 40, color: "#e8e120" }} />
                     <div className={styles.cardText}>
                         <h3>
                             Conexão de Alta Velocidade
@@ -179,7 +180,7 @@ export function Ahistoria() {
                     type: "spring",
                     delay: 0.4,
                 }}>
-                    <HelpIcon sx={{ fontSize: 40, color: "#FF7B00" }} />
+                    <HelpIcon sx={{ fontSize: 40, color: "#e8e120" }} />
                     <div className={styles.cardText}>
                         <h3>
                             Atendimento Disponível 24 horas
@@ -197,7 +198,7 @@ export function Ahistoria() {
                     type: "spring",
                     delay: 0.5,
                 }}>
-                <HomeIcon sx={{ fontSize: 40, color: "#FF7B00" }} />
+                <HomeIcon sx={{ fontSize: 40, color: "#e8e120" }} />
                             <div className={styles.cardText}>
                                 <h3>
                                                                     
@@ -216,7 +217,7 @@ export function Ahistoria() {
                     type: "spring",
                     delay: 0.6,
                 }}>
-                    <LiveTvIcon sx={{ fontSize: 40, color: "#FF7B00" }} />
+                    <LiveTvIcon sx={{ fontSize: 40, color: "#e8e120" }} />
                     <div className={styles.cardText}>
                         <h3>
                         Suporte Premium para Dispositivos
@@ -234,7 +235,7 @@ export function Ahistoria() {
                     type: "spring",
                     delay: 0.6,
                 }}>
-                    <LiveTvIcon sx={{ fontSize: 40, color: "#FF7B00" }} />
+                    <RssFeedIcon sx={{ fontSize: 40, color: "#e8e120" }} />
                     <div className={styles.cardText}>
                         <h3>
                         Cobertura Total com Tecnologia Mesh
@@ -252,7 +253,7 @@ export function Ahistoria() {
                     type: "spring",
                     delay: 0.6,
                 }}>
-                    <LiveTvIcon sx={{ fontSize: 40, color: "#FF7B00" }} />
+                    <RouterIcon sx={{ fontSize: 40, color: "#e8e120" }} />
                     <div className={styles.cardText}>
                         <h3>
                         Tecnologia de Ponta e Sem Fidelidade

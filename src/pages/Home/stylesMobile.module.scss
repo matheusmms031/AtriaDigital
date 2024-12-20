@@ -5,15 +5,18 @@
     flex-direction: column;
     gap: 0px;
     overflow: hidden;
+    background-color: #151515;
 }
 
 .backgroundFirstBox{
     display: flex;
     flex-direction: column;
     align-items: start;
-    background-image: linear-gradient(180deg, rgba(255,255,255,0) 90%, rgba(255,255,255,1) 100%);
+    background-image: linear-gradient(180deg, rgba(255,255,255,0) 90%, #151515 100%);
     backdrop-filter: blur(3px);
+    background-color: #000000a1;
     height: 110vh;
+    z-index: 2;
 }
 
 .firstbox{
@@ -39,18 +42,24 @@ h1,h2,h3,h4,h5,h6{
         font-size: 	11.1627906977vw;
         text-align: center;
         text-shadow: 2px 1px 5px rgba(0,0,0,0.39);
+        font-family: "BDSans";
+        letter-spacing: 0%;
+        font-weight: 900;
     }
     p{
         font-size: 4.1vw;
         text-align: center;
         text-shadow: 2px 1px 11px rgba(0,0,0,0.55);
         width: fit-content;
+        font-family: "Nunito";
+        
     }
 }
 .iconwhat{
     position:fixed;
     bottom: 7vw;
     right: 7vw;
+    z-index: 10;
 }
 
 
@@ -61,6 +70,7 @@ h1,h2,h3,h4,h5,h6{
     align-items: center;
     justify-content: start;
     gap: 50px;
+    background-color: #151515;
 }
 
 .boxText{
@@ -69,13 +79,14 @@ h1,h2,h3,h4,h5,h6{
 
     h2{
         font-size: 9.3023255814vw;
-        color: $color_primary;
+        color: #e8e120;
     }
     p{
         line-height: 100%;
         font-size: 5.1vw;
         font-weight: 600;
-        color: $color_text_second;
+        color: #ffffff;
+        font-family: "Nunito";
     }
 }
 
@@ -101,11 +112,12 @@ h1,h2,h3,h4,h5,h6{
     h3{
         font-size: 5.3vw;
         margin: 0px;
-        color: $color_primary;
+        color: #e8e120;
     }
     p{
         margin: 0px;
         font-size: 4.1vw;
+        color: white;
     }
 }
 
@@ -142,11 +154,11 @@ h1,h2,h3,h4,h5,h6{
     text-transform: none;
     text-decoration: none;
     color: white;
-    background-color: $color_primary;
+    background-color: #e8e120;
     border-radius: 20px;
 
     span{
-        color: white;
+        color: rgb(0, 0, 0);
         font-weight: 600;
         text-decoration: solid;
         font-size: 5vw;
