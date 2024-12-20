@@ -181,7 +181,7 @@ export default function Contato() {
                             type="submit"
                             initial={{ color: '#000' }}
                             onClick={handleSubmit}
-                            whileHover={{ backgroundColor: '#FF7B00', color: '#fff' }}
+                            whileHover={{ backgroundColor: '#e8e120', color: '#000000' }}
                         >
                             ENVIAR
                         </motion.button>

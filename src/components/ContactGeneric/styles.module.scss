@@ -97,6 +97,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 10px;
     gap: 5vh;
     width: fit-content;
     justify-content: center;
@@ -121,14 +122,14 @@
         font-weight: 500;
         text-shadow: 1px 1px 8px black;
         text-transform: uppercase;
-        font-family: "Rubik";
+        font-family: "Nunito";
         
     }
     h2{
         text-shadow: 1px 1px 8px black;
         font-size: 1.5vw;
         font-weight: 500;
-        font-family: "Rubik";
+        font-family: "Nunito";
     }
     h3{
         font-size: 1.3vw;
@@ -145,8 +146,9 @@
 
     h2{
         font-size: 1.81vw;
-        color: $color_primary;
+        color: black;
         margin: 0px;
+        font-family: "Nunito";
     }
     h4{
         font-size: 1.2vw;
@@ -198,7 +200,9 @@
 }
 
 .desc{
-    font-size: 1.6vw;
+    font-size: 1.5vw;
+    font-family: "Nunito";
+    line-height: 105%;
 }
 
 .boxdetails{
