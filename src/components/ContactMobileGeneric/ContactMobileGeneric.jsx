@@ -27,8 +27,7 @@ export default function ContactMobileGeneric({data = {}, phone="+553123331401"})
             Olá tudo bem? Venho através do site, e tenho interesse em conhecer o plano ${data.title}.
             Meu nome é ${formData.name}
             Meu contato é: ${formData.phone}
-            Meu email é ${formData.email}
-            Mensagem: ${formData.message}`;
+            Meu email é ${formData.email}`
         } else {
             setSendSuccess(false);
         }

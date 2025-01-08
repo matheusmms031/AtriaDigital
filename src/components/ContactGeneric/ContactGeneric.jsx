@@ -95,7 +95,7 @@ export default function ContactGeneric({ Firstsection = false, data = {}, phone 
                         </div>
                         <div className={styles.termobox}>
                             <div className={styles.termo}>
-                                <ErrorOutlineIcon sx={{ fontSize: "1.2vw", color: "#FF7B00" }} /> <span>Termos e Condições</span>
+                                <ErrorOutlineIcon sx={{ fontSize: "1.2vw", color: "black" }} /> <span>Termos e Condições</span>
                             </div>
                         </div>
                     </motion.div>
@@ -105,7 +105,7 @@ export default function ContactGeneric({ Firstsection = false, data = {}, phone 
                         animate={{ opacity: 1 }}
                         transition={{ duration: 1 }}
                     >   <a href={`https://api.whatsapp.com/send/?phone=31999848584&text=Olá tudo bem? Venho através do site, e tenho interesse em conhecer o plano ${data.title}.`}>
-                            <WhatsAppIcon sx={{ fontSize: "1.5vw", color: "#ffffff" }} />
+                            <WhatsAppIcon sx={{ fontSize: "1.5vw", color: "white" }} />
                             <span>ASSINE JÁ</span>
                         </a>
                     </motion.div>

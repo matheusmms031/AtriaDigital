@@ -7,7 +7,7 @@ import { useContext } from "react";
 import LoadingScreen from "./components/LoadingScreen/LoadingScreen.jsx";
 import Front from "./components/Front/Front.jsx";
 import fundo from "./assets/fundo.png";
-import video from "./assets/videofundoteste.mp4";
+import video from "./assets/fundovideo2.mp4";
 
 export function App() {
 
